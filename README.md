@@ -6,6 +6,8 @@ An evidence-first, JSON-powered AI newsletter. Responsive, accessible static HTM
 
 Edit **`data/newsletter.json`**. Its issue metadata and all article content are fetched at runtime. The sections are `news`, `rumors`, and `predictions`. Each story has a stable `id`, `title`, `summary`, `whyItMatters`, `confidence` (`high`/`medium`/`low`), `confidenceReason`, `historicalContext`, and a nonempty `sources` array. Sources include title, HTTPS URL, publisher, publication date (`YYYY-MM-DD`), type (`primary`/`reporting`/`analysis`), and `authenticityReason`. Predictions additionally require `horizon`, `resolutionCriteria`, and `counterarguments`.
 
+The optional `charts` array lives in the same JSON. `timeline` charts use sourced dated points; `bar` charts use percentage values with an explicit 0–100 domain, source, publication date, selection criteria, and caveats. Never invent numbers or convert confidence labels into probabilities.
+
 Use the existing JSON as the authoring example. Add or remove stories without editing HTML. An empty rumors section is intentional when nothing meets the evidence threshold. Confidence is an editorial assessment, not a calibrated probability. Date each issue honestly; do not redate old news as a new release. Source authenticity does not establish factual correctness or independence.
 
 ## Local preview

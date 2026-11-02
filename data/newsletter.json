@@ -149,5 +149,80 @@
       "resolutionCriteria": "Check whether the next official Rosalind release still requires separate organizational approval. If no release occurs, leave unresolved.",
       "counterarguments": "Access rules could broaden as safeguards, product strategy or model capabilities change."
     }
+  ],
+  "charts": [
+    {
+      "id": "verified-october-milestones",
+      "type": "timeline",
+      "title": "The recent record",
+      "description": "Publication and announcement dates for the three confirmed developments featured in this issue.",
+      "selectionCriteria": "Includes only the three news-section entries in issue 01. Excludes rumors and editorial predictions. This is a selected editorial timeline, not a complete industry release history or a measure of release frequency.",
+      "dateSemantics": "Dates are the source's publication or announcement date, not a guarantee of universal product availability.",
+      "points": [
+        {
+          "date": "2026-10-16",
+          "label": "Anthropic publishes self-assessment research",
+          "publisher": "Anthropic",
+          "category": "Research publication",
+          "storyId": "self-assessment-2026-10-16",
+          "sourceTitle": "Scaling Misuse Detection with Self-Assessment",
+          "sourceUrl": "https://safeguards.anthropic.com/2026/self-assessment/"
+        },
+        {
+          "date": "2026-10-26",
+          "label": "GPT-6.1 Terra rollout announced",
+          "publisher": "OpenAI",
+          "category": "Model rollout announcement",
+          "storyId": "terra-2026-10-26",
+          "sourceTitle": "Model Release Notes: GPT-6.1 Terra",
+          "sourceUrl": "https://help.openai.com/en/articles/9624314-model-release-notes"
+        },
+        {
+          "date": "2026-10-30",
+          "label": "GPT-6 Rosalind Research restricted rollout",
+          "publisher": "OpenAI",
+          "category": "Restricted model rollout announcement",
+          "storyId": "rosalind-2026-10-30",
+          "sourceTitle": "Model Release Notes: GPT-6 Rosalind Research",
+          "sourceUrl": "https://help.openai.com/en/articles/9624314-model-release-notes"
+        }
+      ],
+      "historicalContext": {
+        "date": "2026-04-16",
+        "label": "Original GPT-Rosalind introduction",
+        "publisher": "OpenAI",
+        "sourceTitle": "Introducing GPT-Rosalind for life sciences research",
+        "sourceUrl": "https://openai.com/index/introducing-gpt-rosalind/",
+        "note": "Optional separate context marker: October's restricted rollout builds on an existing trusted-access program."
+      }
+    },
+    {
+      "id": "self-assessment-evaluation",
+      "type": "bar",
+      "title": "Inside the research",
+      "description": "Company-reported fraction of stronger-classifier flags also caught by self-assessment, at a reported 1% false-positive rate.",
+      "selectionCriteria": "The two headline recall figures reported together in Anthropic's October 16 research. The high-priority group is a subset, not an independent sample or a competing model.",
+      "unit": "percent",
+      "domain": [
+        0,
+        100
+      ],
+      "sourceTitle": "Scaling Misuse Detection with Self-Assessment",
+      "sourceUrl": "https://safeguards.anthropic.com/2026/self-assessment/",
+      "publisher": "Anthropic",
+      "publishedAt": "2026-10-16",
+      "points": [
+        {
+          "label": "All conversations flagged by the stronger classifier",
+          "value": 78
+        },
+        {
+          "label": "High-priority flagged conversations",
+          "value": 94
+        }
+      ],
+      "caveat": "First-party evaluation, not independently replicated here. These percentages measure agreement with a stronger classifier's flags, not proven real-world harm detection. Do not sum these bars or compare them as separate model scores. The reported 1% false-positive rate has a different denominator and should be a note, not a third bar.",
+      "storyId": "self-assessment-2026-10-16"
+    }
   ]
 }

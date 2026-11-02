@@ -14,6 +14,16 @@ export function validate(data) {
  if(item.section==='predictions') for(const key of ['horizon','resolutionCriteria','counterarguments']) if(!str(item[key])) errors.push(`${prefix}.${key} is required for predictions`);
  if(!Array.isArray(item.sources)||!item.sources.length) errors.push(`${prefix}.sources must not be empty`);
  else item.sources.forEach((s,i)=>{if(!s||typeof s!=='object'){errors.push(`${prefix}.sources[${i}] must be an object`);return;}for(const key of ['title','publisher','authenticityReason'])if(!str(s[key]))errors.push(`${prefix}.sources[${i}].${key} is required`);try{if(new URL(s.url).protocol!=='https:')throw Error();}catch{errors.push(`${prefix}.sources[${i}].url must use HTTPS`);}if(!date(s.publishedAt)) errors.push(`${prefix}.sources[${i}].publishedAt is invalid`);if(!['primary','reporting','analysis'].includes(s.type))errors.push(`${prefix}.sources[${i}].type is invalid`);});
- });return errors;
+ });
+ if(data.charts!==undefined){
+ if(!Array.isArray(data.charts))errors.push('charts must be an array');
+ else data.charts.forEach((chart,index)=>{const prefix=`charts[${index}]`;if(!chart||!['timeline','bar'].includes(chart.type)){errors.push(`${prefix}.type is invalid`);return;}
+ const safeUrl=url=>{try{return new URL(url).protocol==='https:';}catch{return false;}};
+ for(const key of ['id','title','description'])if(!str(chart[key]))errors.push(`${prefix}.${key} is required`);
+ if(!Array.isArray(chart.points)||!chart.points.length){errors.push(`${prefix}.points are required`);return;}
+ if(chart.type==='bar'){if(!safeUrl(chart.sourceUrl))errors.push(`${prefix}.sourceUrl must use HTTPS`);if(!date(chart.publishedAt))errors.push(`${prefix}.publishedAt is invalid`);for(const key of ['publisher','selectionCriteria','caveat'])if(!str(chart[key]))errors.push(`${prefix}.${key} is required`);if(JSON.stringify(chart.domain)!=='[0,100]')errors.push(`${prefix}.domain must be [0,100]`);}
+ chart.points.forEach(point=>{if(!point||!str(point.label)){errors.push(`${prefix} has invalid point`);return;}if(chart.type==='bar'){if(!Number.isFinite(point.value)||point.value<0||point.value>100)errors.push(`${prefix} values must be 0–100`);}else{if(!date(point.date)||!safeUrl(point.sourceUrl))errors.push(`${prefix} has invalid date or HTTPS source`);}});
+ });}
+ return errors;
 }
 export function filterItems(items,section,query){const needle=query.trim().toLocaleLowerCase();return items.filter(i=>(section==='all'||i.section===section)&&[i.title,i.summary,i.historicalContext,...i.sources.map(s=>s.publisher)].join(' ').toLocaleLowerCase().includes(needle));}
