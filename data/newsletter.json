@@ -2,8 +2,36 @@
   "title": "The AI Ledger",
   "issue": "Week of October 26–November 1, 2026",
   "publishedAt": "2026-11-02",
-  "introduction": "The last complete week in AI models and coding harnesses: October 26–November 1, 2026. Coverage focuses on Codex, Claude Code, Copilot and OpenCode, with historical context and a forecast for November 2–8. Older unconfirmed reporting is explicitly marked as a carry-over watch item. Confidence is qualitative, not a calibrated probability.",
+  "introduction": "The last complete week in AI models and coding harnesses: October 26–November 1, 2026. Coverage focuses on Codex, Claude Code, Copilot and OpenCode, with historical context and a forecast for November 2–8. Older unconfirmed reporting is explicitly marked as a carry-over watch item. Confidence is qualitative, not a calibrated probability. Post-publication update, November 2 at 20:00 UTC: LongCat-2.5 API availability is included below as a dated daily supplement, outside the reporting week. The original weekly archive and November 2–8 forecast are unchanged.",
   "items": [
+    {
+      "id": "longcat-25-api-2026-11-02",
+      "section": "news",
+      "title": "Daily update · Nov 2: LongCat-2.5 reaches the API",
+      "summary": "LongCat's official API changelog marks LongCat-2.5 available on November 2, following a November 1 announcement. The company positions it for visual understanding and long-running coding tasks, and lists compatibility with Claude Code, Codex and Hermes.",
+      "whyItMatters": "A new model can enter existing coding workflows without a wholly new harness. Compatibility is the vendor's claim, not evidence that every setup works unchanged or that it outperforms alternatives.",
+      "confidence": "high",
+      "confidenceReason": "Official dated API documentation establishes the availability announcement. Capability and harness-compatibility claims remain vendor-reported and were not independently tested here.",
+      "historicalContext": "The same changelog dates LongCat-2.5-Preview to September 25. The full-model blog is dated November 1; the API availability entry is November 2. This is a preview-to-release progression, not two separate model launches.",
+      "sources": [
+        {
+          "title": "LongCat API Change Log: 2026-11-02",
+          "url": "https://longcat.ai/platform/docs/ChangeLog.html",
+          "publisher": "Meituan / LongCat",
+          "publishedAt": "2026-11-02",
+          "type": "primary",
+          "authenticityReason": "Original vendor API changelog with explicit November 2 availability and September 25 preview entries, opened November 2."
+        },
+        {
+          "title": "LongCat-2.5 Native Multimodality for Agentic Tasks",
+          "url": "https://longcat.ai/blog/longcat-2.5",
+          "publisher": "Meituan / LongCat",
+          "publishedAt": "2026-11-01",
+          "type": "primary",
+          "authenticityReason": "Original vendor announcement. Its visible date is November 1, distinct from the API changelog's November 2 availability date."
+        }
+      ]
+    },
     {
       "id": "terra-2026-10-26",
       "section": "news",
@@ -195,8 +223,8 @@
       "id": "verified-october-milestones",
       "type": "timeline",
       "title": "Models and harnesses: the release record",
-      "description": "The five confirmed developments selected for this issue, by announcement or publication date.",
-      "selectionCriteria": "Only this issue’s confirmed model and coding-harness stories. Not an exhaustive release history or a measure of vendor shipping speed. Rumors and forecasts excluded.",
+      "description": "Five confirmed developments from October 26–November 1, followed by one explicitly dated November 2 post-publication update.",
+      "selectionCriteria": "The weekly edition’s five confirmed model and coding-harness stories plus the separately labeled post-publication daily update. Not an exhaustive release history or a measure of shipping speed. Rumors and forecasts excluded.",
       "dateSemantics": "Publication or announcement dates, not universal availability dates.",
       "points": [
         {
@@ -243,6 +271,15 @@
           "storyId": "claude-code-2316-2026-10-31",
           "sourceTitle": "Claude Code v2.1.316 release",
           "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316"
+        },
+        {
+          "date": "2026-11-02",
+          "label": "Daily update: LongCat-2.5 API availability",
+          "publisher": "Meituan / LongCat",
+          "category": "Post-publication model update",
+          "storyId": "longcat-25-api-2026-11-02",
+          "sourceTitle": "LongCat API Change Log: 2026-11-02",
+          "sourceUrl": "https://longcat.ai/platform/docs/ChangeLog.html"
         }
       ]
     },
@@ -282,5 +319,6 @@
   "issueStart": "2026-10-26",
   "issueEnd": "2026-11-01",
   "forecastStart": "2026-11-02",
-  "forecastEnd": "2026-11-08"
+  "forecastEnd": "2026-11-08",
+  "updatedAt": "2026-11-02T20:00:00Z"
 }
