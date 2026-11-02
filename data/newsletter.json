@@ -1,0 +1,153 @@
+{
+  "title": "The AI Ledger",
+  "issue": "ISSUE 001 \u00b7 NOVEMBER 2026",
+  "publishedAt": "2026-11-02",
+  "introduction": "A source-first briefing separating announced developments, unconfirmed reporting, and editorial forecasts. Confidence labels are qualitative judgments, not calibrated probabilities.",
+  "items": [
+    {
+      "id": "terra-2026-10-26",
+      "section": "news",
+      "title": "GPT-6.1 Terra rolls out",
+      "summary": "OpenAI announced Terra for its API, ChatGPT Work and Codex\u2014not Chat. Listed standard API prices are $1 per million input tokens and $5 per million output tokens.",
+      "whyItMatters": "Teams have another deployment option; they should test quality on their own workloads instead of treating price as a capability ranking.",
+      "confidence": "high",
+      "confidenceReason": "Official release documentation establishes the announcement and listed terms, not independent comparative performance.",
+      "historicalContext": "GPT-4o mini's July 2024 launch also emphasized cost-efficient deployment. Different capability classes make raw token-price comparisons misleading.",
+      "sources": [
+        {
+          "title": "Model Release Notes: GPT-6.1 Terra",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "publisher": "OpenAI",
+          "publishedAt": "2026-10-26",
+          "type": "primary",
+          "authenticityReason": "Official OpenAI Help Center release entry, retrieved November 2, 2026."
+        },
+        {
+          "title": "GPT-4o mini: advancing cost-efficient intelligence",
+          "url": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/",
+          "publisher": "OpenAI",
+          "publishedAt": "2024-07-18",
+          "type": "primary",
+          "authenticityReason": "Dated original announcement on OpenAI's domain; historical context, not a current price comparison."
+        }
+      ]
+    },
+    {
+      "id": "rosalind-2026-10-30",
+      "section": "news",
+      "title": "GPT-6 Rosalind Research begins a restricted rollout",
+      "summary": "OpenAI announced a life-sciences model for approved Research customers in Work, Codex and the API. Enterprise access begins with an off-by-default, two-week Admin Preview.",
+      "whyItMatters": "This is a specialized research rollout, not general availability or evidence of clinical effectiveness. Organizations need explicit approval.",
+      "confidence": "high",
+      "confidenceReason": "Primary documentation supports announced access terms. Scientific effectiveness has not been independently assessed here.",
+      "historicalContext": "The original Rosalind announcement on April 16, 2026 also used trusted access. This extends an existing specialized-model program.",
+      "sources": [
+        {
+          "title": "Model Release Notes: GPT-6 Rosalind Research",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "publisher": "OpenAI",
+          "publishedAt": "2026-10-30",
+          "type": "primary",
+          "authenticityReason": "Official dated release entry, retrieved November 2, 2026."
+        },
+        {
+          "title": "Introducing GPT-Rosalind for life sciences research",
+          "url": "https://openai.com/index/introducing-gpt-rosalind/",
+          "publisher": "OpenAI",
+          "publishedAt": "2026-04-16",
+          "type": "primary",
+          "authenticityReason": "Original company announcement; page also contains a separately dated September update."
+        }
+      ]
+    },
+    {
+      "id": "self-assessment-2026-10-16",
+      "section": "news",
+      "title": "Anthropic tests AI self-assessment for misuse detection",
+      "summary": "Anthropic reports that self-assessment identified 78% of conversations flagged by a stronger classifier and 94% of high-priority cases, at a 1% false-positive rate in its evaluation.",
+      "whyItMatters": "The technique could make monitoring less expensive, but agreement with another classifier is not the same as verified real-world harm detection.",
+      "confidence": "high",
+      "confidenceReason": "High confidence in what the published research reports; results are first-party and not independently replicated here.",
+      "historicalContext": "Constitutional AI in December 2022 used AI feedback during training. This applies an AI-supervision idea to post-response monitoring; mechanisms and evaluation targets differ.",
+      "sources": [
+        {
+          "title": "Scaling Misuse Detection with Self-Assessment",
+          "url": "https://safeguards.anthropic.com/2026/self-assessment/",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-10-16",
+          "type": "primary",
+          "authenticityReason": "Dated technical research on Anthropic's official safeguards subdomain."
+        },
+        {
+          "title": "Constitutional AI: Harmlessness from AI feedback",
+          "url": "https://www.anthropic.com/news/constitutional-ai-harmlessness-from-ai-feedback",
+          "publisher": "Anthropic",
+          "publishedAt": "2022-12-15",
+          "type": "primary",
+          "authenticityReason": "Original research announcement on Anthropic's official domain."
+        }
+      ]
+    },
+    {
+      "id": "anthropic-intent-rumor-2026-10-19",
+      "section": "rumors",
+      "title": "Unconfirmed: an Anthropic model focused on user intent",
+      "summary": "The Information reports that Anthropic is preparing a model better at interpreting users' intentions.",
+      "whyItMatters": "A claim worth tracking, not a basis for deployment plans. No independently verified name, launch date or benchmark is established here.",
+      "confidence": "low",
+      "confidenceReason": "The original headline is public but the article is paywalled. A dated secondary account attributes the report to one unnamed user; repetition does not create independent corroboration.",
+      "historicalContext": "Recent announced model releases show ongoing iteration, but launch cadence cannot validate this particular rumor or predict its timing.",
+      "sources": [
+        {
+          "title": "Anthropic Readies Model That Reads Users\u2019 Intentions Better",
+          "url": "https://www.theinformation.com/newsletters/ai-agenda/anthropic-readies-model-reads-users-intentions-better",
+          "publisher": "The Information",
+          "publishedAt": "2026-10-19",
+          "type": "reporting",
+          "authenticityReason": "Original publisher's headline and byline were accessible; full article was not. Publication date is corroborated by the secondary account."
+        },
+        {
+          "title": "Anthropic Said to Ready Model; Launches Average 24-Day Gaps",
+          "url": "https://fourweekmba.com/ai-anthropic-said-to-ready-model-launches-average-24-day-gaps/",
+          "publisher": "FourWeekMBA",
+          "publishedAt": "2026-10-19",
+          "type": "analysis",
+          "authenticityReason": "Public dated secondary account explicitly attributes its claim to The Information; not independent confirmation."
+        }
+      ],
+      "resolutionCriteria": "An official announcement identifies the model and substantiates the reported user-intent capability.",
+      "counterarguments": "An unnamed source may overstate results; internal models can change or never ship. No release deadline is known."
+    },
+    {
+      "id": "specialized-access-outlook-2026-11-02",
+      "section": "predictions",
+      "title": "Outlook: specialized AI may retain separate access gates",
+      "summary": "Editorial inference: specialized scientific models may continue to require distinct organizational approval rather than automatically following general chatbot access.",
+      "whyItMatters": "Research teams should distinguish general subscriptions from eligibility for specialized capabilities when planning adoption.",
+      "confidence": "medium",
+      "confidenceReason": "Current policy and historical continuity support plausibility, not a calibrated probability or announced future commitment.",
+      "historicalContext": "Rosalind's April trusted-access introduction and October restricted upgrade show continuity so far, not a guarantee of future policy.",
+      "sources": [
+        {
+          "title": "Model Release Notes: GPT-6 Rosalind Research",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "publisher": "OpenAI",
+          "publishedAt": "2026-10-30",
+          "type": "primary",
+          "authenticityReason": "Official current access requirements supply evidence for this editorial inference, not endorsement of the forecast."
+        },
+        {
+          "title": "Introducing GPT-Rosalind for life sciences research",
+          "url": "https://openai.com/index/introducing-gpt-rosalind/",
+          "publisher": "OpenAI",
+          "publishedAt": "2026-04-16",
+          "type": "primary",
+          "authenticityReason": "Official earlier trusted-access announcement supplies historical context."
+        }
+      ],
+      "horizon": "The next officially announced Rosalind model release; no calendar deadline assumed.",
+      "resolutionCriteria": "Check whether the next official Rosalind release still requires separate organizational approval. If no release occurs, leave unresolved.",
+      "counterarguments": "Access rules could broaden as safeguards, product strategy or model capabilities change."
+    }
+  ]
+}
