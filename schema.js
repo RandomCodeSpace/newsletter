@@ -3,6 +3,8 @@ export function validate(data) {
  const errors=[]; const str=(v)=>typeof v==='string'&&v.trim().length>0;
  const date=(v)=>str(v)&&/^\d{4}-\d{2}-\d{2}$/.test(v)&&!Number.isNaN(Date.parse(v))&&new Date(v).toISOString().slice(0,10)===v;
  for(const key of ['title','issue','introduction']) if(!str(data?.[key])) errors.push(`${key} must be a nonempty string`);
+ for(const key of ['issueStart','issueEnd','forecastStart','forecastEnd'])if(!date(data?.[key]))errors.push(`${key} must be a valid date`);
+ if(data?.issueStart>data?.issueEnd||data?.forecastStart>data?.forecastEnd||data?.forecastStart<=data?.issueEnd)errors.push('Weekly windows must be ordered and non-overlapping');
  if(!date(data?.publishedAt)) errors.push('publishedAt must be a valid YYYY-MM-DD');
  if(!Array.isArray(data?.items)) return [...errors,'items must be an array'];
  const ids=new Set();
@@ -21,8 +23,8 @@ export function validate(data) {
  const safeUrl=url=>{try{return new URL(url).protocol==='https:';}catch{return false;}};
  for(const key of ['id','title','description'])if(!str(chart[key]))errors.push(`${prefix}.${key} is required`);
  if(!Array.isArray(chart.points)||!chart.points.length){errors.push(`${prefix}.points are required`);return;}
- if(chart.type==='bar'){if(!safeUrl(chart.sourceUrl))errors.push(`${prefix}.sourceUrl must use HTTPS`);if(!date(chart.publishedAt))errors.push(`${prefix}.publishedAt is invalid`);for(const key of ['publisher','selectionCriteria','caveat'])if(!str(chart[key]))errors.push(`${prefix}.${key} is required`);if(JSON.stringify(chart.domain)!=='[0,100]')errors.push(`${prefix}.domain must be [0,100]`);}
- chart.points.forEach(point=>{if(!point||!str(point.label)){errors.push(`${prefix} has invalid point`);return;}if(chart.type==='bar'){if(!Number.isFinite(point.value)||point.value<0||point.value>100)errors.push(`${prefix} values must be 0–100`);}else{if(!date(point.date)||!safeUrl(point.sourceUrl))errors.push(`${prefix} has invalid date or HTTPS source`);}});
+ if(chart.type==='bar'){if(!safeUrl(chart.sourceUrl))errors.push(`${prefix}.sourceUrl must use HTTPS`);if(!date(chart.publishedAt))errors.push(`${prefix}.publishedAt is invalid`);for(const key of ['publisher','selectionCriteria','caveat'])if(!str(chart[key]))errors.push(`${prefix}.${key} is required`);if(!Array.isArray(chart.domain)||chart.domain.length!==2||chart.domain[0]!==0||!Number.isFinite(chart.domain[1])||chart.domain[1]<=0)errors.push(`${prefix}.domain must start at zero and end at a positive number`);if(!str(chart.unit))errors.push(`${prefix}.unit is required`);}
+ chart.points.forEach(point=>{if(!point||!str(point.label)){errors.push(`${prefix} has invalid point`);return;}if(chart.type==='bar'){if(!Number.isFinite(point.value)||point.value<0||point.value>chart.domain?.[1])errors.push(`${prefix} values must fit the chart domain`);}else{if(!date(point.date)||!safeUrl(point.sourceUrl))errors.push(`${prefix} has invalid date or HTTPS source`);}});
  });}
  return errors;
 }

@@ -1,1 +1,14 @@
-{"name":"ai-ledger","private":true,"type":"module","scripts":{"test":"node --test test/*.test.js","validate":"node scripts/validate.js","build":"node scripts/build.js"},"engines":{"node":">=20"}}
+{
+  "name": "ai-ledger",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "validate": "node scripts/validate.js",
+    "build": "node scripts/build.js",
+    "archive": "node scripts/archive.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,14 +1,14 @@
 {
   "title": "The AI Ledger",
-  "issue": "ISSUE 001 \u00b7 NOVEMBER 2026",
+  "issue": "Week of October 26–November 1, 2026",
   "publishedAt": "2026-11-02",
-  "introduction": "A source-first briefing separating announced developments, unconfirmed reporting, and editorial forecasts. Confidence labels are qualitative judgments, not calibrated probabilities.",
+  "introduction": "The last complete week in AI models and coding harnesses: October 26–November 1, 2026. Coverage focuses on Codex, Claude Code, Copilot and OpenCode, with historical context and a forecast for November 2–8. Older unconfirmed reporting is explicitly marked as a carry-over watch item. Confidence is qualitative, not a calibrated probability.",
   "items": [
     {
       "id": "terra-2026-10-26",
       "section": "news",
       "title": "GPT-6.1 Terra rolls out",
-      "summary": "OpenAI announced Terra for its API, ChatGPT Work and Codex\u2014not Chat. Listed standard API prices are $1 per million input tokens and $5 per million output tokens.",
+      "summary": "OpenAI announced Terra for its API, ChatGPT Work and Codex—not Chat. Listed standard API prices are $1 per million input tokens and $5 per million output tokens.",
       "whyItMatters": "Teams have another deployment option; they should test quality on their own workloads instead of treating price as a capability ranking.",
       "confidence": "high",
       "confidenceReason": "Official release documentation establishes the announcement and listed terms, not independent comparative performance.",
@@ -33,73 +33,97 @@
       ]
     },
     {
-      "id": "rosalind-2026-10-30",
+      "id": "codex-0165-2026-10-27",
       "section": "news",
-      "title": "GPT-6 Rosalind Research begins a restricted rollout",
-      "summary": "OpenAI announced a life-sciences model for approved Research customers in Work, Codex and the API. Enterprise access begins with an off-by-default, two-week Admin Preview.",
-      "whyItMatters": "This is a specialized research rollout, not general availability or evidence of clinical effectiveness. Organizations need explicit approval.",
+      "title": "Codex CLI 0.165 adds Terra and more session control",
+      "summary": "The October 27 release adds GPT-6.1 Terra to model catalogs, a built-in Google Cloud Vertex AI provider, repository filtering, and in-conversation reasoning-effort changes for supported models.",
+      "whyItMatters": "The harness is changing alongside the model: provider choice and session organization affect how coding work actually runs.",
       "confidence": "high",
-      "confidenceReason": "Primary documentation supports announced access terms. Scientific effectiveness has not been independently assessed here.",
-      "historicalContext": "The original Rosalind announcement on April 16, 2026 also used trusted access. This extends an existing specialized-model program.",
+      "confidenceReason": "High confidence in the published release announcement; rollout and configuration can vary. No independent productivity gain is claimed.",
+      "historicalContext": "The preceding 0.164 release on October 23 added reusable prompt presets and inline model/permission controls. These are successive workflow changes, not evidence of a benchmark jump.",
       "sources": [
         {
-          "title": "Model Release Notes: GPT-6 Rosalind Research",
-          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "title": "ChatGPT & Codex changelog: CLI 0.165.0",
+          "url": "https://learn.chatgpt.com/docs/changelog",
           "publisher": "OpenAI",
-          "publishedAt": "2026-10-30",
+          "publishedAt": "2026-10-27",
           "type": "primary",
-          "authenticityReason": "Official dated release entry, retrieved November 2, 2026."
-        },
-        {
-          "title": "Introducing GPT-Rosalind for life sciences research",
-          "url": "https://openai.com/index/introducing-gpt-rosalind/",
-          "publisher": "OpenAI",
-          "publishedAt": "2026-04-16",
-          "type": "primary",
-          "authenticityReason": "Original company announcement; page also contains a separately dated September update."
+          "authenticityReason": "Original dated announcement or release notes on the publisher’s official site or repository, checked November 2, 2026. Release notes establish stated changes, not independently measured performance."
         }
       ]
     },
     {
-      "id": "self-assessment-2026-10-16",
+      "id": "copilot-cloud-2026-10-28",
       "section": "news",
-      "title": "Anthropic tests AI self-assessment for misuse detection",
-      "summary": "Anthropic reports that self-assessment identified 78% of conversations flagged by a stronger classifier and 94% of high-priority cases, at a 1% false-positive rate in its evaluation.",
-      "whyItMatters": "The technique could make monitoring less expensive, but agreement with another classifier is not the same as verified real-world harm detection.",
+      "title": "Copilot connects coding sessions across surfaces",
+      "summary": "GitHub announced a connected cloud experience on paid Copilot plans. Sessions can continue across web, mobile, CLI, app and VS Code, with cloud sandboxes and shared Actions compute entitlement.",
+      "whyItMatters": "Session continuity and execution environments are becoming central product features. GitHub says sandbox usage billing begins in November; teams should check their entitlement.",
       "confidence": "high",
-      "confidenceReason": "High confidence in what the published research reports; results are first-party and not independently replicated here.",
-      "historicalContext": "Constitutional AI in December 2022 used AI feedback during training. This applies an AI-supervision idea to post-response monitoring; mechanisms and evaluation targets differ.",
+      "confidenceReason": "High confidence in the published release announcement; rollout and configuration can vary. No independent productivity gain is claimed.",
+      "historicalContext": "GitHub describes this as a connected successor to its separate Copilot Chat and coding-agent experiences. The shift is from isolated surfaces toward resumable work.",
       "sources": [
         {
-          "title": "Scaling Misuse Detection with Self-Assessment",
-          "url": "https://safeguards.anthropic.com/2026/self-assessment/",
-          "publisher": "Anthropic",
-          "publishedAt": "2026-10-16",
+          "title": "Work from anywhere with a new, connected Copilot cloud experience",
+          "url": "https://github.blog/changelog/2026-10-28-work-from-anywhere-with-a-new-connected-copilot-cloud-experience/",
+          "publisher": "GitHub",
+          "publishedAt": "2026-10-28",
           "type": "primary",
-          "authenticityReason": "Dated technical research on Anthropic's official safeguards subdomain."
-        },
+          "authenticityReason": "Original dated announcement or release notes on the publisher’s official site or repository, checked November 2, 2026. Release notes establish stated changes, not independently measured performance."
+        }
+      ]
+    },
+    {
+      "id": "opencode-225-2026-10-30",
+      "section": "news",
+      "title": "OpenCode 2.2.5 improves compaction and worktree controls",
+      "summary": "The October 30 release adds percentage-based context buffers, worktree/base-branch shortcuts, and fixes for context-window errors and model-switch reasoning handling.",
+      "whyItMatters": "A buffer expressed as a percentage can adapt across model context sizes. These are concrete harness ergonomics and reliability changes, not a new underlying model.",
+      "confidence": "high",
+      "confidenceReason": "High confidence in the published release announcement; rollout and configuration can vary. No independent productivity gain is claimed.",
+      "historicalContext": "Previously the buffer setting accepted a token count; percentage support makes one configuration more portable across differently sized model windows.",
+      "sources": [
         {
-          "title": "Constitutional AI: Harmlessness from AI feedback",
-          "url": "https://www.anthropic.com/news/constitutional-ai-harmlessness-from-ai-feedback",
-          "publisher": "Anthropic",
-          "publishedAt": "2022-12-15",
+          "title": "OpenCode v2.2.5 release",
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.5",
+          "publisher": "Anomaly / OpenCode",
+          "publishedAt": "2026-10-30",
           "type": "primary",
-          "authenticityReason": "Original research announcement on Anthropic's official domain."
+          "authenticityReason": "Original dated announcement or release notes on the publisher’s official site or repository, checked November 2, 2026. Release notes establish stated changes, not independently measured performance."
+        }
+      ]
+    },
+    {
+      "id": "claude-code-2316-2026-10-31",
+      "section": "news",
+      "title": "Claude Code adds subagent effort and budget controls",
+      "summary": "Claude Code 2.1.316 adds a default subagent-effort setting and pooled group budgets in the Claude apps gateway. It also fixes shell processes left running when Claude Code exits itself.",
+      "whyItMatters": "Teams can control delegated work more explicitly. Gateway-specific budget features should not be confused with universal personal-plan controls.",
+      "confidence": "high",
+      "confidenceReason": "High confidence in the published release announcement; rollout and configuration can vary. No independent productivity gain is claimed.",
+      "historicalContext": "The release changes the previous default of subagents inheriting session effort when no other setting names one. It illustrates increasingly granular agent orchestration.",
+      "sources": [
+        {
+          "title": "Claude Code v2.1.316 release",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-10-31",
+          "type": "primary",
+          "authenticityReason": "Original dated announcement or release notes on the publisher’s official site or repository, checked November 2, 2026. Release notes establish stated changes, not independently measured performance."
         }
       ]
     },
     {
       "id": "anthropic-intent-rumor-2026-10-19",
       "section": "rumors",
-      "title": "Unconfirmed: an Anthropic model focused on user intent",
+      "title": "Carry-over watch · Oct 19: Anthropic intent-model report",
       "summary": "The Information reports that Anthropic is preparing a model better at interpreting users' intentions.",
-      "whyItMatters": "A claim worth tracking, not a basis for deployment plans. No independently verified name, launch date or benchmark is established here.",
+      "whyItMatters": "Older unconfirmed reporting, carried over for monitoring—not a new development from this issue’s reporting week. No independently verified name, launch date or benchmark is established here.",
       "confidence": "low",
       "confidenceReason": "The original headline is public but the article is paywalled. A dated secondary account attributes the report to one unnamed user; repetition does not create independent corroboration.",
       "historicalContext": "Recent announced model releases show ongoing iteration, but launch cadence cannot validate this particular rumor or predict its timing.",
       "sources": [
         {
-          "title": "Anthropic Readies Model That Reads Users\u2019 Intentions Better",
+          "title": "Anthropic Readies Model That Reads Users’ Intentions Better",
           "url": "https://www.theinformation.com/newsletters/ai-agenda/anthropic-readies-model-reads-users-intentions-better",
           "publisher": "The Information",
           "publishedAt": "2026-10-19",
@@ -119,110 +143,144 @@
       "counterarguments": "An unnamed source may overstate results; internal models can change or never ship. No release deadline is known."
     },
     {
-      "id": "specialized-access-outlook-2026-11-02",
+      "id": "harness-controls-outlook-2026-11-02",
       "section": "predictions",
-      "title": "Outlook: specialized AI may retain separate access gates",
-      "summary": "Editorial inference: specialized scientific models may continue to require distinct organizational approval rather than automatically following general chatbot access.",
-      "whyItMatters": "Research teams should distinguish general subscriptions from eligibility for specialized capabilities when planning adoption.",
+      "title": "Next week: another control upgrade in a coding harness",
+      "summary": "Editorial forecast for November 2–8: at least one of Codex, Copilot, OpenCode or Claude Code will announce a new session, context-management, or subagent-control feature.",
+      "whyItMatters": "Model capability alone is not the whole developer experience. Worktree continuity, context management and delegated-work controls are actionable dimensions to evaluate.",
       "confidence": "medium",
-      "confidenceReason": "Current policy and historical continuity support plausibility, not a calibrated probability or announced future commitment.",
-      "historicalContext": "Rosalind's April trusted-access introduction and October restricted upgrade show continuity so far, not a guarantee of future policy.",
+      "confidenceReason": "The last complete week contains relevant releases from all four projects. That supports a modest directional forecast, but provides neither a calibrated probability nor a promised roadmap.",
+      "historicalContext": "October brought Codex session filtering, Copilot cloud continuity, OpenCode context-buffer controls, and Claude Code subagent-effort settings. The forecast extrapolates this observed cluster without assuming every vendor follows it.",
       "sources": [
         {
-          "title": "Model Release Notes: GPT-6 Rosalind Research",
-          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "title": "ChatGPT & Codex changelog: CLI 0.165.0",
+          "url": "https://learn.chatgpt.com/docs/changelog",
           "publisher": "OpenAI",
-          "publishedAt": "2026-10-30",
+          "publishedAt": "2026-10-27",
           "type": "primary",
-          "authenticityReason": "Official current access requirements supply evidence for this editorial inference, not endorsement of the forecast."
+          "authenticityReason": "Original dated announcement or release notes on the publisher’s official site or repository, checked November 2, 2026. Release notes establish stated changes, not independently measured performance."
         },
         {
-          "title": "Introducing GPT-Rosalind for life sciences research",
-          "url": "https://openai.com/index/introducing-gpt-rosalind/",
-          "publisher": "OpenAI",
-          "publishedAt": "2026-04-16",
+          "title": "Work from anywhere with a new, connected Copilot cloud experience",
+          "url": "https://github.blog/changelog/2026-10-28-work-from-anywhere-with-a-new-connected-copilot-cloud-experience/",
+          "publisher": "GitHub",
+          "publishedAt": "2026-10-28",
           "type": "primary",
-          "authenticityReason": "Official earlier trusted-access announcement supplies historical context."
+          "authenticityReason": "Original dated announcement or release notes on the publisher’s official site or repository, checked November 2, 2026. Release notes establish stated changes, not independently measured performance."
+        },
+        {
+          "title": "OpenCode v2.2.5 release",
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.5",
+          "publisher": "Anomaly / OpenCode",
+          "publishedAt": "2026-10-30",
+          "type": "primary",
+          "authenticityReason": "Original dated announcement or release notes on the publisher’s official site or repository, checked November 2, 2026. Release notes establish stated changes, not independently measured performance."
+        },
+        {
+          "title": "Claude Code v2.1.316 release",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-10-31",
+          "type": "primary",
+          "authenticityReason": "Original dated announcement or release notes on the publisher’s official site or repository, checked November 2, 2026. Release notes establish stated changes, not independently measured performance."
         }
       ],
-      "horizon": "The next officially announced Rosalind model release; no calendar deadline assumed.",
-      "resolutionCriteria": "Check whether the next official Rosalind release still requires separate organizational approval. If no release occurs, leave unresolved.",
-      "counterarguments": "Access rules could broaden as safeguards, product strategy or model capabilities change."
+      "horizon": "November 2–8, 2026; resolve after 23:59 UTC on November 8.",
+      "resolutionCriteria": "Resolve true if official release notes dated November 2–8, 2026 announce a new session-resumption/organization, context-management, or subagent-control feature in at least one of Codex, Copilot, OpenCode or Claude Code. Bug fixes alone, prerelease source commits without a release announcement, and model-only changes do not qualify. Otherwise resolve false after the window closes.",
+      "counterarguments": "Teams may prioritize model integrations or stability instead; the recent cluster may reflect event timing rather than a sustained product trend."
     }
   ],
   "charts": [
     {
       "id": "verified-october-milestones",
       "type": "timeline",
-      "title": "The recent record",
-      "description": "Publication and announcement dates for the three confirmed developments featured in this issue.",
-      "selectionCriteria": "Includes only the three news-section entries in issue 01. Excludes rumors and editorial predictions. This is a selected editorial timeline, not a complete industry release history or a measure of release frequency.",
-      "dateSemantics": "Dates are the source's publication or announcement date, not a guarantee of universal product availability.",
+      "title": "Models and harnesses: the release record",
+      "description": "The five confirmed developments selected for this issue, by announcement or publication date.",
+      "selectionCriteria": "Only this issue’s confirmed model and coding-harness stories. Not an exhaustive release history or a measure of vendor shipping speed. Rumors and forecasts excluded.",
+      "dateSemantics": "Publication or announcement dates, not universal availability dates.",
       "points": [
         {
-          "date": "2026-10-16",
-          "label": "Anthropic publishes self-assessment research",
-          "publisher": "Anthropic",
-          "category": "Research publication",
-          "storyId": "self-assessment-2026-10-16",
-          "sourceTitle": "Scaling Misuse Detection with Self-Assessment",
-          "sourceUrl": "https://safeguards.anthropic.com/2026/self-assessment/"
-        },
-        {
           "date": "2026-10-26",
-          "label": "GPT-6.1 Terra rollout announced",
+          "label": "GPT-6.1 Terra rolls out",
           "publisher": "OpenAI",
-          "category": "Model rollout announcement",
+          "category": "Model rollout",
           "storyId": "terra-2026-10-26",
           "sourceTitle": "Model Release Notes: GPT-6.1 Terra",
           "sourceUrl": "https://help.openai.com/en/articles/9624314-model-release-notes"
         },
         {
-          "date": "2026-10-30",
-          "label": "GPT-6 Rosalind Research restricted rollout",
+          "date": "2026-10-27",
+          "label": "Codex CLI 0.165 adds Terra and more session control",
           "publisher": "OpenAI",
-          "category": "Restricted model rollout announcement",
-          "storyId": "rosalind-2026-10-30",
-          "sourceTitle": "Model Release Notes: GPT-6 Rosalind Research",
-          "sourceUrl": "https://help.openai.com/en/articles/9624314-model-release-notes"
-        }
-      ],
-      "historicalContext": {
-        "date": "2026-04-16",
-        "label": "Original GPT-Rosalind introduction",
-        "publisher": "OpenAI",
-        "sourceTitle": "Introducing GPT-Rosalind for life sciences research",
-        "sourceUrl": "https://openai.com/index/introducing-gpt-rosalind/",
-        "note": "Optional separate context marker: October's restricted rollout builds on an existing trusted-access program."
-      }
-    },
-    {
-      "id": "self-assessment-evaluation",
-      "type": "bar",
-      "title": "Inside the research",
-      "description": "Company-reported fraction of stronger-classifier flags also caught by self-assessment, at a reported 1% false-positive rate.",
-      "selectionCriteria": "The two headline recall figures reported together in Anthropic's October 16 research. The high-priority group is a subset, not an independent sample or a competing model.",
-      "unit": "percent",
-      "domain": [
-        0,
-        100
-      ],
-      "sourceTitle": "Scaling Misuse Detection with Self-Assessment",
-      "sourceUrl": "https://safeguards.anthropic.com/2026/self-assessment/",
-      "publisher": "Anthropic",
-      "publishedAt": "2026-10-16",
-      "points": [
-        {
-          "label": "All conversations flagged by the stronger classifier",
-          "value": 78
+          "category": "Coding harness update",
+          "storyId": "codex-0165-2026-10-27",
+          "sourceTitle": "ChatGPT & Codex changelog: CLI 0.165.0",
+          "sourceUrl": "https://learn.chatgpt.com/docs/changelog"
         },
         {
-          "label": "High-priority flagged conversations",
-          "value": 94
+          "date": "2026-10-28",
+          "label": "Copilot connects coding sessions across surfaces",
+          "publisher": "GitHub",
+          "category": "Coding harness update",
+          "storyId": "copilot-cloud-2026-10-28",
+          "sourceTitle": "Work from anywhere with a new, connected Copilot cloud experience",
+          "sourceUrl": "https://github.blog/changelog/2026-10-28-work-from-anywhere-with-a-new-connected-copilot-cloud-experience/"
+        },
+        {
+          "date": "2026-10-30",
+          "label": "OpenCode 2.2.5 improves compaction and worktree controls",
+          "publisher": "Anomaly / OpenCode",
+          "category": "Coding harness update",
+          "storyId": "opencode-225-2026-10-30",
+          "sourceTitle": "OpenCode v2.2.5 release",
+          "sourceUrl": "https://github.com/anomalyco/opencode/releases/tag/v2.2.5"
+        },
+        {
+          "date": "2026-10-31",
+          "label": "Claude Code adds subagent effort and budget controls",
+          "publisher": "Anthropic",
+          "category": "Coding harness update",
+          "storyId": "claude-code-2316-2026-10-31",
+          "sourceTitle": "Claude Code v2.1.316 release",
+          "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316"
+        }
+      ]
+    },
+    {
+      "id": "terra-token-prices",
+      "type": "bar",
+      "title": "Terra: the token-cost shape",
+      "description": "Standard API price in US dollars per one million tokens, as listed in the October 26 release notes.",
+      "selectionCriteria": "Three billing categories for one model. This is a cost breakdown, not a model ranking or total task-cost estimate.",
+      "unit": "USD per million tokens",
+      "domain": [
+        0,
+        5
+      ],
+      "sourceTitle": "Model Release Notes: GPT-6.1 Terra",
+      "sourceUrl": "https://help.openai.com/en/articles/9624314-model-release-notes",
+      "publisher": "OpenAI",
+      "publishedAt": "2026-10-26",
+      "points": [
+        {
+          "label": "Input",
+          "value": 1
+        },
+        {
+          "label": "Cached input",
+          "value": 0.05
+        },
+        {
+          "label": "Output",
+          "value": 5
         }
       ],
-      "caveat": "First-party evaluation, not independently replicated here. These percentages measure agreement with a stronger classifier's flags, not proven real-world harm detection. Do not sum these bars or compare them as separate model scores. The reported 1% false-positive rate has a different denominator and should be a note, not a third bar.",
-      "storyId": "self-assessment-2026-10-16"
+      "caveat": "These categories have different billing conditions. Total task cost depends on actual input, cache eligibility and generated output; tools or other charges may add cost. API usage is separate from ChatGPT subscriptions. Prices are a dated snapshot, not a forecast.",
+      "storyId": "terra-2026-10-26"
     }
-  ]
+  ],
+  "issueStart": "2026-10-26",
+  "issueEnd": "2026-11-01",
+  "forecastStart": "2026-11-02",
+  "forecastEnd": "2026-11-08"
 }
