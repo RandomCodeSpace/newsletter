@@ -2,8 +2,64 @@
   "title": "The AI Ledger",
   "issue": "Week of October 26–November 1, 2026",
   "publishedAt": "2026-11-02",
-  "introduction": "The last complete week in AI models and coding harnesses: October 26–November 1, 2026. Coverage focuses on Codex, Claude Code, Copilot and OpenCode, with historical context and a forecast for November 2–8. Older unconfirmed reporting is explicitly marked as a carry-over watch item. Confidence is qualitative, not a calibrated probability. Post-publication update, November 2 at 20:00 UTC: LongCat-2.5 API availability is included below as a dated daily supplement, outside the reporting week. The original weekly archive and November 2–8 forecast are unchanged.",
+  "introduction": "The last complete week in AI models and coding harnesses: October 26–November 1, 2026. Coverage focuses on Codex, Claude Code, Copilot and OpenCode, with historical context and a forecast for November 2–8. Older unconfirmed reporting is explicitly marked as a carry-over watch item. Confidence is qualitative, not a calibrated probability. Daily supplements through November 3, 19:57 UTC: LongCat API availability, Claude Code 2.1.317 and Copilot in JetBrains Air are explicitly dated additions outside the reporting week. The original archive and November 2–8 forecast remain unchanged; forecast progress is recorded separately below.",
   "items": [
+    {
+      "id": "claude-code-2317-2026-11-03",
+      "section": "news",
+      "title": "Daily update · Nov 3: Claude Code adds fail-closed hook controls",
+      "summary": "Claude Code 2.1.317 adds an Agent SDK hook option that blocks an action if its callback fails, warnings about unexpected connectors on scheduled cloud tasks, and checks before web or shell calls transmit the account email address.",
+      "whyItMatters": "These controls affect how coding agents handle failures and external actions. The release also adds a gateway-admin cost report, with spend grouped by date, developer or identity-provider group.",
+      "confidence": "high",
+      "confidenceReason": "Official release notes establish the announced changes. They do not independently prove that every failure or unintended transmission is prevented.",
+      "historicalContext": "The October 31 release added subagent-effort and pooled-budget controls. November 3 extends operational oversight with hook-failure handling and cost reporting.",
+      "sources": [
+        {
+          "title": "Claude Code v2.1.317 release",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-03",
+          "type": "primary",
+          "authenticityReason": "Official anthropics repository release. The GitHub page displays 03 Nov 01:25; the extracted display does not explicitly state a timezone."
+        },
+        {
+          "title": "Claude Code v2.1.316 release",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-10-31",
+          "type": "primary",
+          "authenticityReason": "Official preceding release, used only for historical context."
+        }
+      ]
+    },
+    {
+      "id": "copilot-jetbrains-air-2026-11-03",
+      "section": "news",
+      "title": "Daily update · Nov 3: Copilot arrives in JetBrains Air",
+      "summary": "GitHub announced Copilot integration in JetBrains Air through Agent Client Protocol. Developers can track parallel sessions and review changes in context, using their Copilot subscription for local or cloud coding tasks.",
+      "whyItMatters": "Cloud use requires an Air Teams-enabled business organization and administrator enablement. Tasks use Copilot rather than JetBrains AI credits; Air analytics do not show Copilot usage, and Air cannot set its spending limits.",
+      "confidence": "high",
+      "confidenceReason": "GitHub's dated first-party announcement describes availability and limitations. Access still depends on account, subscription and administrator settings.",
+      "historicalContext": "After GitHub's October 28 connected-cloud rollout, this adds a JetBrains Air entry point. The new integration is distinct from the existing Copilot plugin.",
+      "sources": [
+        {
+          "title": "GitHub Copilot is now available in JetBrains Air",
+          "url": "https://github.blog/changelog/2026-11-03-github-copilot-is-now-available-in-jetbrains-air/",
+          "publisher": "GitHub",
+          "publishedAt": "2026-11-03",
+          "type": "primary",
+          "authenticityReason": "Official GitHub changelog dated November 3. No publication time is displayed in the retrieved page."
+        },
+        {
+          "title": "Work from anywhere with a new, connected Copilot cloud experience",
+          "url": "https://github.blog/changelog/2026-10-28-work-from-anywhere-with-a-new-connected-copilot-cloud-experience/",
+          "publisher": "GitHub",
+          "publishedAt": "2026-10-28",
+          "type": "primary",
+          "authenticityReason": "Earlier official announcement provides context, not a second new November 3 launch."
+        }
+      ]
+    },
     {
       "id": "longcat-25-api-2026-11-02",
       "section": "news",
@@ -177,7 +233,7 @@
       "summary": "Editorial forecast for November 2–8: at least one of Codex, Copilot, OpenCode or Claude Code will announce a new session, context-management, or subagent-control feature.",
       "whyItMatters": "Model capability alone is not the whole developer experience. Worktree continuity, context management and delegated-work controls are actionable dimensions to evaluate.",
       "confidence": "medium",
-      "confidenceReason": "The last complete week contains relevant releases from all four projects. That supports a modest directional forecast, but provides neither a calibrated probability nor a promised roadmap.",
+      "confidenceReason": "The last complete week contains relevant releases from all four projects. That supports a modest directional forecast, but provides neither a calibrated probability nor a promised roadmap. Progress check, November 3: GitHub’s official Air integration announcement adds parallel-session tracking, which appears to meet the session-organization criterion. This is an interim assessment, not a changed forecast or an early formal resolution. The original November 8 resolution time still applies.",
       "historicalContext": "October brought Codex session filtering, Copilot cloud continuity, OpenCode context-buffer controls, and Claude Code subagent-effort settings. The forecast extrapolates this observed cluster without assuming every vendor follows it.",
       "sources": [
         {
@@ -211,6 +267,14 @@
           "publishedAt": "2026-10-31",
           "type": "primary",
           "authenticityReason": "Original dated announcement or release notes on the publisher’s official site or repository, checked November 2, 2026. Release notes establish stated changes, not independently measured performance."
+        },
+        {
+          "title": "GitHub Copilot is now available in JetBrains Air",
+          "url": "https://github.blog/changelog/2026-11-03-github-copilot-is-now-available-in-jetbrains-air/",
+          "publisher": "GitHub",
+          "publishedAt": "2026-11-03",
+          "type": "primary",
+          "authenticityReason": "Official GitHub changelog dated November 3. No publication time is displayed in the retrieved page."
         }
       ],
       "horizon": "November 2–8, 2026; resolve after 23:59 UTC on November 8.",
@@ -223,8 +287,8 @@
       "id": "verified-october-milestones",
       "type": "timeline",
       "title": "Models and harnesses: the release record",
-      "description": "Five confirmed developments from October 26–November 1, followed by one explicitly dated November 2 post-publication update.",
-      "selectionCriteria": "The weekly edition’s five confirmed model and coding-harness stories plus the separately labeled post-publication daily update. Not an exhaustive release history or a measure of shipping speed. Rumors and forecasts excluded.",
+      "description": "Five confirmed developments from October 26–November 1, followed by three explicitly dated November 2–3 daily supplements.",
+      "selectionCriteria": "The weekly edition’s five confirmed model and coding-harness stories plus three separately labeled post-publication updates. Not an exhaustive release history or a measure of shipping speed. Rumors and forecasts excluded.",
       "dateSemantics": "Publication or announcement dates, not universal availability dates.",
       "points": [
         {
@@ -280,6 +344,24 @@
           "storyId": "longcat-25-api-2026-11-02",
           "sourceTitle": "LongCat API Change Log: 2026-11-02",
           "sourceUrl": "https://longcat.ai/platform/docs/ChangeLog.html"
+        },
+        {
+          "date": "2026-11-03",
+          "label": "Daily update · Nov 3: Claude Code adds fail-closed hook controls",
+          "publisher": "Anthropic",
+          "category": "Post-publication coding-harness update",
+          "storyId": "claude-code-2317-2026-11-03",
+          "sourceTitle": "Claude Code v2.1.317 release",
+          "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317"
+        },
+        {
+          "date": "2026-11-03",
+          "label": "Daily update · Nov 3: Copilot arrives in JetBrains Air",
+          "publisher": "GitHub",
+          "category": "Post-publication coding-harness update",
+          "storyId": "copilot-jetbrains-air-2026-11-03",
+          "sourceTitle": "GitHub Copilot is now available in JetBrains Air",
+          "sourceUrl": "https://github.blog/changelog/2026-11-03-github-copilot-is-now-available-in-jetbrains-air/"
         }
       ]
     },
@@ -320,5 +402,5 @@
   "issueEnd": "2026-11-01",
   "forecastStart": "2026-11-02",
   "forecastEnd": "2026-11-08",
-  "updatedAt": "2026-11-02T20:00:00Z"
+  "updatedAt": "2026-11-03T19:57:00Z"
 }
