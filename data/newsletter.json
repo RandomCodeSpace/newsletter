@@ -2,8 +2,96 @@
   "title": "The AI Ledger",
   "issue": "Week of October 26–November 1, 2026",
   "publishedAt": "2026-11-02",
-  "introduction": "The last complete week in AI models and coding harnesses: October 26–November 1, 2026. Coverage focuses on Codex, Claude Code, Copilot and OpenCode, with historical context and a forecast for November 2–8. Older unconfirmed reporting is explicitly marked as a carry-over watch item. Confidence is qualitative, not a calibrated probability. Daily supplements through November 3, 19:57 UTC: LongCat API availability, Claude Code 2.1.317 and Copilot in JetBrains Air are explicitly dated additions outside the reporting week. The original archive and November 2–8 forecast remain unchanged; forecast progress is recorded separately below.",
+  "introduction": "The last complete week in AI models and coding harnesses: October 26–November 1, 2026. Coverage focuses on Codex, Claude Code, Copilot and OpenCode, with historical context and a forecast for November 2–8. Older unconfirmed reporting is explicitly marked as a carry-over watch item. Confidence is qualitative, not a calibrated probability. Daily supplements through November 4, 19:58 UTC cover separately dated model and coding-harness updates, including Preview features and a conditional acquisition announcement. These additions sit outside the reporting week; the frozen archive and original November 2–8 forecast are preserved.",
   "items": [
+    {
+      "id": "vscode-1145-harnesses-2026-11-04",
+      "section": "news",
+      "title": "Daily update · Nov 4: VS Code previews mixed-harness sessions",
+      "summary": "VS Code 1.145 adds a preview that groups Copilot, Claude and Codex chats within one session, with separate model, agent and permission settings. The stable release also adds cron schedules and workspace custom agents for local automations.",
+      "whyItMatters": "Developers can compare agents without splitting related conversations across separate sessions. Mixed-harness sessions require the preview setting; cron schedules do not apply to cloud automations.",
+      "confidence": "high",
+      "confidenceReason": "Microsoft's official release notes establish the features and their preview limits. No independent productivity improvement is claimed.",
+      "historicalContext": "Previously, nested sessions inherited their parent's harness. This changes session organization rather than introducing a new underlying model.",
+      "sources": [
+        {
+          "title": "Visual Studio Code 1.145 release notes",
+          "url": "https://code.visualstudio.com/updates/v1_145",
+          "publisher": "Microsoft / Visual Studio Code",
+          "publishedAt": "2026-11-04",
+          "type": "primary",
+          "authenticityReason": "Official notes explicitly date the stable release November 4, 2026 and mark mixed-harness nested sessions as Preview."
+        }
+      ]
+    },
+    {
+      "id": "claude-code-2318-2026-11-04",
+      "section": "news",
+      "title": "Daily update · Nov 4: Claude Code adds per-fork effort controls",
+      "summary": "Claude Code 2.1.318 lets a mod's model fork choose its own reasoning effort, independently of the session. It also exposes stored sign-in expiry in command-line status and JSON output, with advance warnings for unattended text runs.",
+      "whyItMatters": "Small delegated jobs can use lower effort without changing the main session. Expiry visibility gives developers a clearer signal before unattended jobs lose authentication.",
+      "confidence": "high",
+      "confidenceReason": "Anthropic's official release notes confirm the changes; their effect on cost and reliability was not independently measured.",
+      "historicalContext": "This adds control at the individual mod-fork level. The same release fixes conversation continuation and idle-compaction failures.",
+      "sources": [
+        {
+          "title": "Claude Code v2.1.318 release",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-04",
+          "type": "primary",
+          "authenticityReason": "Official anthropics repository release. GitHub displays 04 Nov 00:01; the extracted display does not explicitly state a timezone."
+        }
+      ]
+    },
+    {
+      "id": "tencent-hy4-2026-11-04",
+      "section": "news",
+      "title": "Daily update · Nov 4: Tencent announces Hy4, with weights still to come",
+      "summary": "Tencent's November 4 announcement describes Hy4's visual understanding and computer-use capabilities, and availability across its products. Vercel had already announced Hy4 access through AI Gateway on November 3, including image input and a one-million-token context window.",
+      "whyItMatters": "API availability and downloadable weights are different milestones. Tencent says model weights and system cards will arrive in the coming days; the announcement does not establish that they are available now.",
+      "confidence": "high",
+      "confidenceReason": "A Tencent-issued announcement and Vercel's own integration changelog support the availability claims. Performance descriptions remain vendor-reported.",
+      "historicalContext": "Hy4 follows Hy4 Preview. November 3 gateway access and November 4 corporate announcement are distinct dates, not two separate model launches.",
+      "sources": [
+        {
+          "title": "Tencent launches Hy4",
+          "url": "https://en.prnasia.com/releases/apac/tencent-launches-hy4-joining-the-ranks-of-the-world-s-leading-open-source-ai-models-554689.shtml",
+          "publisher": "Tencent via PR Newswire",
+          "publishedAt": "2026-11-04",
+          "type": "primary",
+          "authenticityReason": "Company-issued press release distributed by PR Newswire, explicitly dated November 4. It describes weights and system cards as forthcoming."
+        },
+        {
+          "title": "Tencent Hy4 now available on AI Gateway",
+          "url": "https://vercel.com/changelog/tencent-hy4-now-available-on-ai-gateway",
+          "publisher": "Vercel",
+          "publishedAt": "2026-11-03",
+          "type": "primary",
+          "authenticityReason": "Vercel's official integration announcement, explicitly dated November 3, independently establishes its gateway's availability rather than Tencent's general launch date."
+        }
+      ]
+    },
+    {
+      "id": "openai-pierre-agreement-2026-11-04",
+      "section": "news",
+      "title": "Daily update · Nov 4: OpenAI announces plans to acquire Pierre",
+      "summary": "OpenAI says it will acquire Pierre, the developer-tools company behind Code Storage. Closing remains subject to customary conditions and regulatory approvals; the companies remain independent until then.",
+      "whyItMatters": "The planned acquisition could bring source-control and code-review tools more closely into Codex. It is not a completed transaction or an announcement that new integrations are available today.",
+      "confidence": "high",
+      "confidenceReason": "The official announcement establishes the stated plan and closing conditions, not a guaranteed closing date or delivered product roadmap.",
+      "historicalContext": "Pierre’s Trees and Diffs libraries already support file browsing and code review in the Codex app. The announcement builds on that existing relationship.",
+      "sources": [
+        {
+          "title": "OpenAI to acquire Pierre Computer Company, Inc.",
+          "url": "https://openai.com/index/openai-to-acquire-pierre/",
+          "publisher": "OpenAI",
+          "publishedAt": "2026-11-04",
+          "type": "primary",
+          "authenticityReason": "Official dated company announcement, checked November 4; future intentions and conditions are explicitly distinguished from completed actions."
+        }
+      ]
+    },
     {
       "id": "claude-code-2317-2026-11-03",
       "section": "news",
@@ -233,7 +321,7 @@
       "summary": "Editorial forecast for November 2–8: at least one of Codex, Copilot, OpenCode or Claude Code will announce a new session, context-management, or subagent-control feature.",
       "whyItMatters": "Model capability alone is not the whole developer experience. Worktree continuity, context management and delegated-work controls are actionable dimensions to evaluate.",
       "confidence": "medium",
-      "confidenceReason": "The last complete week contains relevant releases from all four projects. That supports a modest directional forecast, but provides neither a calibrated probability nor a promised roadmap. Progress check, November 3: GitHub’s official Air integration announcement adds parallel-session tracking, which appears to meet the session-organization criterion. This is an interim assessment, not a changed forecast or an early formal resolution. The original November 8 resolution time still applies.",
+      "confidenceReason": "The last complete week contains relevant releases from all four projects. That supports a modest directional forecast, but provides neither a calibrated probability nor a promised roadmap. Progress check, November 3: GitHub’s official Air integration announcement adds parallel-session tracking, which appears to meet the session-organization criterion. This is an interim assessment, not a changed forecast or an early formal resolution. The original November 8 resolution time still applies. November 4 follow-up: Claude Code 2.1.318 adds individual mod-fork effort controls, providing further interim evidence for delegated-work controls. Formal resolution remains scheduled after November 8, as originally specified.",
       "historicalContext": "October brought Codex session filtering, Copilot cloud continuity, OpenCode context-buffer controls, and Claude Code subagent-effort settings. The forecast extrapolates this observed cluster without assuming every vendor follows it.",
       "sources": [
         {
@@ -275,6 +363,14 @@
           "publishedAt": "2026-11-03",
           "type": "primary",
           "authenticityReason": "Official GitHub changelog dated November 3. No publication time is displayed in the retrieved page."
+        },
+        {
+          "title": "Claude Code v2.1.318 release",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-04",
+          "type": "primary",
+          "authenticityReason": "Official anthropics repository release. GitHub displays 04 Nov 00:01; the extracted display does not explicitly state a timezone."
         }
       ],
       "horizon": "November 2–8, 2026; resolve after 23:59 UTC on November 8.",
@@ -287,8 +383,8 @@
       "id": "verified-october-milestones",
       "type": "timeline",
       "title": "Models and harnesses: the release record",
-      "description": "Five confirmed developments from October 26–November 1, followed by three explicitly dated November 2–3 daily supplements.",
-      "selectionCriteria": "The weekly edition’s five confirmed model and coding-harness stories plus three separately labeled post-publication updates. Not an exhaustive release history or a measure of shipping speed. Rumors and forecasts excluded.",
+      "description": "Five confirmed developments from October 26–November 1, followed by seven separately dated November 2–4 daily supplements.",
+      "selectionCriteria": "The weekly edition’s five confirmed model and coding-harness stories plus seven dated daily additions. Includes a planned acquisition, clearly labeled as an announcement rather than a completed transaction. This is not an exhaustive history or shipping-speed comparison; rumors and forecasts are excluded.",
       "dateSemantics": "Publication or announcement dates, not universal availability dates.",
       "points": [
         {
@@ -362,6 +458,42 @@
           "storyId": "copilot-jetbrains-air-2026-11-03",
           "sourceTitle": "GitHub Copilot is now available in JetBrains Air",
           "sourceUrl": "https://github.blog/changelog/2026-11-03-github-copilot-is-now-available-in-jetbrains-air/"
+        },
+        {
+          "date": "2026-11-04",
+          "label": "Daily update · Nov 4: VS Code previews mixed-harness sessions",
+          "publisher": "Microsoft / Visual Studio Code",
+          "category": "Post-publication coding-harness update",
+          "storyId": "vscode-1145-harnesses-2026-11-04",
+          "sourceTitle": "Visual Studio Code 1.145 release notes",
+          "sourceUrl": "https://code.visualstudio.com/updates/v1_145"
+        },
+        {
+          "date": "2026-11-04",
+          "label": "Daily update · Nov 4: Claude Code adds per-fork effort controls",
+          "publisher": "Anthropic",
+          "category": "Post-publication coding-harness update",
+          "storyId": "claude-code-2318-2026-11-04",
+          "sourceTitle": "Claude Code v2.1.318 release",
+          "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318"
+        },
+        {
+          "date": "2026-11-04",
+          "label": "Daily update · Nov 4: Tencent announces Hy4",
+          "publisher": "Tencent",
+          "category": "Post-publication model announcement",
+          "storyId": "tencent-hy4-2026-11-04",
+          "sourceTitle": "Tencent launches Hy4",
+          "sourceUrl": "https://en.prnasia.com/releases/apac/tencent-launches-hy4-joining-the-ranks-of-the-world-s-leading-open-source-ai-models-554689.shtml"
+        },
+        {
+          "date": "2026-11-04",
+          "label": "Daily update: OpenAI announces planned Pierre acquisition",
+          "publisher": "OpenAI",
+          "category": "Conditional acquisition announcement",
+          "storyId": "openai-pierre-agreement-2026-11-04",
+          "sourceTitle": "OpenAI to acquire Pierre Computer Company, Inc.",
+          "sourceUrl": "https://openai.com/index/openai-to-acquire-pierre/"
         }
       ]
     },
@@ -402,5 +534,5 @@
   "issueEnd": "2026-11-01",
   "forecastStart": "2026-11-02",
   "forecastEnd": "2026-11-08",
-  "updatedAt": "2026-11-03T19:57:00Z"
+  "updatedAt": "2026-11-04T19:58:00Z"
 }
