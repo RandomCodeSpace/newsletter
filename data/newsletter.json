@@ -2,8 +2,88 @@
   "title": "The AI Ledger",
   "issue": "Week of October 26–November 1, 2026",
   "publishedAt": "2026-11-02",
-  "introduction": "The last complete week in AI models and coding harnesses: October 26–November 1, 2026. Coverage focuses on Codex, Claude Code, Copilot and OpenCode, with historical context and a forecast for November 2–8. Older unconfirmed reporting is explicitly marked as a carry-over watch item. Confidence is qualitative, not a calibrated probability. Daily supplements through November 5, 20:02 UTC cover separately dated model, coding-harness and research developments. Images 2.6 is a November 4 announcement added in the November 5 review. These additions sit outside the reporting week; the frozen archive and original November 2–8 forecast are preserved.",
+  "introduction": "The last complete week in AI models and coding harnesses: October 26–November 1, 2026. Coverage focuses on Codex, Claude Code, Copilot and OpenCode, with historical context and a forecast for November 2–8. Older unconfirmed reporting is explicitly marked as a carry-over watch item. Confidence is qualitative, not a calibrated probability. Separately dated supplements through November 6 cover model, coding-harness and research developments. Today’s additions are Codex CLI 0.167, Cursor voice chat, and two November 5 releases: Cursor live apps and Hermes 0.23. These supplements sit outside the reporting week; the frozen archive and original November 2–8 forecast are preserved.",
   "items": [
+    {
+      "id": "codex-0167-2026-11-06",
+      "section": "news",
+      "title": "Daily update · Nov 6: Codex CLI 0.167 improves session navigation",
+      "summary": "OpenAI’s 0.167.0 release adds unread-result markers, backend switching that preserves drafts, and inline patch inspection while an approval prompt is open.",
+      "whyItMatters": "These controls help developers track parallel work and inspect changes at the approval boundary.",
+      "confidence": "high",
+      "confidenceReason": "The official changelog dates these features November 6. It also lists compaction and provider-switching fixes; release notes are not a safety certification.",
+      "historicalContext": "The October 27 release expanded session control; this update continues that workflow trend rather than announcing a new model.",
+      "sources": [
+        {
+          "title": "ChatGPT & Codex changelog: CLI 0.167.0",
+          "url": "https://learn.chatgpt.com/docs/changelog",
+          "publisher": "OpenAI",
+          "publishedAt": "2026-11-06",
+          "type": "primary",
+          "authenticityReason": "Dated release notes on the publisher’s official site or repository, checked November 6, 2026. This establishes the announced features, not independently tested reliability."
+        }
+      ]
+    },
+    {
+      "id": "cursor-voice-chat-2026-11-06",
+      "section": "news",
+      "title": "Daily update · Nov 6: Cursor adds two-way voice conversations",
+      "summary": "Cursor announced Grok Voice-powered calls across its Agents Window, IDE, web and iOS app. A voice agent can hand coding work to the chat agent while the conversation continues.",
+      "whyItMatters": "Developers can ask for progress and discuss changes without waiting for a coding run to finish.",
+      "confidence": "high",
+      "confidenceReason": "The dated first-party announcement supports feature availability. Voice interaction does not itself demonstrate better code quality or safer execution.",
+      "historicalContext": "This is distinct from earlier dictation, which only transcribed speech into the input box.",
+      "sources": [
+        {
+          "title": "Voice Chat with Agents",
+          "url": "https://cursor.com/changelog/voice-chat",
+          "publisher": "Cursor",
+          "publishedAt": "2026-11-06",
+          "type": "primary",
+          "authenticityReason": "Dated release notes on the publisher’s official site or repository, checked November 6, 2026. This establishes the announced features, not independently tested reliability."
+        }
+      ]
+    },
+    {
+      "id": "cursor-live-apps-2026-11-05",
+      "section": "news",
+      "title": "Added Nov 6 · Nov 5 announcement: Cursor deploys live apps",
+      "summary": "Cursor can scaffold an app, provision a Postgres database and authentication, and publish a hosted link. The feature is available on paid plans with cloud agents enabled.",
+      "whyItMatters": "The workflow extends coding into deployment. Publishing requires an explicit action and passing security checks; administrators can override blocked publishes.",
+      "confidence": "high",
+      "confidenceReason": "Official release notes establish the feature and gating. Automated checks should not be treated as proof that an app is secure; access and secrets still need review.",
+      "historicalContext": "The announcement moves beyond localhost workflows. GitHub and Cursor Origin repositories are supported; GitLab support is described as forthcoming.",
+      "sources": [
+        {
+          "title": "Build Live Apps in Cursor",
+          "url": "https://cursor.com/changelog/build-live-apps",
+          "publisher": "Cursor",
+          "publishedAt": "2026-11-05",
+          "type": "primary",
+          "authenticityReason": "Dated release notes on the publisher’s official site or repository, checked November 6, 2026. This establishes the announced features, not independently tested reliability."
+        }
+      ]
+    },
+    {
+      "id": "hermes-023-2026-11-05",
+      "section": "news",
+      "title": "Added Nov 6 · Nov 5 release: Hermes unifies sessions and adds tool budgets",
+      "summary": "Nous Research’s Hermes Agent 0.23 puts session ownership in one gateway, adds a browser workspace and conversation rewind, and introduces spend-limit approvals for paid MCP tools.",
+      "whyItMatters": "Cross-surface continuity and tool budgets are useful harness controls. Upgrade carefully: legacy browser tools are removed and MCP-server launch commands change.",
+      "confidence": "high",
+      "confidenceReason": "The official repository explicitly dates the release November 5. Its behavior and performance claims have not been independently tested for this newsletter.",
+      "historicalContext": "The release consolidates the 0.22 patch series. Browser workspace access is off by default and must be enabled explicitly.",
+      "sources": [
+        {
+          "title": "Hermes Agent v0.23.0 — The Hearth Release",
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.0",
+          "publisher": "Nous Research",
+          "publishedAt": "2026-11-05",
+          "type": "primary",
+          "authenticityReason": "Dated release notes on the publisher’s official site or repository, checked November 6, 2026. This establishes the announced features, not independently tested reliability."
+        }
+      ]
+    },
     {
       "id": "gpt-6-cyber-2026-11-05",
       "section": "news",
@@ -487,8 +567,8 @@
       "id": "verified-october-milestones",
       "type": "timeline",
       "title": "Models and harnesses: the evidence record",
-      "description": "Five confirmed developments from October 26–November 1, followed by eleven separately dated November 2–5 supplements, including one research assessment.",
-      "selectionCriteria": "The weekly edition’s five confirmed model and coding-harness stories plus eleven dated additions. Includes a conditional acquisition announcement and a research assessment, labeled separately from product releases. Not an exhaustive history or shipping-speed comparison; rumors and forecasts are excluded.",
+      "description": "Five confirmed developments from October 26–November 1, followed by fifteen separately dated November 2–6 supplements, including one research assessment.",
+      "selectionCriteria": "The weekly edition’s five confirmed model and coding-harness stories plus fifteen dated additions. Includes a conditional acquisition announcement and a research assessment, labeled separately from product releases. Not an exhaustive history or shipping-speed comparison; rumors and forecasts are excluded.",
       "dateSemantics": "Publication or announcement dates, not universal availability dates.",
       "points": [
         {
@@ -634,6 +714,42 @@
           "storyId": "metr-anthropic-rd-assessment-2026-11-05",
           "sourceTitle": "Independent Assessment of AI R&D Acceleration at Anthropic in October 2026",
           "sourceUrl": "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/"
+        },
+        {
+          "date": "2026-11-05",
+          "label": "Added Nov 6 · Nov 5 announcement: Cursor deploys live apps",
+          "publisher": "Cursor",
+          "category": "Post-publication coding-harness update",
+          "storyId": "cursor-live-apps-2026-11-05",
+          "sourceTitle": "Build Live Apps in Cursor",
+          "sourceUrl": "https://cursor.com/changelog/build-live-apps"
+        },
+        {
+          "date": "2026-11-05",
+          "label": "Added Nov 6 · Nov 5 release: Hermes unifies sessions and adds tool budgets",
+          "publisher": "Nous Research",
+          "category": "Post-publication coding-harness update",
+          "storyId": "hermes-023-2026-11-05",
+          "sourceTitle": "Hermes Agent v0.23.0 — The Hearth Release",
+          "sourceUrl": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.0"
+        },
+        {
+          "date": "2026-11-06",
+          "label": "Daily update · Nov 6: Codex CLI 0.167 improves session navigation",
+          "publisher": "OpenAI",
+          "category": "Post-publication coding-harness update",
+          "storyId": "codex-0167-2026-11-06",
+          "sourceTitle": "ChatGPT & Codex changelog: CLI 0.167.0",
+          "sourceUrl": "https://learn.chatgpt.com/docs/changelog"
+        },
+        {
+          "date": "2026-11-06",
+          "label": "Daily update · Nov 6: Cursor adds two-way voice conversations",
+          "publisher": "Cursor",
+          "category": "Post-publication coding-harness update",
+          "storyId": "cursor-voice-chat-2026-11-06",
+          "sourceTitle": "Voice Chat with Agents",
+          "sourceUrl": "https://cursor.com/changelog/voice-chat"
         }
       ]
     },
@@ -674,5 +790,5 @@
   "issueEnd": "2026-11-01",
   "forecastStart": "2026-11-02",
   "forecastEnd": "2026-11-08",
-  "updatedAt": "2026-11-05T20:02:00Z"
+  "updatedAt": "2026-11-06T19:59:28Z"
 }
