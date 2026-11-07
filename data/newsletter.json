@@ -2,8 +2,56 @@
   "title": "The AI Ledger",
   "issue": "Week of October 26–November 1, 2026",
   "publishedAt": "2026-11-02",
-  "introduction": "The last complete week in AI models and coding harnesses: October 26–November 1, 2026. Coverage focuses on Codex, Claude Code, Copilot and OpenCode, with historical context and a forecast for November 2–8. Older unconfirmed reporting is explicitly marked as a carry-over watch item. Confidence is qualitative, not a calibrated probability. Separately dated supplements through November 6 cover model, coding-harness and research developments. Today’s additions are Codex CLI 0.167, Cursor voice chat, and two November 5 releases: Cursor live apps and Hermes 0.23. These supplements sit outside the reporting week; the frozen archive and original November 2–8 forecast are preserved.",
+  "introduction": "The last complete week in AI models and coding harnesses: October 26–November 1, 2026. Coverage focuses on Codex, Claude Code, Copilot and OpenCode, with historical context and a forecast for November 2–8. Older unconfirmed reporting is explicitly marked as a carry-over watch item. Confidence is qualitative, not a calibrated probability. Separately dated supplements reviewed through November 7 cover model, coding-harness and research developments. Today’s catch-up additions cover Inkling 2 Small’s November 5 launch and Claude Code 2.1.319’s November 6 release, not new November 7 releases. The frozen weekly archive and original November 2–8 forecast are preserved.",
   "items": [
+    {
+      "id": "claude-code-2319-2026-11-06",
+      "section": "news",
+      "title": "Added Nov 7 · Nov 6 release: Claude Code backgrounds MCP tasks",
+      "summary": "Claude Code 2.1.319 adds background execution for MCP tasks and a permission setting that denies calls instead of waiting for a prompt. Finished subagents can also be reopened from the task list.",
+      "whyItMatters": "Unattended workflows gain clearer control over permission waits and long-running tools. The release also reports permission-bypass and sandbox-escape fixes, making upgrade review worthwhile.",
+      "confidence": "high",
+      "confidenceReason": "Anthropic’s official release notes establish the announced changes. The fixes are vendor-reported, not an independent security audit or a guarantee that all bypasses are closed.",
+      "historicalContext": "Published November 6 at 17:04 UTC, before the previous supplement’s timestamp but omitted from that edition. This is a catch-up addition, not a November 7 release. It follows 2.1.318’s per-fork effort controls.",
+      "sources": [
+        {
+          "title": "Claude Code v2.1.319 release",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-06",
+          "type": "primary",
+          "authenticityReason": "Official anthropics repository release, checked November 7. GitHub’s API gives published_at as 2026-11-06T17:04:01Z; features are attributed to the publisher."
+        }
+      ]
+    },
+    {
+      "id": "inkling-2-small-2026-11-05",
+      "section": "news",
+      "title": "Added Nov 7 · Nov 5 launch: Inkling 2 Small arrives on Tinker",
+      "summary": "Thinking Machines released Inkling 2 Small for fine-tuning and inference on Tinker. The text-and-image model has 594 billion total parameters with 17 billion active, and supports variable reasoning effort.",
+      "whyItMatters": "It adds a customizable option for coding agents and tool-using applications. Hosted access is available, but the launch announcement describes full Apache 2.0 weights as a future step after external safety testing and red-teaming.",
+      "confidence": "high",
+      "confidenceReason": "The official announcement and model card both date the release November 5. This verifies announced availability, not independent performance or completion of the promised weight release.",
+      "historicalContext": "The second Inkling generation follows earlier checkpoints tested in OpenCode as Fledge-Alpha. This November 7 catch-up preserves the original launch date rather than treating later coverage as a new release.",
+      "sources": [
+        {
+          "title": "Introducing Inkling 2 Small",
+          "url": "https://thinkingmachines.ai/news/inkling-2-small/",
+          "publisher": "Thinking Machines Lab",
+          "publishedAt": "2026-11-05",
+          "type": "primary",
+          "authenticityReason": "Official company announcement, explicitly dated November 5 and checked November 7. It distinguishes initial closed-weight Tinker access from intended later downloadable weights."
+        },
+        {
+          "title": "Inkling 2 Small Model Card",
+          "url": "https://thinkingmachines.ai/model-card/inkling-2-small/",
+          "publisher": "Thinking Machines Lab",
+          "publishedAt": "2026-11-05",
+          "type": "primary",
+          "authenticityReason": "Official model card lists November 5 as the release date and documents architecture, modalities and distribution. Evaluation results are the developer’s account."
+        }
+      ]
+    },
     {
       "id": "codex-0167-2026-11-06",
       "section": "news",
@@ -567,8 +615,8 @@
       "id": "verified-october-milestones",
       "type": "timeline",
       "title": "Models and harnesses: the evidence record",
-      "description": "Five confirmed developments from October 26–November 1, followed by fifteen separately dated November 2–6 supplements, including one research assessment.",
-      "selectionCriteria": "The weekly edition’s five confirmed model and coding-harness stories plus fifteen dated additions. Includes a conditional acquisition announcement and a research assessment, labeled separately from product releases. Not an exhaustive history or shipping-speed comparison; rumors and forecasts are excluded.",
+      "description": "Five confirmed developments from October 26–November 1, followed by seventeen separately dated November 2–6 supplements reviewed through November 7, including one research assessment.",
+      "selectionCriteria": "The weekly edition’s five confirmed model and coding-harness stories plus seventeen dated additions. Includes a conditional acquisition announcement and a research assessment, labeled separately from product releases. Not an exhaustive history or shipping-speed comparison; rumors and forecasts are excluded.",
       "dateSemantics": "Publication or announcement dates, not universal availability dates.",
       "points": [
         {
@@ -734,6 +782,15 @@
           "sourceUrl": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.0"
         },
         {
+          "date": "2026-11-05",
+          "label": "Added Nov 7 · Nov 5 launch: Inkling 2 Small arrives on Tinker",
+          "publisher": "Thinking Machines Lab",
+          "category": "Hosted model release; added November 7",
+          "storyId": "inkling-2-small-2026-11-05",
+          "sourceTitle": "Introducing Inkling 2 Small",
+          "sourceUrl": "https://thinkingmachines.ai/news/inkling-2-small/"
+        },
+        {
           "date": "2026-11-06",
           "label": "Daily update · Nov 6: Codex CLI 0.167 improves session navigation",
           "publisher": "OpenAI",
@@ -750,6 +807,15 @@
           "storyId": "cursor-voice-chat-2026-11-06",
           "sourceTitle": "Voice Chat with Agents",
           "sourceUrl": "https://cursor.com/changelog/voice-chat"
+        },
+        {
+          "date": "2026-11-06",
+          "label": "Added Nov 7 · Nov 6 release: Claude Code backgrounds MCP tasks",
+          "publisher": "Anthropic",
+          "category": "Coding-harness release; added November 7",
+          "storyId": "claude-code-2319-2026-11-06",
+          "sourceTitle": "Claude Code v2.1.319 release",
+          "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319"
         }
       ]
     },
@@ -790,5 +856,5 @@
   "issueEnd": "2026-11-01",
   "forecastStart": "2026-11-02",
   "forecastEnd": "2026-11-08",
-  "updatedAt": "2026-11-06T19:59:28Z"
+  "updatedAt": "2026-11-07T19:57:00Z"
 }
