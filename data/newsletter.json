@@ -2,8 +2,48 @@
   "title": "The AI Ledger",
   "issue": "Week of October 26–November 1, 2026",
   "publishedAt": "2026-11-02",
-  "introduction": "The last complete week in AI models and coding harnesses: October 26–November 1, 2026. Coverage focuses on Codex, Claude Code, Copilot and OpenCode, with historical context and a forecast for November 2–8. Older unconfirmed reporting is explicitly marked as a carry-over watch item. Confidence is qualitative, not a calibrated probability. Separately dated supplements reviewed through November 7 cover model, coding-harness and research developments. Today’s catch-up additions cover Inkling 2 Small’s November 5 launch and Claude Code 2.1.319’s November 6 release, not new November 7 releases. The frozen weekly archive and original November 2–8 forecast are preserved.",
+  "introduction": "The October 26–November 1 weekly edition, with separately dated supplements reviewed through November 8. Today's catch-up covers OpenCode 2.2.6 and Copilot CLI 1.0.107, both released November 6. The original edition and all previously published supplements are preserved in the archive. The forecast is now for November 9–15; the original November 2–8 forecast remains in the November 7 snapshot. Source dates describe announcements, not crawl dates. Confidence is qualitative, not a probability.",
   "items": [
+    {
+      "id": "opencode-226-2026-11-06",
+      "section": "news",
+      "title": "Added Nov 8 · Nov 6 release: OpenCode improves scripted sessions",
+      "summary": "OpenCode 2.2.6 adds opt-in MCP connection pooling across projects and worktree creation for scripted runs. Its run command now waits for background jobs before exiting.",
+      "whyItMatters": "CI jobs need explicit timeouts: a server or watcher that never exits can keep the run open indefinitely. Pooling may reduce duplicate MCP processes; worktrees separate concurrent edits.",
+      "confidence": "high",
+      "confidenceReason": "The official release documents these features and their limits. No performance measurements or independent security audit were performed for this issue.",
+      "historicalContext": "Published November 6 at 23:37 UTC. This is a catch-up, not a November 8 release; it extends the worktree and compaction controls covered in 2.2.5.",
+      "sources": [
+        {
+          "title": "OpenCode v2.2.6 release",
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.6",
+          "publisher": "OpenCode",
+          "publishedAt": "2026-11-06",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository release; GitHub API publication timestamp verified November 8. Release notes establish announced behavior, not independent reliability testing."
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-1107-2026-11-06",
+      "section": "news",
+      "title": "Added Nov 8 · Nov 6 release: Copilot CLI adds session controls",
+      "summary": "Copilot CLI 1.0.107 adds opt-in local session-management tools, a command to open the current session in VS Code, and a setting to sandbox extension processes.",
+      "whyItMatters": "The notes also report that Autopilot no longer implements recommendations after review-only requests. Teams should test that boundary rather than assume the fix eliminates all unintended edits.",
+      "confidence": "high",
+      "confidenceReason": "GitHub's official release supplies the changes and date; the behavior fix is publisher-reported and has not been independently tested here.",
+      "historicalContext": "Published November 6 at 20:37 UTC. This builds on Copilot's cross-surface workflow and is separate from the previously covered JetBrains Air availability.",
+      "sources": [
+        {
+          "title": "GitHub v1.0.107 release",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.107",
+          "publisher": "GitHub",
+          "publishedAt": "2026-11-06",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository release; GitHub API publication timestamp verified November 8. Release notes establish announced behavior, not independent reliability testing."
+        }
+      ]
+    },
     {
       "id": "claude-code-2319-2026-11-06",
       "section": "news",
@@ -547,67 +587,35 @@
       "counterarguments": "An unnamed source may overstate results; internal models can change or never ship. No release deadline is known."
     },
     {
-      "id": "harness-controls-outlook-2026-11-02",
+      "id": "harness-controls-outlook-2026-11-09",
       "section": "predictions",
-      "title": "Next week: another control upgrade in a coding harness",
-      "summary": "Editorial forecast for November 2–8: at least one of Codex, Copilot, OpenCode or Claude Code will announce a new session, context-management, or subagent-control feature.",
-      "whyItMatters": "Model capability alone is not the whole developer experience. Worktree continuity, context management and delegated-work controls are actionable dimensions to evaluate.",
+      "title": "November 9–15: another stable harness control update",
+      "summary": "We expect at least one stable Codex, Claude Code, Copilot CLI or OpenCode release to add or fix a documented permission, background-task or session-control behavior.",
+      "whyItMatters": "These controls affect unattended reliability even without a new frontier model.",
       "confidence": "medium",
-      "confidenceReason": "The last complete week contains relevant releases from all four projects. That supports a modest directional forecast, but provides neither a calibrated probability nor a promised roadmap. Progress check, November 3: GitHub’s official Air integration announcement adds parallel-session tracking, which appears to meet the session-organization criterion. This is an interim assessment, not a changed forecast or an early formal resolution. The original November 8 resolution time still applies. November 4 follow-up: Claude Code 2.1.318 adds individual mod-fork effort controls, providing further interim evidence for delegated-work controls. Formal resolution remains scheduled after November 8, as originally specified.",
-      "historicalContext": "October brought Codex session filtering, Copilot cloud continuity, OpenCode context-buffer controls, and Claude Code subagent-effort settings. The forecast extrapolates this observed cluster without assuming every vendor follows it.",
+      "confidenceReason": "Several independent harnesses shipped such changes this week. This is an editorial extrapolation from recent releases, not a vendor promise or a numerical probability.",
+      "historicalContext": "The November 2–8 control-upgrade forecast was met by the November 3 Claude Code hook controls and later releases. That original forecast remains unchanged in the archived November 7 snapshot.",
       "sources": [
         {
-          "title": "ChatGPT & Codex changelog: CLI 0.165.0",
-          "url": "https://learn.chatgpt.com/docs/changelog",
-          "publisher": "OpenAI",
-          "publishedAt": "2026-10-27",
+          "title": "OpenCode v2.2.6 release",
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.6",
+          "publisher": "OpenCode",
+          "publishedAt": "2026-11-06",
           "type": "primary",
-          "authenticityReason": "Original dated announcement or release notes on the publisher’s official site or repository, checked November 2, 2026. Release notes establish stated changes, not independently measured performance."
+          "authenticityReason": "Official publisher repository release; GitHub API publication timestamp verified November 8. Release notes establish announced behavior, not independent reliability testing."
         },
         {
-          "title": "Work from anywhere with a new, connected Copilot cloud experience",
-          "url": "https://github.blog/changelog/2026-10-28-work-from-anywhere-with-a-new-connected-copilot-cloud-experience/",
+          "title": "GitHub v1.0.107 release",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.107",
           "publisher": "GitHub",
-          "publishedAt": "2026-10-28",
+          "publishedAt": "2026-11-06",
           "type": "primary",
-          "authenticityReason": "Original dated announcement or release notes on the publisher’s official site or repository, checked November 2, 2026. Release notes establish stated changes, not independently measured performance."
-        },
-        {
-          "title": "OpenCode v2.2.5 release",
-          "url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.5",
-          "publisher": "Anomaly / OpenCode",
-          "publishedAt": "2026-10-30",
-          "type": "primary",
-          "authenticityReason": "Original dated announcement or release notes on the publisher’s official site or repository, checked November 2, 2026. Release notes establish stated changes, not independently measured performance."
-        },
-        {
-          "title": "Claude Code v2.1.316 release",
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
-          "publisher": "Anthropic",
-          "publishedAt": "2026-10-31",
-          "type": "primary",
-          "authenticityReason": "Original dated announcement or release notes on the publisher’s official site or repository, checked November 2, 2026. Release notes establish stated changes, not independently measured performance."
-        },
-        {
-          "title": "GitHub Copilot is now available in JetBrains Air",
-          "url": "https://github.blog/changelog/2026-11-03-github-copilot-is-now-available-in-jetbrains-air/",
-          "publisher": "GitHub",
-          "publishedAt": "2026-11-03",
-          "type": "primary",
-          "authenticityReason": "Official GitHub changelog dated November 3. No publication time is displayed in the retrieved page."
-        },
-        {
-          "title": "Claude Code v2.1.318 release",
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
-          "publisher": "Anthropic",
-          "publishedAt": "2026-11-04",
-          "type": "primary",
-          "authenticityReason": "Official anthropics repository release. GitHub displays 04 Nov 00:01; the extracted display does not explicitly state a timezone."
+          "authenticityReason": "Official publisher repository release; GitHub API publication timestamp verified November 8. Release notes establish announced behavior, not independent reliability testing."
         }
       ],
-      "horizon": "November 2–8, 2026; resolve after 23:59 UTC on November 8.",
-      "resolutionCriteria": "Resolve true if official release notes dated November 2–8, 2026 announce a new session-resumption/organization, context-management, or subagent-control feature in at least one of Codex, Copilot, OpenCode or Claude Code. Bug fixes alone, prerelease source commits without a release announcement, and model-only changes do not qualify. Otherwise resolve false after the window closes.",
-      "counterarguments": "Teams may prioritize model integrations or stability instead; the recent cluster may reflect event timing rather than a sustained product trend."
+      "horizon": "November 9–15, 2026 (UTC)",
+      "resolutionCriteria": "Pass if an official stable release dated November 9–15 explicitly adds or fixes permission, background-task or session-control behavior in one of the four named harnesses. Alpha tags, documentation-only edits and model launches alone do not count. Otherwise fail at 23:59 UTC November 15.",
+      "counterarguments": "Release cadence may slow after this week's updates; work could remain in prerelease branches or focus on unrelated UI changes."
     }
   ],
   "charts": [
@@ -615,8 +623,8 @@
       "id": "verified-october-milestones",
       "type": "timeline",
       "title": "Models and harnesses: the evidence record",
-      "description": "Five confirmed developments from October 26–November 1, followed by seventeen separately dated November 2–6 supplements reviewed through November 7, including one research assessment.",
-      "selectionCriteria": "The weekly edition’s five confirmed model and coding-harness stories plus seventeen dated additions. Includes a conditional acquisition announcement and a research assessment, labeled separately from product releases. Not an exhaustive history or shipping-speed comparison; rumors and forecasts are excluded.",
+      "description": "Five October 26–November 1 developments followed by nineteen dated November 2–6 supplements reviewed through November 8.",
+      "selectionCriteria": "The five original confirmed stories and nineteen dated additions, including acquisition and research items labeled separately. Not exhaustive; no rumors or forecasts.",
       "dateSemantics": "Publication or announcement dates, not universal availability dates.",
       "points": [
         {
@@ -816,6 +824,24 @@
           "storyId": "claude-code-2319-2026-11-06",
           "sourceTitle": "Claude Code v2.1.319 release",
           "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319"
+        },
+        {
+          "date": "2026-11-06",
+          "label": "Added Nov 8 · Nov 6 release: OpenCode improves scripted sessions",
+          "publisher": "OpenCode",
+          "category": "Coding-harness release; added November 8",
+          "storyId": "opencode-226-2026-11-06",
+          "sourceTitle": "OpenCode v2.2.6 release",
+          "sourceUrl": "https://github.com/anomalyco/opencode/releases/tag/v2.2.6"
+        },
+        {
+          "date": "2026-11-06",
+          "label": "Added Nov 8 · Nov 6 release: Copilot CLI adds session controls",
+          "publisher": "GitHub",
+          "category": "Coding-harness release; added November 8",
+          "storyId": "copilot-cli-1107-2026-11-06",
+          "sourceTitle": "GitHub v1.0.107 release",
+          "sourceUrl": "https://github.com/github/copilot-cli/releases/tag/v1.0.107"
         }
       ]
     },
@@ -854,7 +880,7 @@
   ],
   "issueStart": "2026-10-26",
   "issueEnd": "2026-11-01",
-  "forecastStart": "2026-11-02",
-  "forecastEnd": "2026-11-08",
-  "updatedAt": "2026-11-07T19:57:00Z"
+  "forecastStart": "2026-11-09",
+  "forecastEnd": "2026-11-15",
+  "updatedAt": "2026-11-08T20:06:00Z"
 }
