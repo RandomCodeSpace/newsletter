@@ -2,8 +2,48 @@
   "title": "The AI Ledger",
   "issue": "Week of October 26–November 1, 2026",
   "publishedAt": "2026-11-02",
-  "introduction": "The October 26–November 1 weekly edition, with separately dated supplements reviewed through November 8. Today's catch-up covers OpenCode 2.2.6 and Copilot CLI 1.0.107, both released November 6. The original edition and all previously published supplements are preserved in the archive. The forecast is now for November 9–15; the original November 2–8 forecast remains in the November 7 snapshot. Source dates describe announcements, not crawl dates. Confidence is qualitative, not a probability.",
+  "introduction": "The October 26–November 1 edition, with separately dated supplements reviewed through November 9. Today: the official Fable 5.2/Mythos 5.2 launch and Claude Code 2.1.321. The November 8 forecast is resolved against its original criterion, with a new November 10–15 follow-up. Earlier editions and supplements remain archived. Source dates are announcement dates, not crawl dates; confidence is qualitative, not a probability.",
   "items": [
+    {
+      "id": "claude-fable-mythos-52-2026-11-09",
+      "section": "news",
+      "title": "Daily update · Nov 9: Fable 5.2 launches; Mythos access stays gated",
+      "summary": "Anthropic released Fable 5.2 across its platforms. Mythos 5.2 shares the underlying model but is restricted to verified cyber and life-sciences organizations. Fable has stronger safeguards.",
+      "whyItMatters": "Standard input/output pricing is $8/$40 per million tokens; optional fast mode costs $16/$80. Compare total task costs, not token rates alone.",
+      "confidence": "high",
+      "confidenceReason": "The announcement verifies availability and pricing. Claimed capability and speed gains are vendor results, not independent replication.",
+      "historicalContext": "This November 9 launch follows 5.1. It is separate from earlier user-intent reporting; similar testimonials do not establish that report’s identity.",
+      "sources": [
+        {
+          "title": "Claude Fable 5.2 and Mythos 5.2",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-09",
+          "type": "primary",
+          "authenticityReason": "Official announcement explicitly dated November 9; verified through indexed first-party content. Performance claims are vendor-reported."
+        }
+      ]
+    },
+    {
+      "id": "claude-code-2321-2026-11-09",
+      "section": "news",
+      "title": "Daily update · Nov 9: Claude Code adds Fable 5.2 and security fixes",
+      "summary": "Claude Code 2.1.321 makes Fable 5.2 the default Fable model. Release notes report fixes for MCP OAuth secrets following cross-host redirects and several Bash permission and sandbox checks.",
+      "whyItMatters": "Review this upgrade for agent environments using MCP credentials or shell tools. Remote Control also gains a settings-file option that stops new sessions if the file changes until restart.",
+      "confidence": "high",
+      "confidenceReason": "The stable release is official. Security fixes remain publisher claims, not proof of complete protection.",
+      "historicalContext": "Released November 9 at 19:22 UTC, following 2.1.319 on November 6. This satisfies the documented-control-update forecast published November 8.",
+      "sources": [
+        {
+          "title": "Claude Code v2.1.321 release",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-09",
+          "type": "primary",
+          "authenticityReason": "Official repository release dated November 9, 19:22 UTC; marked latest rather than prerelease. Fixes are publisher-reported, not independently audited."
+        }
+      ]
+    },
     {
       "id": "opencode-226-2026-11-06",
       "section": "news",
@@ -563,7 +603,7 @@
       "summary": "The Information reports that Anthropic is preparing a model better at interpreting users' intentions.",
       "whyItMatters": "Older unconfirmed reporting, carried over for monitoring—not a new development from this issue’s reporting week. No independently verified name, launch date or benchmark is established here.",
       "confidence": "low",
-      "confidenceReason": "The original headline is public but the article is paywalled. A dated secondary account attributes the report to one unnamed user; repetition does not create independent corroboration.",
+      "confidenceReason": "The original headline is public but the article is paywalled. A dated secondary account attributes the report to one unnamed user; repetition does not create independent corroboration. November 9 review: the Fable/Mythos launch does not explicitly identify itself as the subject of this report. The rumor remains unconfirmed.",
       "historicalContext": "Recent announced model releases show ongoing iteration, but launch cadence cannot validate this particular rumor or predict its timing.",
       "sources": [
         {
@@ -589,12 +629,51 @@
     {
       "id": "harness-controls-outlook-2026-11-09",
       "section": "predictions",
-      "title": "November 9–15: another stable harness control update",
+      "title": "Resolved Nov 9 · November 9–15 harness-control forecast: met",
       "summary": "We expect at least one stable Codex, Claude Code, Copilot CLI or OpenCode release to add or fix a documented permission, background-task or session-control behavior.",
       "whyItMatters": "These controls affect unattended reliability even without a new frontier model.",
       "confidence": "medium",
-      "confidenceReason": "Several independent harnesses shipped such changes this week. This is an editorial extrapolation from recent releases, not a vendor promise or a numerical probability.",
+      "confidenceReason": "Several independent harnesses shipped such changes this week. This is an editorial extrapolation from recent releases, not a vendor promise or a numerical probability. Resolution November 9: Claude Code 2.1.321 documents permission and session-control fixes in a stable release, meeting the original criterion. The original forecast is preserved in the November 8 archive.",
       "historicalContext": "The November 2–8 control-upgrade forecast was met by the November 3 Claude Code hook controls and later releases. That original forecast remains unchanged in the archived November 7 snapshot.",
+      "sources": [
+        {
+          "title": "OpenCode v2.2.6 release",
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.6",
+          "publisher": "OpenCode",
+          "publishedAt": "2026-11-06",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository release; GitHub API publication timestamp verified November 8. Release notes establish announced behavior, not independent reliability testing."
+        },
+        {
+          "title": "GitHub v1.0.107 release",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.107",
+          "publisher": "GitHub",
+          "publishedAt": "2026-11-06",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository release; GitHub API publication timestamp verified November 8. Release notes establish announced behavior, not independent reliability testing."
+        },
+        {
+          "title": "Claude Code v2.1.321 release",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-09",
+          "type": "primary",
+          "authenticityReason": "Official repository release dated November 9, 19:22 UTC; marked latest rather than prerelease. Fixes are publisher-reported, not independently audited."
+        }
+      ],
+      "horizon": "November 9–15, 2026 (UTC)",
+      "resolutionCriteria": "Pass if an official stable release dated November 9–15 explicitly adds or fixes permission, background-task or session-control behavior in one of the four named harnesses. Alpha tags, documentation-only edits and model launches alone do not count. Otherwise fail at 23:59 UTC November 15.",
+      "counterarguments": "Release cadence may slow after this week's updates; work could remain in prerelease branches or focus on unrelated UI changes."
+    },
+    {
+      "id": "another-harness-update-2026-11-10",
+      "section": "predictions",
+      "title": "November 10–15: a second harness ships stable controls",
+      "summary": "We expect Codex, Copilot CLI or OpenCode to publish a stable release adding or fixing permission, background-task or session-control behavior.",
+      "whyItMatters": "A release from another harness would test whether the controls trend extends beyond the November 9 Claude Code update.",
+      "confidence": "medium",
+      "confidenceReason": "Recent stable releases show recurring work on these controls. This is an editorial forecast, not a publisher commitment.",
+      "historicalContext": "The earlier November 9–15 forecast was met on its first day. This follow-up excludes Claude Code and begins November 10 to avoid counting already published releases.",
       "sources": [
         {
           "title": "OpenCode v2.2.6 release",
@@ -613,9 +692,9 @@
           "authenticityReason": "Official publisher repository release; GitHub API publication timestamp verified November 8. Release notes establish announced behavior, not independent reliability testing."
         }
       ],
-      "horizon": "November 9–15, 2026 (UTC)",
-      "resolutionCriteria": "Pass if an official stable release dated November 9–15 explicitly adds or fixes permission, background-task or session-control behavior in one of the four named harnesses. Alpha tags, documentation-only edits and model launches alone do not count. Otherwise fail at 23:59 UTC November 15.",
-      "counterarguments": "Release cadence may slow after this week's updates; work could remain in prerelease branches or focus on unrelated UI changes."
+      "horizon": "November 10–15, 2026 (UTC)",
+      "resolutionCriteria": "Pass if an official stable Codex, Copilot CLI or OpenCode release dated November 10–15 explicitly adds or fixes permission, background-task or session-control behavior. Prereleases, documentation-only changes and model support alone do not count. Otherwise fail at 23:59 UTC November 15.",
+      "counterarguments": "The other harnesses may stay in prerelease or ship only unrelated features during this short window."
     }
   ],
   "charts": [
@@ -623,8 +702,8 @@
       "id": "verified-october-milestones",
       "type": "timeline",
       "title": "Models and harnesses: the evidence record",
-      "description": "Five October 26–November 1 developments followed by nineteen dated November 2–6 supplements reviewed through November 8.",
-      "selectionCriteria": "The five original confirmed stories and nineteen dated additions, including acquisition and research items labeled separately. Not exhaustive; no rumors or forecasts.",
+      "description": "Five original October developments and twenty-one dated supplements through November 9.",
+      "selectionCriteria": "The five original confirmed stories and twenty-one dated additions, with research and acquisition items labeled separately. Not exhaustive; excludes rumors and forecasts.",
       "dateSemantics": "Publication or announcement dates, not universal availability dates.",
       "points": [
         {
@@ -842,6 +921,24 @@
           "storyId": "copilot-cli-1107-2026-11-06",
           "sourceTitle": "GitHub v1.0.107 release",
           "sourceUrl": "https://github.com/github/copilot-cli/releases/tag/v1.0.107"
+        },
+        {
+          "date": "2026-11-09",
+          "label": "Daily update · Nov 9: Fable 5.2 launches; Mythos access stays gated",
+          "publisher": "Anthropic",
+          "category": "Model release",
+          "storyId": "claude-fable-mythos-52-2026-11-09",
+          "sourceTitle": "Claude Fable 5.2 and Mythos 5.2",
+          "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+        },
+        {
+          "date": "2026-11-09",
+          "label": "Daily update · Nov 9: Claude Code adds Fable 5.2 and security fixes",
+          "publisher": "Anthropic",
+          "category": "Coding-harness release",
+          "storyId": "claude-code-2321-2026-11-09",
+          "sourceTitle": "Claude Code v2.1.321 release",
+          "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321"
         }
       ]
     },
@@ -876,11 +973,47 @@
       ],
       "caveat": "These categories have different billing conditions. Total task cost depends on actual input, cache eligibility and generated output; tools or other charges may add cost. API usage is separate from ChatGPT subscriptions. Prices are a dated snapshot, not a forecast.",
       "storyId": "terra-2026-10-26"
+    },
+    {
+      "id": "fable-mythos-52-prices",
+      "type": "bar",
+      "title": "Fable / Mythos 5.2: standard versus fast pricing",
+      "description": "Launch-day token prices, not task-cost or speed measurements.",
+      "selectionCriteria": "Input and output rates for two serving modes.",
+      "unit": "USD per million tokens",
+      "domain": [
+        0,
+        80
+      ],
+      "sourceTitle": "Claude Fable 5.2 and Mythos 5.2",
+      "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "publisher": "Anthropic",
+      "publishedAt": "2026-11-09",
+      "storyId": "claude-fable-mythos-52-2026-11-09",
+      "points": [
+        {
+          "label": "Standard input",
+          "value": 8
+        },
+        {
+          "label": "Standard output",
+          "value": 40
+        },
+        {
+          "label": "Fast input",
+          "value": 16
+        },
+        {
+          "label": "Fast output",
+          "value": 80
+        }
+      ],
+      "caveat": "Access and supported platforms differ. Caching, tools and workload change actual bills; these are dated rates, not a cross-model ranking."
     }
   ],
   "issueStart": "2026-10-26",
   "issueEnd": "2026-11-01",
   "forecastStart": "2026-11-09",
   "forecastEnd": "2026-11-15",
-  "updatedAt": "2026-11-08T20:06:00Z"
+  "updatedAt": "2026-11-09T20:06:00Z"
 }
