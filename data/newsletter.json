@@ -1,18 +1,175 @@
 {
   "title": "The AI Ledger",
-  "issue": "Week of October 26–November 1, 2026",
-  "publishedAt": "2026-11-02",
-  "introduction": "The October 26–November 1 edition, with separately dated supplements reviewed through November 9. Today: the official Fable 5.2/Mythos 5.2 launch and Claude Code 2.1.321. The November 8 forecast is resolved against its original criterion, with a new November 10–15 follow-up. Earlier editions and supplements remain archived. Source dates are announcement dates, not crawl dates; confidence is qualitative, not a probability.",
+  "issue": "Week of November 9–15, 2026 · through November 10",
+  "publishedAt": "2026-11-10",
+  "updatedAt": "2026-11-10T20:08:00Z",
+  "issueStart": "2026-11-09",
+  "issueEnd": "2026-11-15",
+  "forecastStart": "2026-11-16",
+  "forecastEnd": "2026-11-22",
+  "introduction": "An in-progress weekly edition, reviewed through November 10. Carbon reaches general availability, Muse Ember adds a lower-cost execution option, and harness releases tighten networking, billing and plugin updates. Original release dates and access limits are explicit. The earlier second-harness forecast is resolved; new forecasts target November 16–22. Prior editions and all supplements remain in the archive. No new rumor met the evidence threshold. Confidence is qualitative, not a probability.",
   "items": [
+    {
+      "id": "gemini-carbon-ga-2026-11-10",
+      "section": "news",
+      "title": "Nov 10: Gemini 4 Carbon reaches general availability",
+      "summary": "Google opened Carbon to paid API developers and enterprises, with a rollout to AI Ultra subscribers. Antigravity’s coordinated-agent /swarm feature is in preview; Carbon for cyber retains a separate Fairwind application.",
+      "whyItMatters": "Standard API rates are $2 input/$10 output per million tokens through November 30, rising to $4/$20 on December 1. Output includes thinking; there is no free tier. Budget for the scheduled increase and measured task usage.",
+      "confidence": "high",
+      "confidenceReason": "The dated API changelog confirms general availability. Performance comparisons and multi-agent demos remain Google’s claims, not tests reproduced here.",
+      "historicalContext": "Carbon was announced October 28 with limited cyber-defender access. November 10 is a broader availability milestone, not the model’s first announcement.",
+      "sources": [
+        {
+          "title": "Gemini API release notes: November 10, 2026",
+          "url": "https://aistudio.google.com/docs/changelog",
+          "publisher": "Google",
+          "publishedAt": "2026-11-10",
+          "type": "primary",
+          "authenticityReason": "Directly retrieved official API documentation explicitly dates the general-availability entry November 10."
+        },
+        {
+          "title": "Gemini 4 Carbon is now available",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+          "publisher": "Google",
+          "publishedAt": "2026-11-10",
+          "type": "primary",
+          "authenticityReason": "Official Google post explicitly dated November 10 in indexed first-party text; direct retrieval failed. API availability is also corroborated by Google’s dated API changelog. Both are from the same publisher, not an independent evaluator."
+        },
+        {
+          "title": "Gemini Developer API pricing: Gemini 4 Carbon",
+          "url": "https://aistudio.google.com/docs/pricing#gemini-4-carbon",
+          "publisher": "Google",
+          "publishedAt": "2026-11-10",
+          "type": "primary",
+          "authenticityReason": "Official pricing documentation checked November 10. The date records the GA pricing snapshot, corroborated by the dated launch post; this rolling page has no separate publication date."
+        },
+        {
+          "title": "Introducing Gemini 4 Carbon",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+          "publisher": "Google",
+          "publishedAt": "2026-10-28",
+          "type": "primary",
+          "authenticityReason": "Original official announcement explicitly dated October 28 in indexed first-party text; initial Fairwind access was limited."
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-1109-2026-11-10",
+      "section": "news",
+      "title": "Nov 10: Copilot CLI adds network-range controls and clearer failures",
+      "summary": "Copilot CLI 1.0.109 adds IPv4/IPv6 CIDR ranges to sandbox host allow/deny rules. Failed prompt-mode JSON runs now emit a final result with an exit status; ACP hooks requesting approval are routed to the client.",
+      "whyItMatters": "Network-scoped deployments gain more precise rules, and scripts get clearer failure records. The notes also add Fable 5.2 to the model picker. That is integration support, not a new model launch.",
+      "confidence": "high",
+      "confidenceReason": "The official stable release documents these changes. Permission and reliability fixes are publisher-reported and need testing against each team’s configuration.",
+      "historicalContext": "Published November 10 at 17:02 UTC, after the previously covered 1.0.107. Its permission changes satisfy the November 10–15 follow-up forecast published on November 9.",
+      "sources": [
+        {
+          "title": "Copilot CLI v1.0.109 release",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.109",
+          "publisher": "GitHub",
+          "publishedAt": "2026-11-10",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository; GitHub API published_at is 2026-11-10T17:02:15Z, with draft and prerelease both false. Release notes are publisher claims, not independent testing."
+        }
+      ]
+    },
+    {
+      "id": "opencode-227-2026-11-10",
+      "section": "news",
+      "title": "Nov 10: OpenCode adds Copilot Auto routing and billing fixes",
+      "summary": "OpenCode 2.2.7 lets eligible Copilot accounts select Auto for per-session model routing, with a default-model fallback if routing fails. Session costs now use Copilot’s charged amounts, and cache-warming costs enter totals.",
+      "whyItMatters": "Better accounting can make agent budgets easier to audit. MCP refresh fixes target concurrent token rotations and transient failures. SDK consumers should review breaking changes to image responses and plugin-loading waits before upgrading.",
+      "confidence": "high",
+      "confidenceReason": "The official stable release verifies announced behavior. It gives no Auto discount percentage or equal-quality savings measurement; no such performance claim is inferred here.",
+      "historicalContext": "Published November 10 at 10:37 UTC, following November 6’s 2.2.6 scripted-session and MCP-pooling update.",
+      "sources": [
+        {
+          "title": "OpenCode v2.2.7 release",
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.7",
+          "publisher": "OpenCode",
+          "publishedAt": "2026-11-10",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository; GitHub API published_at is 2026-11-10T10:37:15Z, with draft and prerelease both false. Release notes are publisher claims, not independent testing."
+        }
+      ]
+    },
+    {
+      "id": "hermes-0231-2026-11-10",
+      "section": "news",
+      "title": "Nov 10 UTC: Hermes fixes silently stale plugin catalogs",
+      "summary": "Hermes Agent 0.23.1 raises its plugin-catalog size cap from 2 MiB to 16 MiB. The live catalog had outgrown the old limit, causing clients to fall back silently to bundled entries and miss newer plugins or removal entries.",
+      "whyItMatters": "The notes say older clients remain affected until updated. Update paths differ: this patch does not change the separately installed .exe/.dmg Desktop app. Do not assume a CLI or container update updates every surface.",
+      "confidence": "high",
+      "confidenceReason": "Official stable release notes describe the failure and fix; the behavior has not been independently reproduced here.",
+      "historicalContext": "The notes label the release November 9, while GitHub published it November 10 at 01:42 UTC. This edition uses the latter and preserves both dates. Curated notes for its broader bundled changes are deferred to 0.24.0.",
+      "sources": [
+        {
+          "title": "Hermes Agent v0.23.1 release",
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.1",
+          "publisher": "Nous Research",
+          "publishedAt": "2026-11-10",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository; GitHub API published_at is 2026-11-10T01:42:15Z, with draft and prerelease both false. Release notes are publisher claims, not independent testing. The prose release date is November 9; the timeline uses the November 10 UTC publication timestamp."
+        }
+      ]
+    },
+    {
+      "id": "claude-code-2322-2026-11-10",
+      "section": "news",
+      "title": "Nov 10: Claude Code extends fast mode to Vertex",
+      "summary": "Claude Code 2.1.322 adds fast mode through Vertex in global, US and EU regions, with standard-speed fallback when Vertex declines fast mode.",
+      "whyItMatters": "This expands a serving option for teams using Google’s cloud. The short release note supplies no speed measurement, pricing or guarantee that every request runs fast.",
+      "confidence": "high",
+      "confidenceReason": "The official stable release directly states the integration and fallback behavior.",
+      "historicalContext": "Published November 10 at 02:29 UTC, after 2.1.321 added Fable 5.2 support on November 9. This is a harness update, not another model release.",
+      "sources": [
+        {
+          "title": "Claude Code v2.1.322 release",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.322",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-10",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository; GitHub API published_at is 2026-11-10T02:29:43Z, with draft and prerelease both false. Release notes are publisher claims, not independent testing."
+        }
+      ]
+    },
+    {
+      "id": "muse-ember-2026-11-09",
+      "section": "news",
+      "title": "Added Nov 10 · Nov 9 launch: Muse Ember targets repeated agent work",
+      "summary": "Meta released Muse Ember on its Model API and Muse Code plans for tasks such as tool calls, coding subtasks and document processing. It accepts text, images, audio and video.",
+      "whyItMatters": "Input/output rates are $0.10/$0.50 per million tokens for prompts up to 200K input tokens, and $0.30/$1.50 above that threshold. Long context does not carry the headline low rate across every workload.",
+      "confidence": "high",
+      "confidenceReason": "Official research and developer posts establish availability and the pricing tiers. Vendor-presented comparisons are not independent validation of universal superiority.",
+      "historicalContext": "This is a November 9 release added one day later. Meta positions Ember as a smaller execution worker paired with larger planning models, rather than a replacement for every reasoning task.",
+      "sources": [
+        {
+          "title": "Introducing Our Smallest, Most Efficient Model: Muse Ember",
+          "url": "https://research.meta.ai/blog/muse-ember",
+          "publisher": "Meta",
+          "publishedAt": "2026-11-09",
+          "type": "primary",
+          "authenticityReason": "Directly retrieved official research announcement explicitly dated November 9. Comparative results are presented by the vendor."
+        },
+        {
+          "title": "Start building with Muse Ember, our smallest, most efficient model",
+          "url": "https://dev.meta.ai/resources/blog/build-with-muse-ember",
+          "publisher": "Meta",
+          "publishedAt": "2026-11-09",
+          "type": "primary",
+          "authenticityReason": "Official developer companion to the November 9 launch, directly retrieved November 10. It supplies the long-prompt pricing qualification omitted from the research post’s headline rates."
+        }
+      ]
+    },
     {
       "id": "claude-fable-mythos-52-2026-11-09",
       "section": "news",
-      "title": "Daily update · Nov 9: Fable 5.2 launches; Mythos access stays gated",
-      "summary": "Anthropic released Fable 5.2 across its platforms. Mythos 5.2 shares the underlying model but is restricted to verified cyber and life-sciences organizations. Fable has stronger safeguards.",
+      "title": "Nov 9: Fable 5.2 launches; direct Mythos access stays gated",
+      "summary": "Anthropic released Fable 5.2 broadly. Direct general-purpose Mythos 5.2 access is for vetted cyber and life-sciences organizations. Claude Enterprise also offers task-specific Claude Security powered by Mythos.",
       "whyItMatters": "Standard input/output pricing is $8/$40 per million tokens; optional fast mode costs $16/$80. Compare total task costs, not token rates alone.",
       "confidence": "high",
       "confidenceReason": "The announcement verifies availability and pricing. Claimed capability and speed gains are vendor results, not independent replication.",
-      "historicalContext": "This November 9 launch follows 5.1. It is separate from earlier user-intent reporting; similar testimonials do not establish that report’s identity.",
+      "historicalContext": "This November 9 release follows 5.1. It does not explicitly resolve the older user-intent rumor preserved in the prior edition.",
       "sources": [
         {
           "title": "Claude Fable 5.2 and Mythos 5.2",
@@ -20,14 +177,14 @@
           "publisher": "Anthropic",
           "publishedAt": "2026-11-09",
           "type": "primary",
-          "authenticityReason": "Official announcement explicitly dated November 9; verified through indexed first-party content. Performance claims are vendor-reported."
+          "authenticityReason": "Directly retrieved official announcement dated November 9, rechecked November 10. Capability claims are vendor-reported."
         }
       ]
     },
     {
       "id": "claude-code-2321-2026-11-09",
       "section": "news",
-      "title": "Daily update · Nov 9: Claude Code adds Fable 5.2 and security fixes",
+      "title": "Nov 9: Claude Code adds Fable 5.2 and security fixes",
       "summary": "Claude Code 2.1.321 makes Fable 5.2 the default Fable model. Release notes report fixes for MCP OAuth secrets following cross-host redirects and several Bash permission and sandbox checks.",
       "whyItMatters": "Review this upgrade for agent environments using MCP credentials or shell tools. Remote Control also gains a settings-file option that stops new sessions if the file changes until restart.",
       "confidence": "high",
@@ -45,634 +202,13 @@
       ]
     },
     {
-      "id": "opencode-226-2026-11-06",
-      "section": "news",
-      "title": "Added Nov 8 · Nov 6 release: OpenCode improves scripted sessions",
-      "summary": "OpenCode 2.2.6 adds opt-in MCP connection pooling across projects and worktree creation for scripted runs. Its run command now waits for background jobs before exiting.",
-      "whyItMatters": "CI jobs need explicit timeouts: a server or watcher that never exits can keep the run open indefinitely. Pooling may reduce duplicate MCP processes; worktrees separate concurrent edits.",
-      "confidence": "high",
-      "confidenceReason": "The official release documents these features and their limits. No performance measurements or independent security audit were performed for this issue.",
-      "historicalContext": "Published November 6 at 23:37 UTC. This is a catch-up, not a November 8 release; it extends the worktree and compaction controls covered in 2.2.5.",
-      "sources": [
-        {
-          "title": "OpenCode v2.2.6 release",
-          "url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.6",
-          "publisher": "OpenCode",
-          "publishedAt": "2026-11-06",
-          "type": "primary",
-          "authenticityReason": "Official publisher repository release; GitHub API publication timestamp verified November 8. Release notes establish announced behavior, not independent reliability testing."
-        }
-      ]
-    },
-    {
-      "id": "copilot-cli-1107-2026-11-06",
-      "section": "news",
-      "title": "Added Nov 8 · Nov 6 release: Copilot CLI adds session controls",
-      "summary": "Copilot CLI 1.0.107 adds opt-in local session-management tools, a command to open the current session in VS Code, and a setting to sandbox extension processes.",
-      "whyItMatters": "The notes also report that Autopilot no longer implements recommendations after review-only requests. Teams should test that boundary rather than assume the fix eliminates all unintended edits.",
-      "confidence": "high",
-      "confidenceReason": "GitHub's official release supplies the changes and date; the behavior fix is publisher-reported and has not been independently tested here.",
-      "historicalContext": "Published November 6 at 20:37 UTC. This builds on Copilot's cross-surface workflow and is separate from the previously covered JetBrains Air availability.",
-      "sources": [
-        {
-          "title": "GitHub v1.0.107 release",
-          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.107",
-          "publisher": "GitHub",
-          "publishedAt": "2026-11-06",
-          "type": "primary",
-          "authenticityReason": "Official publisher repository release; GitHub API publication timestamp verified November 8. Release notes establish announced behavior, not independent reliability testing."
-        }
-      ]
-    },
-    {
-      "id": "claude-code-2319-2026-11-06",
-      "section": "news",
-      "title": "Added Nov 7 · Nov 6 release: Claude Code backgrounds MCP tasks",
-      "summary": "Claude Code 2.1.319 adds background execution for MCP tasks and a permission setting that denies calls instead of waiting for a prompt. Finished subagents can also be reopened from the task list.",
-      "whyItMatters": "Unattended workflows gain clearer control over permission waits and long-running tools. The release also reports permission-bypass and sandbox-escape fixes, making upgrade review worthwhile.",
-      "confidence": "high",
-      "confidenceReason": "Anthropic’s official release notes establish the announced changes. The fixes are vendor-reported, not an independent security audit or a guarantee that all bypasses are closed.",
-      "historicalContext": "Published November 6 at 17:04 UTC, before the previous supplement’s timestamp but omitted from that edition. This is a catch-up addition, not a November 7 release. It follows 2.1.318’s per-fork effort controls.",
-      "sources": [
-        {
-          "title": "Claude Code v2.1.319 release",
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
-          "publisher": "Anthropic",
-          "publishedAt": "2026-11-06",
-          "type": "primary",
-          "authenticityReason": "Official anthropics repository release, checked November 7. GitHub’s API gives published_at as 2026-11-06T17:04:01Z; features are attributed to the publisher."
-        }
-      ]
-    },
-    {
-      "id": "inkling-2-small-2026-11-05",
-      "section": "news",
-      "title": "Added Nov 7 · Nov 5 launch: Inkling 2 Small arrives on Tinker",
-      "summary": "Thinking Machines released Inkling 2 Small for fine-tuning and inference on Tinker. The text-and-image model has 594 billion total parameters with 17 billion active, and supports variable reasoning effort.",
-      "whyItMatters": "It adds a customizable option for coding agents and tool-using applications. Hosted access is available, but the launch announcement describes full Apache 2.0 weights as a future step after external safety testing and red-teaming.",
-      "confidence": "high",
-      "confidenceReason": "The official announcement and model card both date the release November 5. This verifies announced availability, not independent performance or completion of the promised weight release.",
-      "historicalContext": "The second Inkling generation follows earlier checkpoints tested in OpenCode as Fledge-Alpha. This November 7 catch-up preserves the original launch date rather than treating later coverage as a new release.",
-      "sources": [
-        {
-          "title": "Introducing Inkling 2 Small",
-          "url": "https://thinkingmachines.ai/news/inkling-2-small/",
-          "publisher": "Thinking Machines Lab",
-          "publishedAt": "2026-11-05",
-          "type": "primary",
-          "authenticityReason": "Official company announcement, explicitly dated November 5 and checked November 7. It distinguishes initial closed-weight Tinker access from intended later downloadable weights."
-        },
-        {
-          "title": "Inkling 2 Small Model Card",
-          "url": "https://thinkingmachines.ai/model-card/inkling-2-small/",
-          "publisher": "Thinking Machines Lab",
-          "publishedAt": "2026-11-05",
-          "type": "primary",
-          "authenticityReason": "Official model card lists November 5 as the release date and documents architecture, modalities and distribution. Evaluation results are the developer’s account."
-        }
-      ]
-    },
-    {
-      "id": "codex-0167-2026-11-06",
-      "section": "news",
-      "title": "Daily update · Nov 6: Codex CLI 0.167 improves session navigation",
-      "summary": "OpenAI’s 0.167.0 release adds unread-result markers, backend switching that preserves drafts, and inline patch inspection while an approval prompt is open.",
-      "whyItMatters": "These controls help developers track parallel work and inspect changes at the approval boundary.",
-      "confidence": "high",
-      "confidenceReason": "The official changelog dates these features November 6. It also lists compaction and provider-switching fixes; release notes are not a safety certification.",
-      "historicalContext": "The October 27 release expanded session control; this update continues that workflow trend rather than announcing a new model.",
-      "sources": [
-        {
-          "title": "ChatGPT & Codex changelog: CLI 0.167.0",
-          "url": "https://learn.chatgpt.com/docs/changelog",
-          "publisher": "OpenAI",
-          "publishedAt": "2026-11-06",
-          "type": "primary",
-          "authenticityReason": "Dated release notes on the publisher’s official site or repository, checked November 6, 2026. This establishes the announced features, not independently tested reliability."
-        }
-      ]
-    },
-    {
-      "id": "cursor-voice-chat-2026-11-06",
-      "section": "news",
-      "title": "Daily update · Nov 6: Cursor adds two-way voice conversations",
-      "summary": "Cursor announced Grok Voice-powered calls across its Agents Window, IDE, web and iOS app. A voice agent can hand coding work to the chat agent while the conversation continues.",
-      "whyItMatters": "Developers can ask for progress and discuss changes without waiting for a coding run to finish.",
-      "confidence": "high",
-      "confidenceReason": "The dated first-party announcement supports feature availability. Voice interaction does not itself demonstrate better code quality or safer execution.",
-      "historicalContext": "This is distinct from earlier dictation, which only transcribed speech into the input box.",
-      "sources": [
-        {
-          "title": "Voice Chat with Agents",
-          "url": "https://cursor.com/changelog/voice-chat",
-          "publisher": "Cursor",
-          "publishedAt": "2026-11-06",
-          "type": "primary",
-          "authenticityReason": "Dated release notes on the publisher’s official site or repository, checked November 6, 2026. This establishes the announced features, not independently tested reliability."
-        }
-      ]
-    },
-    {
-      "id": "cursor-live-apps-2026-11-05",
-      "section": "news",
-      "title": "Added Nov 6 · Nov 5 announcement: Cursor deploys live apps",
-      "summary": "Cursor can scaffold an app, provision a Postgres database and authentication, and publish a hosted link. The feature is available on paid plans with cloud agents enabled.",
-      "whyItMatters": "The workflow extends coding into deployment. Publishing requires an explicit action and passing security checks; administrators can override blocked publishes.",
-      "confidence": "high",
-      "confidenceReason": "Official release notes establish the feature and gating. Automated checks should not be treated as proof that an app is secure; access and secrets still need review.",
-      "historicalContext": "The announcement moves beyond localhost workflows. GitHub and Cursor Origin repositories are supported; GitLab support is described as forthcoming.",
-      "sources": [
-        {
-          "title": "Build Live Apps in Cursor",
-          "url": "https://cursor.com/changelog/build-live-apps",
-          "publisher": "Cursor",
-          "publishedAt": "2026-11-05",
-          "type": "primary",
-          "authenticityReason": "Dated release notes on the publisher’s official site or repository, checked November 6, 2026. This establishes the announced features, not independently tested reliability."
-        }
-      ]
-    },
-    {
-      "id": "hermes-023-2026-11-05",
-      "section": "news",
-      "title": "Added Nov 6 · Nov 5 release: Hermes unifies sessions and adds tool budgets",
-      "summary": "Nous Research’s Hermes Agent 0.23 puts session ownership in one gateway, adds a browser workspace and conversation rewind, and introduces spend-limit approvals for paid MCP tools.",
-      "whyItMatters": "Cross-surface continuity and tool budgets are useful harness controls. Upgrade carefully: legacy browser tools are removed and MCP-server launch commands change.",
-      "confidence": "high",
-      "confidenceReason": "The official repository explicitly dates the release November 5. Its behavior and performance claims have not been independently tested for this newsletter.",
-      "historicalContext": "The release consolidates the 0.22 patch series. Browser workspace access is off by default and must be enabled explicitly.",
-      "sources": [
-        {
-          "title": "Hermes Agent v0.23.0 — The Hearth Release",
-          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.0",
-          "publisher": "Nous Research",
-          "publishedAt": "2026-11-05",
-          "type": "primary",
-          "authenticityReason": "Dated release notes on the publisher’s official site or repository, checked November 6, 2026. This establishes the announced features, not independently tested reliability."
-        }
-      ]
-    },
-    {
-      "id": "gpt-6-cyber-2026-11-05",
-      "section": "news",
-      "title": "Daily update · Nov 5: GPT-6 Cyber launches with restricted access",
-      "summary": "OpenAI introduced GPT-6 Cyber for security research, initially through the API and Codex for selected approved Daybreak Red customers. Its system card identifies it as a cybersecurity-specialized variant of GPT-6 Astra.",
-      "whyItMatters": "Access remains gated. OpenAI rates its cybersecurity capability Critical under its Preparedness Framework; teams should distinguish that capability classification from a guarantee of safe operation.",
-      "confidence": "high",
-      "confidenceReason": "The dated announcement and system card establish the release and restrictions. Results are vendor evaluations: the card reports mixed alignment performance against Astra, including weaker results on stopping after warnings and final-answer disclosure of blockers.",
-      "historicalContext": "It follows GPT-5.6 Cyber, which OpenAI rated High for cybersecurity. Wider GPT-6 Cyber access is planned, without a firm date in the announcement.",
-      "sources": [
-        {
-          "title": "GPT-6 Cyber: Advancing the frontier of aligned cybersecurity agents",
-          "url": "https://openai.com/index/introducing-gpt-6-cyber/",
-          "publisher": "OpenAI",
-          "publishedAt": "2026-11-05",
-          "type": "primary",
-          "authenticityReason": "Official company announcement explicitly dated November 5, checked that day. It separates initial availability from planned access expansion."
-        },
-        {
-          "title": "GPT-6 Cyber System Card",
-          "url": "https://deploymentsafety.openai.com/gpt-6-cyber",
-          "publisher": "OpenAI",
-          "publishedAt": "2026-11-05",
-          "type": "primary",
-          "authenticityReason": "Official safety documentation dated November 5. This is the developer’s evaluation, not independent certification."
-        }
-      ]
-    },
-    {
-      "id": "plamo-3-translate-weights-2026-11-05",
-      "section": "news",
-      "title": "Daily update · Nov 5: PLaMo 3 Translate releases downloadable weights",
-      "summary": "Preferred Networks announced PLaMo 3 Translate weights in four sizes, from 0.8B to 31B parameters, supporting 53 languages. The models are intended for translation on local devices and private servers.",
-      "whyItMatters": "Local deployment offers another option for translation workloads. Free commercial use requires registration and the PLaMo Community License’s ¥1 billion-or-less revenue/sales condition for the user or affiliates in the most recent fiscal year; commercial use above that threshold needs a separate license.",
-      "confidence": "high",
-      "confidenceReason": "PFN’s dated announcement supports the release and license summary. Translation-quality comparisons remain vendor-reported; local performance depends on model size and hardware.",
-      "historicalContext": "PFN updated its hosted translation service to the third-generation model on October 7. November 5 is the weight-release milestone, rather than the first appearance of the model family.",
-      "sources": [
-        {
-          "title": "PFN releases PLaMo 3 Translate open-weight models",
-          "url": "https://www.preferred.jp/ja/news/pr20261105",
-          "publisher": "Preferred Networks",
-          "publishedAt": "2026-11-05",
-          "type": "primary",
-          "authenticityReason": "Original Japanese company announcement dated November 5. Its correction clarifies that the revenue threshold includes ¥1 billion."
-        },
-        {
-          "title": "PFN updates its PLaMo translation service",
-          "url": "https://www.preferred.jp/ja/news/pr20261007",
-          "publisher": "Preferred Networks",
-          "publishedAt": "2026-10-07",
-          "type": "primary",
-          "authenticityReason": "Earlier dated announcement establishes the hosted-service update and describes the weight release as a future step."
-        },
-        {
-          "title": "PLaMo 3 Translate 31B model card",
-          "url": "https://huggingface.co/pfnet/plamo-3-translate-31b",
-          "publisher": "Preferred Networks / pfnet",
-          "publishedAt": "2026-11-05",
-          "type": "primary",
-          "authenticityReason": "Official model card linked by PFN’s November 5 release announcement. It specifies commercial registration, the user-or-affiliate threshold, and separate licensing above it."
-        }
-      ]
-    },
-    {
-      "id": "metr-anthropic-rd-assessment-2026-11-05",
-      "section": "news",
-      "title": "Daily update · Nov 5: METR reports faster AI R&D at Anthropic, with major caveats",
-      "summary": "After an August–October assessment with access to internal data, METR estimates that Anthropic’s progress on well-specified tasks is roughly twice its March 2024–October 2025 pace. METR believes AI-assisted R&D likely accounts for most of the current acceleration, with substantial uncertainty.",
-      "whyItMatters": "This adds evidence about models helping build subsequent models. METR says Anthropic redacted most of the evidence it found most informative, limiting public scrutiny of its conclusions.",
-      "confidence": "medium",
-      "confidenceReason": "The report is primary research from the evaluator. Attribution to AI is an uncertain assessment, not a controlled causal result; benchmark scope, other drivers and redactions limit generalization.",
-      "historicalContext": "Published November 5 about an assessment ending October 29. It concerns development progress on defined tasks, not a newly released model or proof of fully autonomous AI research.",
-      "sources": [
-        {
-          "title": "Independent Assessment of AI R&D Acceleration at Anthropic in October 2026",
-          "url": "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/",
-          "publisher": "METR",
-          "publishedAt": "2026-11-05",
-          "type": "primary",
-          "authenticityReason": "Original dated assessment on METR’s site. External authorship is distinct from independent reproducibility: access and publication redactions depended on Anthropic."
-        }
-      ]
-    },
-    {
-      "id": "images-26-2026-11-04",
-      "section": "news",
-      "title": "Added Nov 5 · Nov 4 announcement: Images 2.6 expands creation and editing",
-      "summary": "OpenAI announced Images 2.6 for ChatGPT, Codex and the API on November 4. API options include Flare and Sunburst, with image markup, SVG exports and a complexity control; the release also adds GIF creation.",
-      "whyItMatters": "Developers gain more control over visual assets and editing workflows. OpenAI’s faster-generation claim is vendor-reported, and actual latency depends on settings and workload.",
-      "confidence": "high",
-      "confidenceReason": "The official announcement confirms availability and features. It does not provide an independently reproduced speed comparison.",
-      "historicalContext": "This is a November 4 release added during the November 5 review. The source gives no publication time, so this edition makes no claim that it appeared after the previous daily cutoff.",
-      "sources": [
-        {
-          "title": "Introducing Images 2.6",
-          "url": "https://openai.com/index/introducing-images-2-6/",
-          "publisher": "OpenAI",
-          "publishedAt": "2026-11-04",
-          "type": "primary",
-          "authenticityReason": "Official product announcement explicitly dated November 4. The source date is preserved rather than using the date of later news coverage."
-        }
-      ]
-    },
-    {
-      "id": "vscode-1145-harnesses-2026-11-04",
-      "section": "news",
-      "title": "Daily update · Nov 4: VS Code previews mixed-harness sessions",
-      "summary": "VS Code 1.145 adds a preview that groups Copilot, Claude and Codex chats within one session, with separate model, agent and permission settings. The stable release also adds cron schedules and workspace custom agents for local automations.",
-      "whyItMatters": "Developers can compare agents without splitting related conversations across separate sessions. Mixed-harness sessions require the preview setting; cron schedules do not apply to cloud automations.",
-      "confidence": "high",
-      "confidenceReason": "Microsoft's official release notes establish the features and their preview limits. No independent productivity improvement is claimed.",
-      "historicalContext": "Previously, nested sessions inherited their parent's harness. This changes session organization rather than introducing a new underlying model.",
-      "sources": [
-        {
-          "title": "Visual Studio Code 1.145 release notes",
-          "url": "https://code.visualstudio.com/updates/v1_145",
-          "publisher": "Microsoft / Visual Studio Code",
-          "publishedAt": "2026-11-04",
-          "type": "primary",
-          "authenticityReason": "Official notes explicitly date the stable release November 4, 2026 and mark mixed-harness nested sessions as Preview."
-        }
-      ]
-    },
-    {
-      "id": "claude-code-2318-2026-11-04",
-      "section": "news",
-      "title": "Daily update · Nov 4: Claude Code adds per-fork effort controls",
-      "summary": "Claude Code 2.1.318 lets a mod's model fork choose its own reasoning effort, independently of the session. It also exposes stored sign-in expiry in command-line status and JSON output, with advance warnings for unattended text runs.",
-      "whyItMatters": "Small delegated jobs can use lower effort without changing the main session. Expiry visibility gives developers a clearer signal before unattended jobs lose authentication.",
-      "confidence": "high",
-      "confidenceReason": "Anthropic's official release notes confirm the changes; their effect on cost and reliability was not independently measured.",
-      "historicalContext": "This adds control at the individual mod-fork level. The same release fixes conversation continuation and idle-compaction failures.",
-      "sources": [
-        {
-          "title": "Claude Code v2.1.318 release",
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
-          "publisher": "Anthropic",
-          "publishedAt": "2026-11-04",
-          "type": "primary",
-          "authenticityReason": "Official anthropics repository release. GitHub displays 04 Nov 00:01; the extracted display does not explicitly state a timezone."
-        }
-      ]
-    },
-    {
-      "id": "tencent-hy4-2026-11-04",
-      "section": "news",
-      "title": "Daily update · Nov 4: Tencent announces Hy4, with weights still to come",
-      "summary": "Tencent's November 4 announcement describes Hy4's visual understanding and computer-use capabilities, and availability across its products. Vercel had already announced Hy4 access through AI Gateway on November 3, including image input and a one-million-token context window.",
-      "whyItMatters": "API availability and downloadable weights are different milestones. Tencent says model weights and system cards will arrive in the coming days; the announcement does not establish that they are available now.",
-      "confidence": "high",
-      "confidenceReason": "A Tencent-issued announcement and Vercel's own integration changelog support the availability claims. Performance descriptions remain vendor-reported.",
-      "historicalContext": "Hy4 follows Hy4 Preview. November 3 gateway access and November 4 corporate announcement are distinct dates, not two separate model launches.",
-      "sources": [
-        {
-          "title": "Tencent launches Hy4",
-          "url": "https://en.prnasia.com/releases/apac/tencent-launches-hy4-joining-the-ranks-of-the-world-s-leading-open-source-ai-models-554689.shtml",
-          "publisher": "Tencent via PR Newswire",
-          "publishedAt": "2026-11-04",
-          "type": "primary",
-          "authenticityReason": "Company-issued press release distributed by PR Newswire, explicitly dated November 4. It describes weights and system cards as forthcoming."
-        },
-        {
-          "title": "Tencent Hy4 now available on AI Gateway",
-          "url": "https://vercel.com/changelog/tencent-hy4-now-available-on-ai-gateway",
-          "publisher": "Vercel",
-          "publishedAt": "2026-11-03",
-          "type": "primary",
-          "authenticityReason": "Vercel's official integration announcement, explicitly dated November 3, independently establishes its gateway's availability rather than Tencent's general launch date."
-        }
-      ]
-    },
-    {
-      "id": "openai-pierre-agreement-2026-11-04",
-      "section": "news",
-      "title": "Daily update · Nov 4: OpenAI announces plans to acquire Pierre",
-      "summary": "OpenAI says it will acquire Pierre, the developer-tools company behind Code Storage. Closing remains subject to customary conditions and regulatory approvals; the companies remain independent until then.",
-      "whyItMatters": "The planned acquisition could bring source-control and code-review tools more closely into Codex. It is not a completed transaction or an announcement that new integrations are available today.",
-      "confidence": "high",
-      "confidenceReason": "The official announcement establishes the stated plan and closing conditions, not a guaranteed closing date or delivered product roadmap.",
-      "historicalContext": "Pierre’s Trees and Diffs libraries already support file browsing and code review in the Codex app. The announcement builds on that existing relationship.",
-      "sources": [
-        {
-          "title": "OpenAI to acquire Pierre Computer Company, Inc.",
-          "url": "https://openai.com/index/openai-to-acquire-pierre/",
-          "publisher": "OpenAI",
-          "publishedAt": "2026-11-04",
-          "type": "primary",
-          "authenticityReason": "Official dated company announcement, checked November 4; future intentions and conditions are explicitly distinguished from completed actions."
-        }
-      ]
-    },
-    {
-      "id": "claude-code-2317-2026-11-03",
-      "section": "news",
-      "title": "Daily update · Nov 3: Claude Code adds fail-closed hook controls",
-      "summary": "Claude Code 2.1.317 adds an Agent SDK hook option that blocks an action if its callback fails, warnings about unexpected connectors on scheduled cloud tasks, and checks before web or shell calls transmit the account email address.",
-      "whyItMatters": "These controls affect how coding agents handle failures and external actions. The release also adds a gateway-admin cost report, with spend grouped by date, developer or identity-provider group.",
-      "confidence": "high",
-      "confidenceReason": "Official release notes establish the announced changes. They do not independently prove that every failure or unintended transmission is prevented.",
-      "historicalContext": "The October 31 release added subagent-effort and pooled-budget controls. November 3 extends operational oversight with hook-failure handling and cost reporting.",
-      "sources": [
-        {
-          "title": "Claude Code v2.1.317 release",
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
-          "publisher": "Anthropic",
-          "publishedAt": "2026-11-03",
-          "type": "primary",
-          "authenticityReason": "Official anthropics repository release. The GitHub page displays 03 Nov 01:25; the extracted display does not explicitly state a timezone."
-        },
-        {
-          "title": "Claude Code v2.1.316 release",
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
-          "publisher": "Anthropic",
-          "publishedAt": "2026-10-31",
-          "type": "primary",
-          "authenticityReason": "Official preceding release, used only for historical context."
-        }
-      ]
-    },
-    {
-      "id": "copilot-jetbrains-air-2026-11-03",
-      "section": "news",
-      "title": "Daily update · Nov 3: Copilot arrives in JetBrains Air",
-      "summary": "GitHub announced Copilot integration in JetBrains Air through Agent Client Protocol. Developers can track parallel sessions and review changes in context, using their Copilot subscription for local or cloud coding tasks.",
-      "whyItMatters": "Cloud use requires an Air Teams-enabled business organization and administrator enablement. Tasks use Copilot rather than JetBrains AI credits; Air analytics do not show Copilot usage, and Air cannot set its spending limits.",
-      "confidence": "high",
-      "confidenceReason": "GitHub's dated first-party announcement describes availability and limitations. Access still depends on account, subscription and administrator settings.",
-      "historicalContext": "After GitHub's October 28 connected-cloud rollout, this adds a JetBrains Air entry point. The new integration is distinct from the existing Copilot plugin.",
-      "sources": [
-        {
-          "title": "GitHub Copilot is now available in JetBrains Air",
-          "url": "https://github.blog/changelog/2026-11-03-github-copilot-is-now-available-in-jetbrains-air/",
-          "publisher": "GitHub",
-          "publishedAt": "2026-11-03",
-          "type": "primary",
-          "authenticityReason": "Official GitHub changelog dated November 3. No publication time is displayed in the retrieved page."
-        },
-        {
-          "title": "Work from anywhere with a new, connected Copilot cloud experience",
-          "url": "https://github.blog/changelog/2026-10-28-work-from-anywhere-with-a-new-connected-copilot-cloud-experience/",
-          "publisher": "GitHub",
-          "publishedAt": "2026-10-28",
-          "type": "primary",
-          "authenticityReason": "Earlier official announcement provides context, not a second new November 3 launch."
-        }
-      ]
-    },
-    {
-      "id": "longcat-25-api-2026-11-02",
-      "section": "news",
-      "title": "Daily update · Nov 2: LongCat-2.5 reaches the API",
-      "summary": "LongCat's official API changelog marks LongCat-2.5 available on November 2, following a November 1 announcement. The company positions it for visual understanding and long-running coding tasks, and lists compatibility with Claude Code, Codex and Hermes.",
-      "whyItMatters": "A new model can enter existing coding workflows without a wholly new harness. Compatibility is the vendor's claim, not evidence that every setup works unchanged or that it outperforms alternatives.",
-      "confidence": "high",
-      "confidenceReason": "Official dated API documentation establishes the availability announcement. Capability and harness-compatibility claims remain vendor-reported and were not independently tested here.",
-      "historicalContext": "The same changelog dates LongCat-2.5-Preview to September 25. The full-model blog is dated November 1; the API availability entry is November 2. This is a preview-to-release progression, not two separate model launches.",
-      "sources": [
-        {
-          "title": "LongCat API Change Log: 2026-11-02",
-          "url": "https://longcat.ai/platform/docs/ChangeLog.html",
-          "publisher": "Meituan / LongCat",
-          "publishedAt": "2026-11-02",
-          "type": "primary",
-          "authenticityReason": "Original vendor API changelog with explicit November 2 availability and September 25 preview entries, opened November 2."
-        },
-        {
-          "title": "LongCat-2.5 Native Multimodality for Agentic Tasks",
-          "url": "https://longcat.ai/blog/longcat-2.5",
-          "publisher": "Meituan / LongCat",
-          "publishedAt": "2026-11-01",
-          "type": "primary",
-          "authenticityReason": "Original vendor announcement. Its visible date is November 1, distinct from the API changelog's November 2 availability date."
-        }
-      ]
-    },
-    {
-      "id": "terra-2026-10-26",
-      "section": "news",
-      "title": "GPT-6.1 Terra rolls out",
-      "summary": "OpenAI announced Terra for its API, ChatGPT Work and Codex—not Chat. Listed standard API prices are $1 per million input tokens and $5 per million output tokens.",
-      "whyItMatters": "Teams have another deployment option; they should test quality on their own workloads instead of treating price as a capability ranking.",
-      "confidence": "high",
-      "confidenceReason": "Official release documentation establishes the announcement and listed terms, not independent comparative performance.",
-      "historicalContext": "GPT-4o mini's July 2024 launch also emphasized cost-efficient deployment. Different capability classes make raw token-price comparisons misleading.",
-      "sources": [
-        {
-          "title": "Model Release Notes: GPT-6.1 Terra",
-          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
-          "publisher": "OpenAI",
-          "publishedAt": "2026-10-26",
-          "type": "primary",
-          "authenticityReason": "Official OpenAI Help Center release entry, retrieved November 2, 2026."
-        },
-        {
-          "title": "GPT-4o mini: advancing cost-efficient intelligence",
-          "url": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/",
-          "publisher": "OpenAI",
-          "publishedAt": "2024-07-18",
-          "type": "primary",
-          "authenticityReason": "Dated original announcement on OpenAI's domain; historical context, not a current price comparison."
-        }
-      ]
-    },
-    {
-      "id": "codex-0165-2026-10-27",
-      "section": "news",
-      "title": "Codex CLI 0.165 adds Terra and more session control",
-      "summary": "The October 27 release adds GPT-6.1 Terra to model catalogs, a built-in Google Cloud Vertex AI provider, repository filtering, and in-conversation reasoning-effort changes for supported models.",
-      "whyItMatters": "The harness is changing alongside the model: provider choice and session organization affect how coding work actually runs.",
-      "confidence": "high",
-      "confidenceReason": "High confidence in the published release announcement; rollout and configuration can vary. No independent productivity gain is claimed.",
-      "historicalContext": "The preceding 0.164 release on October 23 added reusable prompt presets and inline model/permission controls. These are successive workflow changes, not evidence of a benchmark jump.",
-      "sources": [
-        {
-          "title": "ChatGPT & Codex changelog: CLI 0.165.0",
-          "url": "https://learn.chatgpt.com/docs/changelog",
-          "publisher": "OpenAI",
-          "publishedAt": "2026-10-27",
-          "type": "primary",
-          "authenticityReason": "Original dated announcement or release notes on the publisher’s official site or repository, checked November 2, 2026. Release notes establish stated changes, not independently measured performance."
-        }
-      ]
-    },
-    {
-      "id": "copilot-cloud-2026-10-28",
-      "section": "news",
-      "title": "Copilot connects coding sessions across surfaces",
-      "summary": "GitHub announced a connected cloud experience on paid Copilot plans. Sessions can continue across web, mobile, CLI, app and VS Code, with cloud sandboxes and shared Actions compute entitlement.",
-      "whyItMatters": "Session continuity and execution environments are becoming central product features. GitHub says sandbox usage billing begins in November; teams should check their entitlement.",
-      "confidence": "high",
-      "confidenceReason": "High confidence in the published release announcement; rollout and configuration can vary. No independent productivity gain is claimed.",
-      "historicalContext": "GitHub describes this as a connected successor to its separate Copilot Chat and coding-agent experiences. The shift is from isolated surfaces toward resumable work.",
-      "sources": [
-        {
-          "title": "Work from anywhere with a new, connected Copilot cloud experience",
-          "url": "https://github.blog/changelog/2026-10-28-work-from-anywhere-with-a-new-connected-copilot-cloud-experience/",
-          "publisher": "GitHub",
-          "publishedAt": "2026-10-28",
-          "type": "primary",
-          "authenticityReason": "Original dated announcement or release notes on the publisher’s official site or repository, checked November 2, 2026. Release notes establish stated changes, not independently measured performance."
-        }
-      ]
-    },
-    {
-      "id": "opencode-225-2026-10-30",
-      "section": "news",
-      "title": "OpenCode 2.2.5 improves compaction and worktree controls",
-      "summary": "The October 30 release adds percentage-based context buffers, worktree/base-branch shortcuts, and fixes for context-window errors and model-switch reasoning handling.",
-      "whyItMatters": "A buffer expressed as a percentage can adapt across model context sizes. These are concrete harness ergonomics and reliability changes, not a new underlying model.",
-      "confidence": "high",
-      "confidenceReason": "High confidence in the published release announcement; rollout and configuration can vary. No independent productivity gain is claimed.",
-      "historicalContext": "Previously the buffer setting accepted a token count; percentage support makes one configuration more portable across differently sized model windows.",
-      "sources": [
-        {
-          "title": "OpenCode v2.2.5 release",
-          "url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.5",
-          "publisher": "Anomaly / OpenCode",
-          "publishedAt": "2026-10-30",
-          "type": "primary",
-          "authenticityReason": "Original dated announcement or release notes on the publisher’s official site or repository, checked November 2, 2026. Release notes establish stated changes, not independently measured performance."
-        }
-      ]
-    },
-    {
-      "id": "claude-code-2316-2026-10-31",
-      "section": "news",
-      "title": "Claude Code adds subagent effort and budget controls",
-      "summary": "Claude Code 2.1.316 adds a default subagent-effort setting and pooled group budgets in the Claude apps gateway. It also fixes shell processes left running when Claude Code exits itself.",
-      "whyItMatters": "Teams can control delegated work more explicitly. Gateway-specific budget features should not be confused with universal personal-plan controls.",
-      "confidence": "high",
-      "confidenceReason": "High confidence in the published release announcement; rollout and configuration can vary. No independent productivity gain is claimed.",
-      "historicalContext": "The release changes the previous default of subagents inheriting session effort when no other setting names one. It illustrates increasingly granular agent orchestration.",
-      "sources": [
-        {
-          "title": "Claude Code v2.1.316 release",
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
-          "publisher": "Anthropic",
-          "publishedAt": "2026-10-31",
-          "type": "primary",
-          "authenticityReason": "Original dated announcement or release notes on the publisher’s official site or repository, checked November 2, 2026. Release notes establish stated changes, not independently measured performance."
-        }
-      ]
-    },
-    {
-      "id": "anthropic-intent-rumor-2026-10-19",
-      "section": "rumors",
-      "title": "Carry-over watch · Oct 19: Anthropic intent-model report",
-      "summary": "The Information reports that Anthropic is preparing a model better at interpreting users' intentions.",
-      "whyItMatters": "Older unconfirmed reporting, carried over for monitoring—not a new development from this issue’s reporting week. No independently verified name, launch date or benchmark is established here.",
-      "confidence": "low",
-      "confidenceReason": "The original headline is public but the article is paywalled. A dated secondary account attributes the report to one unnamed user; repetition does not create independent corroboration. November 9 review: the Fable/Mythos launch does not explicitly identify itself as the subject of this report. The rumor remains unconfirmed.",
-      "historicalContext": "Recent announced model releases show ongoing iteration, but launch cadence cannot validate this particular rumor or predict its timing.",
-      "sources": [
-        {
-          "title": "Anthropic Readies Model That Reads Users’ Intentions Better",
-          "url": "https://www.theinformation.com/newsletters/ai-agenda/anthropic-readies-model-reads-users-intentions-better",
-          "publisher": "The Information",
-          "publishedAt": "2026-10-19",
-          "type": "reporting",
-          "authenticityReason": "Original publisher's headline and byline were accessible; full article was not. Publication date is corroborated by the secondary account."
-        },
-        {
-          "title": "Anthropic Said to Ready Model; Launches Average 24-Day Gaps",
-          "url": "https://fourweekmba.com/ai-anthropic-said-to-ready-model-launches-average-24-day-gaps/",
-          "publisher": "FourWeekMBA",
-          "publishedAt": "2026-10-19",
-          "type": "analysis",
-          "authenticityReason": "Public dated secondary account explicitly attributes its claim to The Information; not independent confirmation."
-        }
-      ],
-      "resolutionCriteria": "An official announcement identifies the model and substantiates the reported user-intent capability.",
-      "counterarguments": "An unnamed source may overstate results; internal models can change or never ship. No release deadline is known."
-    },
-    {
-      "id": "harness-controls-outlook-2026-11-09",
-      "section": "predictions",
-      "title": "Resolved Nov 9 · November 9–15 harness-control forecast: met",
-      "summary": "We expect at least one stable Codex, Claude Code, Copilot CLI or OpenCode release to add or fix a documented permission, background-task or session-control behavior.",
-      "whyItMatters": "These controls affect unattended reliability even without a new frontier model.",
-      "confidence": "medium",
-      "confidenceReason": "Several independent harnesses shipped such changes this week. This is an editorial extrapolation from recent releases, not a vendor promise or a numerical probability. Resolution November 9: Claude Code 2.1.321 documents permission and session-control fixes in a stable release, meeting the original criterion. The original forecast is preserved in the November 8 archive.",
-      "historicalContext": "The November 2–8 control-upgrade forecast was met by the November 3 Claude Code hook controls and later releases. That original forecast remains unchanged in the archived November 7 snapshot.",
-      "sources": [
-        {
-          "title": "OpenCode v2.2.6 release",
-          "url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.6",
-          "publisher": "OpenCode",
-          "publishedAt": "2026-11-06",
-          "type": "primary",
-          "authenticityReason": "Official publisher repository release; GitHub API publication timestamp verified November 8. Release notes establish announced behavior, not independent reliability testing."
-        },
-        {
-          "title": "GitHub v1.0.107 release",
-          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.107",
-          "publisher": "GitHub",
-          "publishedAt": "2026-11-06",
-          "type": "primary",
-          "authenticityReason": "Official publisher repository release; GitHub API publication timestamp verified November 8. Release notes establish announced behavior, not independent reliability testing."
-        },
-        {
-          "title": "Claude Code v2.1.321 release",
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
-          "publisher": "Anthropic",
-          "publishedAt": "2026-11-09",
-          "type": "primary",
-          "authenticityReason": "Official repository release dated November 9, 19:22 UTC; marked latest rather than prerelease. Fixes are publisher-reported, not independently audited."
-        }
-      ],
-      "horizon": "November 9–15, 2026 (UTC)",
-      "resolutionCriteria": "Pass if an official stable release dated November 9–15 explicitly adds or fixes permission, background-task or session-control behavior in one of the four named harnesses. Alpha tags, documentation-only edits and model launches alone do not count. Otherwise fail at 23:59 UTC November 15.",
-      "counterarguments": "Release cadence may slow after this week's updates; work could remain in prerelease branches or focus on unrelated UI changes."
-    },
-    {
       "id": "another-harness-update-2026-11-10",
       "section": "predictions",
-      "title": "November 10–15: a second harness ships stable controls",
+      "title": "Resolved Nov 10 · second-harness control forecast: met",
       "summary": "We expect Codex, Copilot CLI or OpenCode to publish a stable release adding or fixing permission, background-task or session-control behavior.",
       "whyItMatters": "A release from another harness would test whether the controls trend extends beyond the November 9 Claude Code update.",
       "confidence": "medium",
-      "confidenceReason": "Recent stable releases show recurring work on these controls. This is an editorial forecast, not a publisher commitment.",
+      "confidenceReason": "Recent stable releases show recurring work on these controls. This is an editorial forecast, not a publisher commitment. Resolution November 10: stable Copilot CLI 1.0.109 adds CIDR sandbox rules and fixes ACP approval handling, meeting the original criterion. The November 9 snapshot preserves the forecast before the result.",
       "historicalContext": "The earlier November 9–15 forecast was met on its first day. This follow-up excludes Claude Code and begins November 10 to avoid counting already published releases.",
       "sources": [
         {
@@ -690,330 +226,199 @@
           "publishedAt": "2026-11-06",
           "type": "primary",
           "authenticityReason": "Official publisher repository release; GitHub API publication timestamp verified November 8. Release notes establish announced behavior, not independent reliability testing."
+        },
+        {
+          "title": "Copilot CLI v1.0.109 release",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.109",
+          "publisher": "GitHub",
+          "publishedAt": "2026-11-10",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository; GitHub API published_at is 2026-11-10T17:02:15Z, with draft and prerelease both false. Release notes are publisher claims, not independent testing."
         }
       ],
       "horizon": "November 10–15, 2026 (UTC)",
       "resolutionCriteria": "Pass if an official stable Codex, Copilot CLI or OpenCode release dated November 10–15 explicitly adds or fixes permission, background-task or session-control behavior. Prereleases, documentation-only changes and model support alone do not count. Otherwise fail at 23:59 UTC November 15.",
       "counterarguments": "The other harnesses may stay in prerelease or ship only unrelated features during this short window."
+    },
+    {
+      "id": "multi-harness-controls-2026-11-16",
+      "section": "predictions",
+      "title": "November 16–22: control updates from two harness publishers",
+      "summary": "We expect at least two of Codex, Claude Code, Copilot CLI and OpenCode to publish stable releases that add or fix permission, background-task or session-control behavior during the next calendar week.",
+      "whyItMatters": "Cross-publisher progress would be stronger evidence of an operational-controls trend than another isolated patch.",
+      "confidence": "medium",
+      "confidenceReason": "Recent releases support the direction, but the count and timing are editorial forecasts, not publisher commitments or calculated probabilities.",
+      "historicalContext": "The November 9 and November 10 follow-up forecasts each required only one release and were met. This prospectively raises the threshold to two distinct harnesses and excludes the current week.",
+      "sources": [
+        {
+          "title": "Copilot CLI v1.0.109 release",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.109",
+          "publisher": "GitHub",
+          "publishedAt": "2026-11-10",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository; GitHub API published_at is 2026-11-10T17:02:15Z, with draft and prerelease both false. Release notes are publisher claims, not independent testing."
+        },
+        {
+          "title": "OpenCode v2.2.7 release",
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.7",
+          "publisher": "OpenCode",
+          "publishedAt": "2026-11-10",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository; GitHub API published_at is 2026-11-10T10:37:15Z, with draft and prerelease both false. Release notes are publisher claims, not independent testing."
+        },
+        {
+          "title": "Claude Code v2.1.321 release",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-09",
+          "type": "primary",
+          "authenticityReason": "Official repository release dated November 9, 19:22 UTC; marked latest rather than prerelease. Fixes are publisher-reported, not independently audited."
+        }
+      ],
+      "horizon": "November 16–22, 2026 (UTC)",
+      "resolutionCriteria": "Pass if official stable releases from at least two distinct named harnesses have published_at dates from November 16 through November 22 and explicitly document a permission, background-task or session-control addition or fix. Count each harness once. Prereleases, documentation-only changes and model support alone do not count. Otherwise fail at 23:59 UTC November 22.",
+      "counterarguments": "Recent patches may reduce immediate demand, releases may cluster before the window, or work may stay in prerelease."
+    },
+    {
+      "id": "mythos-access-outlook-2026-11-22",
+      "section": "predictions",
+      "title": "By November 22: direct Mythos 5.2 access stays verification-gated",
+      "summary": "We expect direct general-purpose Mythos 5.2 access still to require organizational verification at the end of next week.",
+      "whyItMatters": "Teams should not plan around unrestricted direct access becoming available on ordinary paid accounts.",
+      "confidence": "medium",
+      "confidenceReason": "This is a forecast of policy continuity, not an announced future restriction.",
+      "historicalContext": "The launch separates broad Fable access from direct Mythos access. Task-specific Claude Security access is outside this forecast.",
+      "sources": [
+        {
+          "title": "Claude Fable 5.2 and Mythos 5.2",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-09",
+          "type": "primary",
+          "authenticityReason": "Directly retrieved official announcement dated November 9, rechecked November 10. Capability claims are vendor-reported."
+        }
+      ],
+      "horizon": "Resolution at 23:59 UTC November 22, 2026; next calendar week is November 16–22.",
+      "resolutionCriteria": "Pass if Anthropic’s current official access documentation at the deadline still requires organizational verification for direct general-purpose Mythos 5.2 access. Fail if any ordinary paid subscriber or API customer can obtain that direct access without verification. Claude Security access does not count. Mark unresolved, not passed, if official evidence is unavailable or contradictory.",
+      "counterarguments": "Anthropic could relax eligibility or offer a new direct-access route before the deadline."
     }
   ],
   "charts": [
     {
-      "id": "verified-october-milestones",
+      "id": "verified-november-9-15-milestones",
       "type": "timeline",
-      "title": "Models and harnesses: the evidence record",
-      "description": "Five original October developments and twenty-one dated supplements through November 9.",
-      "selectionCriteria": "The five original confirmed stories and twenty-one dated additions, with research and acquisition items labeled separately. Not exhaustive; excludes rumors and forecasts.",
-      "dateSemantics": "Publication or announcement dates, not universal availability dates.",
+      "title": "This week’s model and harness milestones",
+      "description": "Verified publisher dates through November 10. This is a selected reporting timeline, not a complete release count. Hermes uses GitHub’s UTC publication date; its prose notes say November 9. Muse Ember is a November 9 launch added November 10.",
       "points": [
         {
-          "date": "2026-10-26",
-          "label": "GPT-6.1 Terra rolls out",
-          "publisher": "OpenAI",
-          "category": "Model rollout",
-          "storyId": "terra-2026-10-26",
-          "sourceTitle": "Model Release Notes: GPT-6.1 Terra",
-          "sourceUrl": "https://help.openai.com/en/articles/9624314-model-release-notes"
-        },
-        {
-          "date": "2026-10-27",
-          "label": "Codex CLI 0.165 adds Terra and more session control",
-          "publisher": "OpenAI",
-          "category": "Coding harness update",
-          "storyId": "codex-0165-2026-10-27",
-          "sourceTitle": "ChatGPT & Codex changelog: CLI 0.165.0",
-          "sourceUrl": "https://learn.chatgpt.com/docs/changelog"
-        },
-        {
-          "date": "2026-10-28",
-          "label": "Copilot connects coding sessions across surfaces",
-          "publisher": "GitHub",
-          "category": "Coding harness update",
-          "storyId": "copilot-cloud-2026-10-28",
-          "sourceTitle": "Work from anywhere with a new, connected Copilot cloud experience",
-          "sourceUrl": "https://github.blog/changelog/2026-10-28-work-from-anywhere-with-a-new-connected-copilot-cloud-experience/"
-        },
-        {
-          "date": "2026-10-30",
-          "label": "OpenCode 2.2.5 improves compaction and worktree controls",
-          "publisher": "Anomaly / OpenCode",
-          "category": "Coding harness update",
-          "storyId": "opencode-225-2026-10-30",
-          "sourceTitle": "OpenCode v2.2.5 release",
-          "sourceUrl": "https://github.com/anomalyco/opencode/releases/tag/v2.2.5"
-        },
-        {
-          "date": "2026-10-31",
-          "label": "Claude Code adds subagent effort and budget controls",
-          "publisher": "Anthropic",
-          "category": "Coding harness update",
-          "storyId": "claude-code-2316-2026-10-31",
-          "sourceTitle": "Claude Code v2.1.316 release",
-          "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316"
-        },
-        {
-          "date": "2026-11-02",
-          "label": "Daily update: LongCat-2.5 API availability",
-          "publisher": "Meituan / LongCat",
-          "category": "Post-publication model update",
-          "storyId": "longcat-25-api-2026-11-02",
-          "sourceTitle": "LongCat API Change Log: 2026-11-02",
-          "sourceUrl": "https://longcat.ai/platform/docs/ChangeLog.html"
-        },
-        {
-          "date": "2026-11-03",
-          "label": "Daily update · Nov 3: Claude Code adds fail-closed hook controls",
-          "publisher": "Anthropic",
-          "category": "Post-publication coding-harness update",
-          "storyId": "claude-code-2317-2026-11-03",
-          "sourceTitle": "Claude Code v2.1.317 release",
-          "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317"
-        },
-        {
-          "date": "2026-11-03",
-          "label": "Daily update · Nov 3: Copilot arrives in JetBrains Air",
-          "publisher": "GitHub",
-          "category": "Post-publication coding-harness update",
-          "storyId": "copilot-jetbrains-air-2026-11-03",
-          "sourceTitle": "GitHub Copilot is now available in JetBrains Air",
-          "sourceUrl": "https://github.blog/changelog/2026-11-03-github-copilot-is-now-available-in-jetbrains-air/"
-        },
-        {
-          "date": "2026-11-04",
-          "label": "Daily update · Nov 4: VS Code previews mixed-harness sessions",
-          "publisher": "Microsoft / Visual Studio Code",
-          "category": "Post-publication coding-harness update",
-          "storyId": "vscode-1145-harnesses-2026-11-04",
-          "sourceTitle": "Visual Studio Code 1.145 release notes",
-          "sourceUrl": "https://code.visualstudio.com/updates/v1_145"
-        },
-        {
-          "date": "2026-11-04",
-          "label": "Daily update · Nov 4: Claude Code adds per-fork effort controls",
-          "publisher": "Anthropic",
-          "category": "Post-publication coding-harness update",
-          "storyId": "claude-code-2318-2026-11-04",
-          "sourceTitle": "Claude Code v2.1.318 release",
-          "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318"
-        },
-        {
-          "date": "2026-11-04",
-          "label": "Daily update · Nov 4: Tencent announces Hy4",
-          "publisher": "Tencent",
-          "category": "Post-publication model announcement",
-          "storyId": "tencent-hy4-2026-11-04",
-          "sourceTitle": "Tencent launches Hy4",
-          "sourceUrl": "https://en.prnasia.com/releases/apac/tencent-launches-hy4-joining-the-ranks-of-the-world-s-leading-open-source-ai-models-554689.shtml"
-        },
-        {
-          "date": "2026-11-04",
-          "label": "Daily update: OpenAI announces planned Pierre acquisition",
-          "publisher": "OpenAI",
-          "category": "Conditional acquisition announcement",
-          "storyId": "openai-pierre-agreement-2026-11-04",
-          "sourceTitle": "OpenAI to acquire Pierre Computer Company, Inc.",
-          "sourceUrl": "https://openai.com/index/openai-to-acquire-pierre/"
-        },
-        {
-          "date": "2026-11-04",
-          "label": "Added Nov 5 · Nov 4 announcement: Images 2.6 expands creation and editing",
-          "publisher": "OpenAI",
-          "category": "Model release; added November 5",
-          "storyId": "images-26-2026-11-04",
-          "sourceTitle": "Introducing Images 2.6",
-          "sourceUrl": "https://openai.com/index/introducing-images-2-6/"
-        },
-        {
-          "date": "2026-11-05",
-          "label": "Daily update · Nov 5: GPT-6 Cyber launches with restricted access",
-          "publisher": "OpenAI",
-          "category": "Restricted model release",
-          "storyId": "gpt-6-cyber-2026-11-05",
-          "sourceTitle": "GPT-6 Cyber: Advancing the frontier of aligned cybersecurity agents",
-          "sourceUrl": "https://openai.com/index/introducing-gpt-6-cyber/"
-        },
-        {
-          "date": "2026-11-05",
-          "label": "Daily update · Nov 5: PLaMo 3 Translate releases downloadable weights",
-          "publisher": "Preferred Networks",
-          "category": "Model-weight release",
-          "storyId": "plamo-3-translate-weights-2026-11-05",
-          "sourceTitle": "PFN releases PLaMo 3 Translate open-weight models",
-          "sourceUrl": "https://www.preferred.jp/ja/news/pr20261105"
-        },
-        {
-          "date": "2026-11-05",
-          "label": "Daily update · Nov 5: METR reports faster AI R&D at Anthropic, with major caveats",
-          "publisher": "METR",
-          "category": "Research assessment publication",
-          "storyId": "metr-anthropic-rd-assessment-2026-11-05",
-          "sourceTitle": "Independent Assessment of AI R&D Acceleration at Anthropic in October 2026",
-          "sourceUrl": "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/"
-        },
-        {
-          "date": "2026-11-05",
-          "label": "Added Nov 6 · Nov 5 announcement: Cursor deploys live apps",
-          "publisher": "Cursor",
-          "category": "Post-publication coding-harness update",
-          "storyId": "cursor-live-apps-2026-11-05",
-          "sourceTitle": "Build Live Apps in Cursor",
-          "sourceUrl": "https://cursor.com/changelog/build-live-apps"
-        },
-        {
-          "date": "2026-11-05",
-          "label": "Added Nov 6 · Nov 5 release: Hermes unifies sessions and adds tool budgets",
-          "publisher": "Nous Research",
-          "category": "Post-publication coding-harness update",
-          "storyId": "hermes-023-2026-11-05",
-          "sourceTitle": "Hermes Agent v0.23.0 — The Hearth Release",
-          "sourceUrl": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.0"
-        },
-        {
-          "date": "2026-11-05",
-          "label": "Added Nov 7 · Nov 5 launch: Inkling 2 Small arrives on Tinker",
-          "publisher": "Thinking Machines Lab",
-          "category": "Hosted model release; added November 7",
-          "storyId": "inkling-2-small-2026-11-05",
-          "sourceTitle": "Introducing Inkling 2 Small",
-          "sourceUrl": "https://thinkingmachines.ai/news/inkling-2-small/"
-        },
-        {
-          "date": "2026-11-06",
-          "label": "Daily update · Nov 6: Codex CLI 0.167 improves session navigation",
-          "publisher": "OpenAI",
-          "category": "Post-publication coding-harness update",
-          "storyId": "codex-0167-2026-11-06",
-          "sourceTitle": "ChatGPT & Codex changelog: CLI 0.167.0",
-          "sourceUrl": "https://learn.chatgpt.com/docs/changelog"
-        },
-        {
-          "date": "2026-11-06",
-          "label": "Daily update · Nov 6: Cursor adds two-way voice conversations",
-          "publisher": "Cursor",
-          "category": "Post-publication coding-harness update",
-          "storyId": "cursor-voice-chat-2026-11-06",
-          "sourceTitle": "Voice Chat with Agents",
-          "sourceUrl": "https://cursor.com/changelog/voice-chat"
-        },
-        {
-          "date": "2026-11-06",
-          "label": "Added Nov 7 · Nov 6 release: Claude Code backgrounds MCP tasks",
-          "publisher": "Anthropic",
-          "category": "Coding-harness release; added November 7",
-          "storyId": "claude-code-2319-2026-11-06",
-          "sourceTitle": "Claude Code v2.1.319 release",
-          "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319"
-        },
-        {
-          "date": "2026-11-06",
-          "label": "Added Nov 8 · Nov 6 release: OpenCode improves scripted sessions",
-          "publisher": "OpenCode",
-          "category": "Coding-harness release; added November 8",
-          "storyId": "opencode-226-2026-11-06",
-          "sourceTitle": "OpenCode v2.2.6 release",
-          "sourceUrl": "https://github.com/anomalyco/opencode/releases/tag/v2.2.6"
-        },
-        {
-          "date": "2026-11-06",
-          "label": "Added Nov 8 · Nov 6 release: Copilot CLI adds session controls",
-          "publisher": "GitHub",
-          "category": "Coding-harness release; added November 8",
-          "storyId": "copilot-cli-1107-2026-11-06",
-          "sourceTitle": "GitHub v1.0.107 release",
-          "sourceUrl": "https://github.com/github/copilot-cli/releases/tag/v1.0.107"
+          "date": "2026-11-09",
+          "label": "Added Nov 10 · Nov 9 launch: Muse Ember targets repeated agent work",
+          "publisher": "Meta",
+          "category": "Model availability",
+          "storyId": "muse-ember-2026-11-09",
+          "sourceTitle": "Introducing Our Smallest, Most Efficient Model: Muse Ember",
+          "sourceUrl": "https://research.meta.ai/blog/muse-ember"
         },
         {
           "date": "2026-11-09",
-          "label": "Daily update · Nov 9: Fable 5.2 launches; Mythos access stays gated",
+          "label": "Nov 9: Fable 5.2 launches; direct Mythos access stays gated",
           "publisher": "Anthropic",
-          "category": "Model release",
+          "category": "Model availability",
           "storyId": "claude-fable-mythos-52-2026-11-09",
           "sourceTitle": "Claude Fable 5.2 and Mythos 5.2",
           "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
         },
         {
           "date": "2026-11-09",
-          "label": "Daily update · Nov 9: Claude Code adds Fable 5.2 and security fixes",
+          "label": "Nov 9: Claude Code adds Fable 5.2 and security fixes",
           "publisher": "Anthropic",
-          "category": "Coding-harness release",
+          "category": "Coding harness update",
           "storyId": "claude-code-2321-2026-11-09",
           "sourceTitle": "Claude Code v2.1.321 release",
           "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321"
+        },
+        {
+          "date": "2026-11-10",
+          "label": "Nov 10: Gemini 4 Carbon reaches general availability",
+          "publisher": "Google",
+          "category": "Model availability",
+          "storyId": "gemini-carbon-ga-2026-11-10",
+          "sourceTitle": "Gemini API release notes: November 10, 2026",
+          "sourceUrl": "https://aistudio.google.com/docs/changelog"
+        },
+        {
+          "date": "2026-11-10",
+          "label": "Nov 10: Copilot CLI adds network-range controls and clearer failures",
+          "publisher": "GitHub",
+          "category": "Coding harness update",
+          "storyId": "copilot-cli-1109-2026-11-10",
+          "sourceTitle": "Copilot CLI v1.0.109 release",
+          "sourceUrl": "https://github.com/github/copilot-cli/releases/tag/v1.0.109"
+        },
+        {
+          "date": "2026-11-10",
+          "label": "Nov 10: OpenCode adds Copilot Auto routing and billing fixes",
+          "publisher": "OpenCode",
+          "category": "Coding harness update",
+          "storyId": "opencode-227-2026-11-10",
+          "sourceTitle": "OpenCode v2.2.7 release",
+          "sourceUrl": "https://github.com/anomalyco/opencode/releases/tag/v2.2.7"
+        },
+        {
+          "date": "2026-11-10",
+          "label": "Nov 10 UTC: Hermes fixes silently stale plugin catalogs",
+          "publisher": "Nous Research",
+          "category": "Coding harness update",
+          "storyId": "hermes-0231-2026-11-10",
+          "sourceTitle": "Hermes Agent v0.23.1 release",
+          "sourceUrl": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.1"
+        },
+        {
+          "date": "2026-11-10",
+          "label": "Nov 10: Claude Code extends fast mode to Vertex",
+          "publisher": "Anthropic",
+          "category": "Coding harness update",
+          "storyId": "claude-code-2322-2026-11-10",
+          "sourceTitle": "Claude Code v2.1.322 release",
+          "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.322"
         }
       ]
     },
     {
-      "id": "terra-token-prices",
+      "id": "carbon-introductory-prices",
       "type": "bar",
-      "title": "Terra: the token-cost shape",
-      "description": "Standard API price in US dollars per one million tokens, as listed in the October 26 release notes.",
-      "selectionCriteria": "Three billing categories for one model. This is a cost breakdown, not a model ranking or total task-cost estimate.",
+      "title": "Carbon: introductory rates end November 30",
+      "description": "Standard paid API rates in US dollars per one million tokens, from the official pricing page checked November 10. December rates are Google’s announced schedule, not an editorial forecast.",
+      "selectionCriteria": "Input and output rates for one model and one service tier at two effective dates. This is a pricing schedule, not a model ranking.",
       "unit": "USD per million tokens",
       "domain": [
         0,
-        5
+        20
       ],
-      "sourceTitle": "Model Release Notes: GPT-6.1 Terra",
-      "sourceUrl": "https://help.openai.com/en/articles/9624314-model-release-notes",
-      "publisher": "OpenAI",
-      "publishedAt": "2026-10-26",
+      "sourceTitle": "Gemini Developer API pricing: Gemini 4 Carbon",
+      "sourceUrl": "https://aistudio.google.com/docs/pricing#gemini-4-carbon",
+      "publisher": "Google",
+      "publishedAt": "2026-11-10",
+      "storyId": "gemini-carbon-ga-2026-11-10",
       "points": [
         {
-          "label": "Input",
-          "value": 1
+          "label": "Input through Nov 30",
+          "value": 2
         },
         {
-          "label": "Cached input",
-          "value": 0.05
+          "label": "Input from Dec 1",
+          "value": 4
         },
         {
-          "label": "Output",
-          "value": 5
+          "label": "Output through Nov 30",
+          "value": 10
+        },
+        {
+          "label": "Output from Dec 1",
+          "value": 20
         }
       ],
-      "caveat": "These categories have different billing conditions. Total task cost depends on actual input, cache eligibility and generated output; tools or other charges may add cost. API usage is separate from ChatGPT subscriptions. Prices are a dated snapshot, not a forecast.",
-      "storyId": "terra-2026-10-26"
-    },
-    {
-      "id": "fable-mythos-52-prices",
-      "type": "bar",
-      "title": "Fable / Mythos 5.2: standard versus fast pricing",
-      "description": "Launch-day token prices, not task-cost or speed measurements.",
-      "selectionCriteria": "Input and output rates for two serving modes.",
-      "unit": "USD per million tokens",
-      "domain": [
-        0,
-        80
-      ],
-      "sourceTitle": "Claude Fable 5.2 and Mythos 5.2",
-      "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
-      "publisher": "Anthropic",
-      "publishedAt": "2026-11-09",
-      "storyId": "claude-fable-mythos-52-2026-11-09",
-      "points": [
-        {
-          "label": "Standard input",
-          "value": 8
-        },
-        {
-          "label": "Standard output",
-          "value": 40
-        },
-        {
-          "label": "Fast input",
-          "value": 16
-        },
-        {
-          "label": "Fast output",
-          "value": 80
-        }
-      ],
-      "caveat": "Access and supported platforms differ. Caching, tools and workload change actual bills; these are dated rates, not a cross-model ranking."
+      "caveat": "Output includes thinking tokens. No free tier. Caching, grounding, service tiers and actual token usage affect total bills. Applies to publicly available Carbon, not a quoted Fairwind cyber price. The snapshot date is the GA date; the rolling pricing page has no separate publication date."
     }
-  ],
-  "issueStart": "2026-10-26",
-  "issueEnd": "2026-11-01",
-  "forecastStart": "2026-11-09",
-  "forecastEnd": "2026-11-15",
-  "updatedAt": "2026-11-09T20:06:00Z"
+  ]
 }
