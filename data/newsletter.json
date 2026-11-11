@@ -1,14 +1,106 @@
 {
   "title": "The AI Ledger",
-  "issue": "Week of November 9–15, 2026 · through November 10",
+  "issue": "Week of November 9–15, 2026 · through November 11",
   "publishedAt": "2026-11-10",
-  "updatedAt": "2026-11-10T20:08:00Z",
+  "updatedAt": "2026-11-11T20:00:00Z",
   "issueStart": "2026-11-09",
   "issueEnd": "2026-11-15",
   "forecastStart": "2026-11-16",
   "forecastEnd": "2026-11-22",
-  "introduction": "An in-progress weekly edition, reviewed through November 10. Carbon reaches general availability, Muse Ember adds a lower-cost execution option, and harness releases tighten networking, billing and plugin updates. Original release dates and access limits are explicit. The earlier second-harness forecast is resolved; new forecasts target November 16–22. Prior editions and all supplements remain in the archive. No new rumor met the evidence threshold. Confidence is qualitative, not a probability.",
+  "introduction": "An in-progress weekly edition, reviewed through November 11. Qwen4-Max opens a time-limited model preview, Qwen Code 1.0 combines harness capabilities in prerelease, and Gemini CLI ships session-recovery fixes. Earlier reports retain their original dates. The November 10 snapshot is preserved verbatim in the archive. Existing November 16–22 forecasts remain unchanged and pending; announced preview deadlines are not editorial predictions. No new rumor met the evidence threshold. Confidence is qualitative, not a probability.",
   "items": [
+    {
+      "id": "qwen4-max-preview-2026-11-11",
+      "section": "news",
+      "title": "Nov 11: Qwen4-Max opens a time-limited API preview",
+      "summary": "Alibaba opened Qwen4-Max-Preview through Token Plan, without pay-as-you-go access. It accepts text, images and video, with a one-million-token context and tool calling. The preview ends at 24:00 November 25 (UTC+8), equivalent to 16:00 UTC that day; this build is then scheduled for retirement.",
+      "whyItMatters": "Plan evaluations around that deadline. In Chat Completions, max_tokens now caps thinking and the final answer together for this model. An answer-only budget can truncate responses; older Qwen models retain their prior behavior.",
+      "confidence": "high",
+      "confidenceReason": "The dated official changelog verifies preview availability. The documentation establishes access and API behavior, not independent evidence of superior coding performance.",
+      "historicalContext": "The API compatibility notice is dated November 2, before the November 11 preview opening. Neither document establishes a permanent release date or an open-weight Qwen4 release.",
+      "sources": [
+        {
+          "title": "QwenCloud model releases: November 11, 2026",
+          "url": "https://docs.qwencloud.com/changelog/models",
+          "publisher": "Alibaba / QwenCloud",
+          "publishedAt": "2026-11-11",
+          "type": "primary",
+          "authenticityReason": "Directly retrieved publisher documentation explicitly dates the Qwen4-Max-Preview entry November 11 and identifies Token Plan-only access."
+        },
+        {
+          "title": "Latest model: Qwen4-Max-Preview",
+          "url": "https://docs.qwencloud.com/developer-guides/getting-started/latest-model",
+          "publisher": "Alibaba / QwenCloud",
+          "publishedAt": "2026-11-11",
+          "type": "primary",
+          "authenticityReason": "Official model guide directly retrieved November 11; its preview window starts that day. This is the launch-day documentation snapshot, not a separately stated page publication date. The Alibaba Cloud Model Studio guide corroborates the access window in indexed first-party text."
+        },
+        {
+          "title": "QwenCloud API compatibility upgrades: November 2 notice",
+          "url": "https://docs.qwencloud.com/changelog/api-compatibility-upgrade-notice",
+          "publisher": "Alibaba / QwenCloud",
+          "publishedAt": "2026-11-02",
+          "type": "primary",
+          "authenticityReason": "Directly retrieved official notice explicitly dated November 2. It specifies the changed output-budget behavior beginning with qwen4-max-preview."
+        }
+      ]
+    },
+    {
+      "id": "qwen-code-100-preview-2026-11-11",
+      "section": "news",
+      "title": "Nov 11: Qwen Code 1.0 previews the combined Qoder harness",
+      "summary": "Qwen Code 1.0 Preview brings together Qoder and Qwen Code agent capabilities. Native packages cover macOS, Linux and Windows without a separate Node.js installation. It supports multiple providers, saved-session resumption and non-interactive runs.",
+      "whyItMatters": "Treat this as a migration to evaluate, not a stable 1.0 upgrade: interfaces, configuration and behavior may change. The tagged README temporarily closes community pull requests and expects them to reopen after December 2026; issues remain welcome.",
+      "confidence": "high",
+      "confidenceReason": "The official GitHub release is explicitly marked prerelease. Its feature descriptions are publisher claims, not independently tested reliability results.",
+      "historicalContext": "Published November 11 at 03:55 UTC, after stable 0.27.2 on November 10. This harness preview is separate from the Qwen4-Max model preview and does not satisfy a stable-release forecast.",
+      "sources": [
+        {
+          "title": "Qwen Code v1.0.0-preview release",
+          "url": "https://github.com/QwenLM/qwen-code/releases/tag/v1.0.0-preview",
+          "publisher": "Qwen Team",
+          "publishedAt": "2026-11-11",
+          "type": "primary",
+          "authenticityReason": "Official repository; GitHub API published_at is 2026-11-11T03:55:44Z, draft is false and prerelease is true."
+        },
+        {
+          "title": "Qwen Code 1.0 Preview README at the release tag",
+          "url": "https://github.com/QwenLM/qwen-code/blob/v1.0.0-preview/README.md",
+          "publisher": "Qwen Team",
+          "publishedAt": "2026-11-11",
+          "type": "primary",
+          "authenticityReason": "Directly retrieved README pinned to the November 11 release tag, rather than a changing default branch. It documents compatibility caveats, contribution status and Apache-2.0 licensing."
+        },
+        {
+          "title": "Qwen Code v0.27.2 release",
+          "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.2",
+          "publisher": "Qwen Team",
+          "publishedAt": "2026-11-10",
+          "type": "primary",
+          "authenticityReason": "Official repository; GitHub API published_at is 2026-11-10T19:22:00Z, with draft and prerelease both false. Used only to establish the prior stable release."
+        }
+      ]
+    },
+    {
+      "id": "gemini-cli-0680-2026-11-10",
+      "section": "news",
+      "title": "Added Nov 11 · Nov 10 release: Gemini CLI improves session recovery",
+      "summary": "Stable Gemini CLI 0.68.0 adds an extension-validation command and fixes model selection across transient fallback, cancellation and rewind. ACP session loading now waits for history replay before responding.",
+      "whyItMatters": "Teams using resumed sessions or extensions gain targeted reliability fixes. Concurrent extension installs use a per-extension lock, and shadow repositories honor Git exclude settings. Test these paths in your own setup before relying on the reported fixes.",
+      "confidence": "high",
+      "confidenceReason": "The official stable release lists the changes. This newsletter has not reproduced the fixes or measured their impact.",
+      "historicalContext": "Published November 10 at 21:17 UTC, after this newsletter’s November 10 cutoff. The 0.68.0 preview appeared November 4; the separate 0.69.0 preview remains a prerelease. This is a harness release, not a new Gemini model.",
+      "sources": [
+        {
+          "title": "Gemini CLI v0.68.0 release",
+          "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.68.0",
+          "publisher": "Google",
+          "publishedAt": "2026-11-10",
+          "type": "primary",
+          "authenticityReason": "Official repository; GitHub API published_at is 2026-11-10T21:17:07Z, with draft and prerelease both false. Earlier preview timing was checked against the repository’s release API."
+        }
+      ]
+    },
     {
       "id": "gemini-carbon-ga-2026-11-10",
       "section": "news",
@@ -308,7 +400,7 @@
       "id": "verified-november-9-15-milestones",
       "type": "timeline",
       "title": "This week’s model and harness milestones",
-      "description": "Verified publisher dates through November 10. This is a selected reporting timeline, not a complete release count. Hermes uses GitHub’s UTC publication date; its prose notes say November 9. Muse Ember is a November 9 launch added November 10.",
+      "description": "Verified publisher dates through November 11. This selected timeline distinguishes preview access from stable releases. Hermes uses GitHub’s UTC date, although its prose notes say November 9. Muse Ember was added November 10; Gemini CLI was added November 11 after the prior cutoff.",
       "points": [
         {
           "date": "2026-11-09",
@@ -381,6 +473,33 @@
           "storyId": "claude-code-2322-2026-11-10",
           "sourceTitle": "Claude Code v2.1.322 release",
           "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.322"
+        },
+        {
+          "date": "2026-11-10",
+          "label": "Added Nov 11 · Nov 10 release: Gemini CLI improves session recovery",
+          "publisher": "Google",
+          "category": "Stable harness update",
+          "storyId": "gemini-cli-0680-2026-11-10",
+          "sourceTitle": "Gemini CLI v0.68.0 release",
+          "sourceUrl": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.68.0"
+        },
+        {
+          "date": "2026-11-11",
+          "label": "Nov 11: Qwen4-Max opens a time-limited API preview",
+          "publisher": "Alibaba / QwenCloud",
+          "category": "Model preview",
+          "storyId": "qwen4-max-preview-2026-11-11",
+          "sourceTitle": "QwenCloud model releases: November 11, 2026",
+          "sourceUrl": "https://docs.qwencloud.com/changelog/models"
+        },
+        {
+          "date": "2026-11-11",
+          "label": "Nov 11: Qwen Code 1.0 previews the combined Qoder harness",
+          "publisher": "Qwen Team",
+          "category": "Harness prerelease",
+          "storyId": "qwen-code-100-preview-2026-11-11",
+          "sourceTitle": "Qwen Code v1.0.0-preview release",
+          "sourceUrl": "https://github.com/QwenLM/qwen-code/releases/tag/v1.0.0-preview"
         }
       ]
     },
