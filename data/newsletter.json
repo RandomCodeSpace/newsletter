@@ -1,14 +1,62 @@
 {
   "title": "The AI Ledger",
-  "issue": "Week of November 9–15, 2026 · through November 11",
+  "issue": "Week of November 9–15, 2026 · through November 12",
   "publishedAt": "2026-11-10",
-  "updatedAt": "2026-11-11T20:00:00Z",
+  "updatedAt": "2026-11-12T20:00:00Z",
   "issueStart": "2026-11-09",
   "issueEnd": "2026-11-15",
   "forecastStart": "2026-11-16",
   "forecastEnd": "2026-11-22",
-  "introduction": "An in-progress weekly edition, reviewed through November 11. Qwen4-Max opens a time-limited model preview, Qwen Code 1.0 combines harness capabilities in prerelease, and Gemini CLI ships session-recovery fixes. Earlier reports retain their original dates. The November 10 snapshot is preserved verbatim in the archive. Existing November 16–22 forecasts remain unchanged and pending; announced preview deadlines are not editorial predictions. No new rumor met the evidence threshold. Confidence is qualitative, not a probability.",
+  "introduction": "An in-progress weekly edition reviewed through November 12. Anthropic adds customer-hosted agent orchestration, while Codex changes Vertex tool streaming. Earlier model and harness reports retain their original dates. The November 11 snapshot is preserved verbatim. Existing November 16–22 forecasts remain unchanged and pending; no new model-launch rumor met the evidence threshold. Confidence is qualitative, not a probability.",
   "items": [
+    {
+      "id": "claude-managed-selfhosted-2026-11-12",
+      "section": "news",
+      "title": "Nov 12: Claude moves the Managed Agents service onto customer infrastructure",
+      "summary": "Anthropic now offers self-hosted Managed Agents: the service, agent loop, sandboxes and session storage run on customer infrastructure. Access requires contacting an Anthropic account team. This is deployment control, not a new model or an offline Claude release.",
+      "whyItMatters": "Teams can retain session state locally and route inference through their chosen provider. Model requests still send conversation content to that provider. Operators take responsibility for securing the server, database and isolated workers; self-hosting does not by itself prevent data leaving the network.",
+      "confidence": "high",
+      "confidenceReason": "The dated official release entry and linked technical guide agree on scope and access. They do not establish general self-service availability or independently validated security.",
+      "historicalContext": "Earlier self-hosted sandboxes moved only tool execution. This release additionally moves the service and storage. Inference remains separate, and some hosted-service features are unavailable.",
+      "sources": [
+        {
+          "title": "Claude Platform release notes: November 12",
+          "url": "https://platform.claude.com/docs/en/release-notes/overview",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-12",
+          "type": "primary",
+          "authenticityReason": "Official dated release entry explicitly announces self-hosted Managed Agents; retrieved November 12, not dated by search crawl time."
+        },
+        {
+          "title": "Self-hosted Claude Managed Agents",
+          "url": "https://platform.claude.com/docs/en/managed-agents/self-hosted",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-12",
+          "type": "primary",
+          "authenticityReason": "First-party technical guide linked by the November 12 announcement. Date denotes the verified launch-day documentation snapshot; the guide has no separate publication date."
+        }
+      ]
+    },
+    {
+      "id": "codex-01672-2026-11-11",
+      "section": "news",
+      "title": "Added Nov 12 · late Nov 11 release: Codex streams Vertex tool updates by default",
+      "summary": "Codex CLI 0.167.2 enables incremental tool updates by default on Google Cloud Vertex AI. The official release says to set incremental_tools_legacy_gcp = false under [features] in config.toml to opt out.",
+      "whyItMatters": "Vertex users should check how their integrations handle streamed tool updates before upgrading. This is a provider-path behavior change, not a new coding model or a measured speed improvement.",
+      "confidence": "high",
+      "confidenceReason": "The stable GitHub release directly records the behavior and opt-out; its publication timestamp is verified through the GitHub API.",
+      "historicalContext": "Published at 22:44:46 UTC on November 11, after the prior edition’s 20:00 UTC cutoff. Some aggregators label it November 12; this entry retains the original UTC release date.",
+      "sources": [
+        {
+          "title": "Codex CLI 0.167.2 release",
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.167.2",
+          "publisher": "OpenAI",
+          "publishedAt": "2026-11-11",
+          "type": "primary",
+          "authenticityReason": "Release in OpenAI’s official repository; GitHub API published_at is 2026-11-11T22:44:46Z and prerelease is false. This is later than the previous edition cutoff."
+        }
+      ]
+    },
     {
       "id": "qwen4-max-preview-2026-11-11",
       "section": "news",
@@ -500,6 +548,18 @@
           "storyId": "qwen-code-100-preview-2026-11-11",
           "sourceTitle": "Qwen Code v1.0.0-preview release",
           "sourceUrl": "https://github.com/QwenLM/qwen-code/releases/tag/v1.0.0-preview"
+        },
+        {
+          "label": "Codex 0.167.2: Vertex tool streaming",
+          "date": "2026-11-11",
+          "sourceUrl": "https://github.com/openai/codex/releases/tag/rust-v0.167.2",
+          "storyId": "codex-01672-2026-11-11"
+        },
+        {
+          "label": "Claude Managed Agents: self-hosted service",
+          "date": "2026-11-12",
+          "sourceUrl": "https://platform.claude.com/docs/en/release-notes/overview",
+          "storyId": "claude-managed-selfhosted-2026-11-12"
         }
       ]
     },
