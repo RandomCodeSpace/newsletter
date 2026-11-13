@@ -2,13 +2,53 @@
   "title": "The AI Ledger",
   "issue": "Week of November 9–15, 2026 · through November 12",
   "publishedAt": "2026-11-10",
-  "updatedAt": "2026-11-12T20:00:00Z",
+  "updatedAt": "2026-11-13T20:00:00Z",
   "issueStart": "2026-11-09",
   "issueEnd": "2026-11-15",
   "forecastStart": "2026-11-16",
   "forecastEnd": "2026-11-22",
-  "introduction": "An in-progress weekly edition reviewed through November 12. Anthropic adds customer-hosted agent orchestration, while Codex changes Vertex tool streaming. Earlier model and harness reports retain their original dates. The November 11 snapshot is preserved verbatim. Existing November 16–22 forecasts remain unchanged and pending; no new model-launch rumor met the evidence threshold. Confidence is qualitative, not a probability.",
+  "introduction": "An in-progress weekly edition reviewed through November 13. Codex adds opt-in side chats and reinforces project trust; Claude Code introduces experimental programmatic tool invocation and background-account fixes. Original release dates are retained, including late November 12 news. The November 12 snapshot is preserved verbatim. November 16–22 forecasts remain unchanged and pending; this week’s releases cannot satisfy next week’s predictions. Confidence is qualitative, not a probability.",
   "items": [
+    {
+      "id": "codex-01690-2026-11-13",
+      "section": "news",
+      "title": "Nov 13: Codex 0.169.0 adds side chats and reinforces project trust",
+      "summary": "The opt-in terminal workspace gains multiple side-chat tabs and can reopen saved local side chats. The agent command center can search older tasks. Custom-provider onboarding can use device codes for supported gateways over SSH.",
+      "whyItMatters": "For headless automation, project configuration and MCP remain disabled in untrusted directories even with workspace-write sandboxing. The release documents --trust for explicitly saving project trust; sandbox mode alone is not trust consent.",
+      "confidence": "high",
+      "confidenceReason": "Official release notes establish availability and reported behavior; the changes have not been independently tested for this newsletter.",
+      "historicalContext": "Published after this edition’s Codex 0.167.2 report. These are harness changes, not a new model release. Side-chat workspace and gateway onboarding features are opt-in, not universal defaults.",
+      "sources": [
+        {
+          "title": "Nov 13: Codex 0.169.0 adds side chats and reinforces project trust",
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0",
+          "publisher": "OpenAI",
+          "publishedAt": "2026-11-13",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository. GitHub release API published_at is 2026-11-13T08:37:05Z; draft and prerelease are false. This is the original release timestamp, not a search crawl date."
+        }
+      ]
+    },
+    {
+      "id": "claude-code-21323-2026-11-12",
+      "section": "news",
+      "title": "Added Nov 13 · late Nov 12: Claude Code introduces experimental Code Mode",
+      "summary": "Claude Code 2.1.323 adds opt-in Code Mode, where Claude writes JavaScript to invoke tools. Plugins can declare a compatible Claude Code version range, and plugin validation checks TypeScript hooks, with strict mode failing on findings.",
+      "whyItMatters": "Background-session fixes prevent silently changing the account used for a conversation. The release also fixes repeated compaction dropping an unanswered message. These are useful regression-test targets for long-running agent workflows, not proof that all context-loss problems are solved.",
+      "confidence": "high",
+      "confidenceReason": "Official release notes establish availability and reported behavior; the changes have not been independently tested for this newsletter.",
+      "historicalContext": "Published November 12 at 22:12 UTC, after the previous edition’s 20:00 UTC cutoff. The stable package contains an experimental feature: Code Mode itself is not described as generally enabled.",
+      "sources": [
+        {
+          "title": "Added Nov 13 · late Nov 12: Claude Code introduces experimental Code Mode",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-12",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository. GitHub release API published_at is 2026-11-12T22:12:13Z; draft and prerelease are false. This is the original release timestamp, not a search crawl date."
+        }
+      ]
+    },
     {
       "id": "claude-managed-selfhosted-2026-11-12",
       "section": "news",
@@ -448,7 +488,7 @@
       "id": "verified-november-9-15-milestones",
       "type": "timeline",
       "title": "This week’s model and harness milestones",
-      "description": "Verified publisher dates through November 11. This selected timeline distinguishes preview access from stable releases. Hermes uses GitHub’s UTC date, although its prose notes say November 9. Muse Ember was added November 10; Gemini CLI was added November 11 after the prior cutoff.",
+      "description": "Selected verified model and harness milestones through November 13. Dates are original publisher release dates, not the dates added to this edition. Preview and experimental features are distinguished from stable package releases.",
       "points": [
         {
           "date": "2026-11-09",
@@ -560,6 +600,24 @@
           "date": "2026-11-12",
           "sourceUrl": "https://platform.claude.com/docs/en/release-notes/overview",
           "storyId": "claude-managed-selfhosted-2026-11-12"
+        },
+        {
+          "date": "2026-11-12",
+          "label": "Added Nov 13 · late Nov 12: Claude Code introduces experimental Code Mode",
+          "publisher": "Anthropic",
+          "category": "Coding harness",
+          "storyId": "claude-code-21323-2026-11-12",
+          "sourceTitle": "Added Nov 13 · late Nov 12: Claude Code introduces experimental Code Mode",
+          "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323"
+        },
+        {
+          "date": "2026-11-13",
+          "label": "Nov 13: Codex 0.169.0 adds side chats and reinforces project trust",
+          "publisher": "OpenAI",
+          "category": "Coding harness",
+          "storyId": "codex-01690-2026-11-13",
+          "sourceTitle": "Nov 13: Codex 0.169.0 adds side chats and reinforces project trust",
+          "sourceUrl": "https://github.com/openai/codex/releases/tag/rust-v0.169.0"
         }
       ]
     },
