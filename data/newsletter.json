@@ -1,14 +1,94 @@
 {
   "title": "The AI Ledger",
-  "issue": "Week of November 9–15, 2026 · through November 12",
+  "issue": "Week of November 9–15, 2026 · through November 14",
   "publishedAt": "2026-11-10",
-  "updatedAt": "2026-11-13T20:00:00Z",
+  "updatedAt": "2026-11-14T20:00:00Z",
   "issueStart": "2026-11-09",
   "issueEnd": "2026-11-15",
   "forecastStart": "2026-11-16",
   "forecastEnd": "2026-11-22",
-  "introduction": "An in-progress weekly edition reviewed through November 13. Codex adds opt-in side chats and reinforces project trust; Claude Code introduces experimental programmatic tool invocation and background-account fixes. Original release dates are retained, including late November 12 news. The November 12 snapshot is preserved verbatim. November 16–22 forecasts remain unchanged and pending; this week’s releases cannot satisfy next week’s predictions. Confidence is qualitative, not a probability.",
+  "introduction": "An in-progress weekly edition reviewed through November 14. New coverage includes late-November-13 Claude Code and Copilot CLI fixes, plus previously unreported OpenCode 2.3 and Gemini 4 Hydrogen releases. Dates below are original publication dates, not discovery dates. The November 13 snapshot is preserved verbatim. November 16–22 forecasts remain unchanged and pending; this week’s releases cannot satisfy next week’s predictions. Confidence is qualitative, not a probability.",
   "items": [
+    {
+      "id": "claude-code-21325-2026-11-13",
+      "section": "news",
+      "title": "Added Nov 14 · Claude Code 2.1.325 fixes decoding, account and compaction issues",
+      "summary": "Anthropic reports a security fix in zstd-compressed response decoding, restores missing recent turns after an unclean exit, and fixes repeated context-limit errors on third-party gateways and Foundry. Background sessions started on claude.ai no longer use and bill an API key inherited from the shell.",
+      "whyItMatters": "For gateway and background-session users, this is an operational and security-maintenance update. The notes do not establish a CVE, severity rating or evidence that any user was compromised.",
+      "confidence": "high",
+      "confidenceReason": "The publisher’s official release notes establish availability and reported behavior. These changes have not been independently tested for this newsletter.",
+      "historicalContext": "Published at 20:40 UTC after the preceding 20:00 UTC review. It follows this issue’s 2.1.323 Code Mode coverage; it is a harness update, not a Claude model launch.",
+      "sources": [
+        {
+          "title": "Added Nov 14 · Claude Code 2.1.325 fixes decoding, account and compaction issues",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-13",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository. GitHub release API published_at is 2026-11-13T20:40:01Z; draft and prerelease are false. Original release timestamp, not search crawl time."
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-10112-2026-11-13",
+      "section": "news",
+      "title": "Added Nov 14 · Copilot CLI 1.0.112 tightens credit limits and untrusted-text rendering",
+      "summary": "Resumed sessions count previously used AI credits toward the session limit, and subagents respect the session-wide --max-ai-credits limit. Task prompts, MCP reviews and other untrusted text are rendered without passing terminal control sequences through.",
+      "whyItMatters": "These changes target cost-control consistency and terminal presentation safety. The release also respects organization policy disabling the built-in GitHub MCP server. These are publisher-reported fixes, not proof of complete protection against malicious content.",
+      "confidence": "high",
+      "confidenceReason": "The publisher’s official release notes establish availability and reported behavior. These changes have not been independently tested for this newsletter.",
+      "historicalContext": "Published at 23:59 UTC after the prior review. This continues the 1.0.109 controls coverage earlier in the issue; macOS localhost sandbox limitations are clarified in help, not presented here as a newly introduced sandbox feature.",
+      "sources": [
+        {
+          "title": "Added Nov 14 · Copilot CLI 1.0.112 tightens credit limits and untrusted-text rendering",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.112",
+          "publisher": "GitHub",
+          "publishedAt": "2026-11-13",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository. GitHub release API published_at is 2026-11-13T23:59:41Z; draft and prerelease are false. Original release timestamp, not search crawl time."
+        }
+      ]
+    },
+    {
+      "id": "opencode-230-2026-11-13",
+      "section": "news",
+      "title": "Added Nov 14 · OpenCode 2.3 makes subagents asynchronous by default",
+      "summary": "Subagents return a session ID immediately, continue in the background and report to their parent when idle. The terminal groups tool calls and thoughts into collapsible activity rows by default, while retaining an existing verbosity choice. Desktop users gain Jump to message.",
+      "whyItMatters": "Parent sessions can continue while multiple workers run. Importantly, an idle worker with ongoing background work reports that work as still running, reducing the chance of confusing a partial response with completion.",
+      "confidence": "high",
+      "confidenceReason": "The publisher’s official release notes establish availability and reported behavior. These changes have not been independently tested for this newsletter.",
+      "historicalContext": "This November 13 release was not included in the prior snapshot and is added retrospectively with its actual date. It follows this issue’s OpenCode 2.2.7 coverage. MCP events remain experimental behind a flag.",
+      "sources": [
+        {
+          "title": "Added Nov 14 · OpenCode 2.3 makes subagents asynchronous by default",
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v2.3.0",
+          "publisher": "OpenCode / Anomaly",
+          "publishedAt": "2026-11-13",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository. GitHub release API published_at is 2026-11-13T08:55:07Z; draft and prerelease are false. Original release timestamp, not search crawl time."
+        }
+      ]
+    },
+    {
+      "id": "gemini-hydrogen-ga-2026-11-12",
+      "section": "news",
+      "title": "Added Nov 14 · Gemini 4 Hydrogen reaches general availability",
+      "summary": "Google’s November 12 API changelog lists gemini-4-hydrogen as generally available, with a free tier and paid rates of $1.50 per million input tokens and $7.50 per million output tokens. It adds an xhigh thinking level alongside low, medium and default high.",
+      "whyItMatters": "Hydrogen becomes the default Antigravity agent model in Gemini Managed Agents. Developers evaluating everyday coding and agent workflows should check migration guidance from Gemini 3.8 Flash rather than assume a drop-in replacement.",
+      "confidence": "high",
+      "confidenceReason": "The publisher’s official release notes establish availability and reported behavior. These changes have not been independently tested for this newsletter.",
+      "historicalContext": "This previously unreported November 12 launch is added on November 14, not described as launching today. It follows Gemini 4 Carbon’s November 10 GA announcement already covered here. Price and feature differences do not establish benchmark superiority.",
+      "sources": [
+        {
+          "title": "Added Nov 14 · Gemini 4 Hydrogen reaches general availability",
+          "url": "https://aistudio.google.com/docs/changelog",
+          "publisher": "Google",
+          "publishedAt": "2026-11-12",
+          "type": "primary",
+          "authenticityReason": "Google’s official Gemini API changelog explicitly dates this launch November 12, 2026. The dated entry, not a search crawl timestamp, is the evidence for release timing."
+        }
+      ]
+    },
     {
       "id": "codex-01690-2026-11-13",
       "section": "news",
@@ -611,6 +691,15 @@
           "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323"
         },
         {
+          "date": "2026-11-12",
+          "label": "Added Nov 14 · Gemini 4 Hydrogen reaches general availability",
+          "publisher": "Google",
+          "category": "Model release",
+          "storyId": "gemini-hydrogen-ga-2026-11-12",
+          "sourceTitle": "Added Nov 14 · Gemini 4 Hydrogen reaches general availability",
+          "sourceUrl": "https://aistudio.google.com/docs/changelog"
+        },
+        {
           "date": "2026-11-13",
           "label": "Nov 13: Codex 0.169.0 adds side chats and reinforces project trust",
           "publisher": "OpenAI",
@@ -618,6 +707,33 @@
           "storyId": "codex-01690-2026-11-13",
           "sourceTitle": "Nov 13: Codex 0.169.0 adds side chats and reinforces project trust",
           "sourceUrl": "https://github.com/openai/codex/releases/tag/rust-v0.169.0"
+        },
+        {
+          "date": "2026-11-13",
+          "label": "Added Nov 14 · Claude Code 2.1.325 fixes decoding, account and compaction issues",
+          "publisher": "Anthropic",
+          "category": "Coding harness",
+          "storyId": "claude-code-21325-2026-11-13",
+          "sourceTitle": "Added Nov 14 · Claude Code 2.1.325 fixes decoding, account and compaction issues",
+          "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325"
+        },
+        {
+          "date": "2026-11-13",
+          "label": "Added Nov 14 · Copilot CLI 1.0.112 tightens credit limits and untrusted-text rendering",
+          "publisher": "GitHub",
+          "category": "Coding harness",
+          "storyId": "copilot-cli-10112-2026-11-13",
+          "sourceTitle": "Added Nov 14 · Copilot CLI 1.0.112 tightens credit limits and untrusted-text rendering",
+          "sourceUrl": "https://github.com/github/copilot-cli/releases/tag/v1.0.112"
+        },
+        {
+          "date": "2026-11-13",
+          "label": "Added Nov 14 · OpenCode 2.3 makes subagents asynchronous by default",
+          "publisher": "OpenCode / Anomaly",
+          "category": "Coding harness",
+          "storyId": "opencode-230-2026-11-13",
+          "sourceTitle": "Added Nov 14 · OpenCode 2.3 makes subagents asynchronous by default",
+          "sourceUrl": "https://github.com/anomalyco/opencode/releases/tag/v2.3.0"
         }
       ]
     },
