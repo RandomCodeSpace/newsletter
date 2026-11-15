@@ -1,14 +1,34 @@
 {
   "title": "The AI Ledger",
-  "issue": "Week of November 9–15, 2026 · through November 14",
+  "issue": "Week of November 9–15, 2026 · through November 15",
   "publishedAt": "2026-11-10",
-  "updatedAt": "2026-11-14T20:00:00Z",
+  "updatedAt": "2026-11-15T20:00:00Z",
   "issueStart": "2026-11-09",
   "issueEnd": "2026-11-15",
   "forecastStart": "2026-11-16",
   "forecastEnd": "2026-11-22",
-  "introduction": "An in-progress weekly edition reviewed through November 14. New coverage includes late-November-13 Claude Code and Copilot CLI fixes, plus previously unreported OpenCode 2.3 and Gemini 4 Hydrogen releases. Dates below are original publication dates, not discovery dates. The November 13 snapshot is preserved verbatim. November 16–22 forecasts remain unchanged and pending; this week’s releases cannot satisfy next week’s predictions. Confidence is qualitative, not a probability.",
+  "introduction": "Weekly edition reviewed through November 15 at 20:00 UTC. Today adds Qwen Code 0.27.4, with managed-session access and permission controls. Earlier model and harness stories retain their original publication dates. The November 14 snapshot is preserved verbatim. November 16–22 forecasts remain unchanged and pending: releases from this reporting week cannot satisfy them. No fresh release-timing rumor met the evidence threshold. Confidence is qualitative, not a probability.",
   "items": [
+    {
+      "id": "qwen-code-0274-2026-11-15",
+      "section": "news",
+      "title": "Nov 15: Qwen Code 0.27.4 expands managed sessions and authorization controls",
+      "summary": "Managed Agent sessions gain temporary local-directory grants and an interactive web terminal. Auto Mode checks explicit authorization for risky actions, reviews classifier timeouts and avoids filesystem lookups for HTTP URLs. Long managed-channel replies are segmented rather than silently truncated; exceeding the segment limit produces a notice.",
+      "whyItMatters": "Useful for remote sessions and permission visibility, but these changes do not establish that arbitrary workloads are safe. Test grants and cancellation behavior in your own environment.",
+      "confidence": "high",
+      "confidenceReason": "Availability and the reported changes are documented in the official release; behavior has not been independently tested.",
+      "historicalContext": "This is a stable 0.27-series harness release, separate from the November 11 version 1.0 preview already covered. Version numbers alone do not establish that one release channel replaces another. It is not a Qwen model launch.",
+      "sources": [
+        {
+          "title": "Qwen Code v0.27.4 release",
+          "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.4",
+          "publisher": "Qwen Team",
+          "publishedAt": "2026-11-15",
+          "type": "primary",
+          "authenticityReason": "Official QwenLM repository. GitHub release API published_at is 2026-11-15T07:04:40Z; draft and prerelease are false. The release page independently displays November 15, 07:04. Publisher-reported behavior, not independent testing."
+        }
+      ]
+    },
     {
       "id": "claude-code-21325-2026-11-13",
       "section": "news",
@@ -568,7 +588,7 @@
       "id": "verified-november-9-15-milestones",
       "type": "timeline",
       "title": "This week’s model and harness milestones",
-      "description": "Selected verified model and harness milestones through November 13. Dates are original publisher release dates, not the dates added to this edition. Preview and experimental features are distinguished from stable package releases.",
+      "description": "Selected verified model and harness milestones through November 15. Dates are original publisher release dates, not dates added to this edition. Preview and experimental features are distinguished from stable package releases.",
       "points": [
         {
           "date": "2026-11-09",
@@ -734,6 +754,15 @@
           "storyId": "opencode-230-2026-11-13",
           "sourceTitle": "Added Nov 14 · OpenCode 2.3 makes subagents asynchronous by default",
           "sourceUrl": "https://github.com/anomalyco/opencode/releases/tag/v2.3.0"
+        },
+        {
+          "date": "2026-11-15",
+          "label": "Qwen Code 0.27.4: managed sessions and authorization controls",
+          "publisher": "Qwen Team",
+          "category": "Stable harness update",
+          "storyId": "qwen-code-0274-2026-11-15",
+          "sourceTitle": "Qwen Code v0.27.4 release",
+          "sourceUrl": "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.4"
         }
       ]
     },
