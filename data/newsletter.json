@@ -1,14 +1,62 @@
 {
   "title": "The AI Ledger",
-  "issue": "Week of November 16–22, 2026 · through November 17",
+  "issue": "Week of November 16–22, 2026 · through November 18",
   "publishedAt": "2026-11-16",
-  "updatedAt": "2026-11-17T20:00:00Z",
+  "updatedAt": "2026-11-18T20:00:00Z",
   "issueStart": "2026-11-16",
   "issueEnd": "2026-11-22",
   "forecastStart": "2026-11-23",
   "forecastEnd": "2026-11-29",
-  "introduction": "Reviewed through November 17 at 20:00 UTC. GPT-6.2 leads a busy model and harness day, alongside Microsoft coding models in Copilot, Entra sign-in preview and review controls. Late November 16 releases retain their actual dates. Yesterday’s snapshot is archived unchanged. The two-publisher controls forecast is now met by Claude Code and Copilot CLI; remaining forecasts retain their original criteria. No fresh timing rumor met the evidence threshold. Confidence is qualitative, not a probability.",
+  "introduction": "Reviewed through November 18 at 20:00 UTC. Stable Codex and Claude Code updates focus on permissions, recovery and avoiding destructive side effects. Yesterday’s complete snapshot is preserved unchanged. The Codex stable-version forecast is now met by the late-November-17 0.169.1 release; remaining forecast criteria are unchanged. Earlier model announcements keep their original dates. No fresh timing rumor met the evidence threshold. Confidence labels are qualitative, not probabilities.",
   "items": [
+    {
+      "id": "codex-01700-2026-11-18",
+      "section": "news",
+      "title": "Codex 0.170.0 preserves sandbox restrictions and recovery turns",
+      "summary": "The stable release fixes permission updates and child threads losing existing sandbox restrictions, and preserves active recovery turns during reconnection. Oversized WebSocket requests fall back to HTTP; MCP OAuth handling is hardened against credential races.",
+      "whyItMatters": "These are useful upgrade and regression-test targets for multiprocess and remote workflows. Same-named MCP servers across environments remain experimental; do not infer universal support.",
+      "historicalContext": "Published November 18 at 03:40 UTC. A stable 0.169.1 had already appeared late November 17 with no verified feature highlights, resolving the version-only forecast before this feature release.",
+      "confidence": "high",
+      "confidenceReason": "Official dated release notes support these claims. No independent behavior or performance tests were run.",
+      "sources": [
+        {
+          "title": "OpenAI rust-v0.170.0",
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.170.0",
+          "publisher": "OpenAI",
+          "publishedAt": "2026-11-18",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository, with GitHub API published_at 2026-11-18T03:40:48Z and draft/prerelease both false. Release notes are publisher-reported, not independent testing."
+        },
+        {
+          "title": "OpenAI rust-v0.169.1",
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.1",
+          "publisher": "OpenAI",
+          "publishedAt": "2026-11-17",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository, with GitHub API published_at 2026-11-17T22:21:10Z and draft/prerelease both false. Release notes are publisher-reported, not independent testing."
+        }
+      ]
+    },
+    {
+      "id": "claude-code-21327-2026-11-17",
+      "section": "news",
+      "title": "Late Nov 17: Claude Code fixes destructive cleanup and lost-history cases",
+      "summary": "Version 2.1.327 fixes Remote Control worktree shutdown deleting a running session’s ignored files and prevents export from overwriting files without confirmation. It reports unloadable earlier messages and fixes several crash/resume and compaction cases that lost conversation content.",
+      "whyItMatters": "For long sessions, test Stop/restart and worktree cleanup rather than assume history is intact. MCP JSON can now be read from stdin to keep tokens out of command-line arguments. This does not guarantee credentials cannot leak elsewhere.",
+      "historicalContext": "Published November 17 at 23:17 UTC, after yesterday’s cutoff. These are harness maintenance changes, separate from Claude model capabilities.",
+      "confidence": "high",
+      "confidenceReason": "Official dated release notes support these claims. No independent behavior or performance tests were run.",
+      "sources": [
+        {
+          "title": "Anthropic v2.1.327",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.327",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-17",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository, with GitHub API published_at 2026-11-17T23:17:45Z and draft/prerelease both false. Release notes are publisher-reported, not independent testing."
+        }
+      ]
+    },
     {
       "id": "gpt62-2026-11-17",
       "section": "news",
@@ -367,7 +415,7 @@
       "whyItMatters": "This tests whether the recent operational-controls trend persists beyond the current reporting week.",
       "confidence": "medium",
       "confidenceReason": "Editorial inference from recent releases, not a publisher commitment or numeric probability.",
-      "historicalContext": "Recent stable releases addressed trust, credits and background sessions. This is a new forecast, not a restatement of the still-pending November 16–22 two-publisher forecast.",
+      "historicalContext": "Recent stable releases addressed trust, credits and background sessions. This forecast was made before the November 16–22 two-publisher forecast resolved; releases before November 23 cannot satisfy this later window.",
       "sources": [
         {
           "title": "Added Nov 14 · Copilot CLI 1.0.112 tightens credit limits and untrusted-text rendering",
@@ -385,11 +433,11 @@
     {
       "id": "codex-stable-forecast-2026-11-29",
       "section": "predictions",
-      "title": "By November 29: Codex ships a stable version newer than 0.169.0",
+      "title": "Resolved Nov 18 · Codex stable-version forecast: met",
       "summary": "We expect a stable Codex release newer than 0.169.0 by the end of next week.",
       "whyItMatters": "This tests whether current prerelease activity converts to a stable release; it makes no claim about which features will ship.",
       "confidence": "medium",
-      "confidenceReason": "Editorial forecast based on an active alpha series; no release date has been promised.",
+      "confidenceReason": "Editorial forecast based on an active alpha series; no release date has been promised. Resolution: stable 0.169.1 was published November 17 at 22:21:10 UTC, after the original cutoff and before the deadline. The criterion required a version newer than 0.169.0, not a feature-bearing release or the promotion of a particular alpha.",
       "historicalContext": "The November 16 alpha series is observable, but publishers can skip version numbers or delay promotion.",
       "sources": [
         {
@@ -399,6 +447,14 @@
           "publishedAt": "2026-11-16",
           "type": "primary",
           "authenticityReason": "Official openai/codex release page labels this a prerelease and displays November 16 at 19:13 UTC. This does not establish stable availability."
+        },
+        {
+          "title": "OpenAI rust-v0.169.1",
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.1",
+          "publisher": "OpenAI",
+          "publishedAt": "2026-11-17",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository, with GitHub API published_at 2026-11-17T22:21:10Z and draft/prerelease both false. Release notes are publisher-reported, not independent testing."
         }
       ],
       "horizon": "Deadline 23:59 UTC November 29, 2026; next calendar week is November 23–29.",
@@ -484,6 +540,18 @@
           "date": "2026-11-17",
           "sourceUrl": "https://github.com/anomalyco/opencode/releases/tag/v1.19.6",
           "storyId": "opencode-1196-2026-11-17"
+        },
+        {
+          "label": "Late Nov 17: Claude Code fixes destructive cleanup and lost-history cases",
+          "date": "2026-11-17",
+          "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.327",
+          "storyId": "claude-code-21327-2026-11-17"
+        },
+        {
+          "label": "Codex 0.170.0 preserves sandbox restrictions and recovery turns",
+          "date": "2026-11-18",
+          "sourceUrl": "https://github.com/openai/codex/releases/tag/rust-v0.170.0",
+          "storyId": "codex-01700-2026-11-18"
         }
       ]
     },

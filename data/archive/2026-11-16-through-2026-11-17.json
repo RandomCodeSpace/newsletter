@@ -1,0 +1,563 @@
+{
+  "title": "The AI Ledger",
+  "issue": "Week of November 16–22, 2026 · through November 17",
+  "publishedAt": "2026-11-16",
+  "updatedAt": "2026-11-17T20:00:00Z",
+  "issueStart": "2026-11-16",
+  "issueEnd": "2026-11-22",
+  "forecastStart": "2026-11-23",
+  "forecastEnd": "2026-11-29",
+  "introduction": "Reviewed through November 17 at 20:00 UTC. GPT-6.2 leads a busy model and harness day, alongside Microsoft coding models in Copilot, Entra sign-in preview and review controls. Late November 16 releases retain their actual dates. Yesterday’s snapshot is archived unchanged. The two-publisher controls forecast is now met by Claude Code and Copilot CLI; remaining forecasts retain their original criteria. No fresh timing rumor met the evidence threshold. Confidence is qualitative, not a probability.",
+  "items": [
+    {
+      "id": "gpt62-2026-11-17",
+      "section": "news",
+      "title": "GPT-6.2 Astra and Sol launch with lower Astra API rates",
+      "summary": "OpenAI releases Astra for demanding projects and Sol for everyday work in ChatGPT Work, Codex and the API. Standard Astra input/output rates fall 20% versus GPT-6 Astra; Sol retains GPT-6.1 Sol pricing. Efficiency and quality improvements remain publisher claims.",
+      "whyItMatters": "Pro $200 gains Ultrafast for Sol; Pro $500 supports either model. Work and Codex share usage. API Ultrafast availability is separate from subscription entitlements. OpenAI also warns that tighter cyber safeguards can restrict legitimate security research.",
+      "confidence": "high",
+      "confidenceReason": "Official sources establish the dated release and reported behavior; no independent performance test was run.",
+      "historicalContext": "This is a confirmed November 17 launch, not the earlier documentation sightings. The model release is distinct from Codex CLI prereleases. No benchmark claim here establishes superiority on a particular repository.",
+      "sources": [
+        {
+          "title": "Introducing GPT-6.2 Astra and Sol",
+          "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+          "publisher": "OpenAI",
+          "publishedAt": "2026-11-17",
+          "type": "primary",
+          "authenticityReason": "Official OpenAI announcement; November 17 launch date corroborated by the dated ChatGPT Learn release note. Performance comparisons are vendor-reported."
+        },
+        {
+          "title": "GPT-6.2 availability",
+          "url": "https://learn.chatgpt.com/docs/whats-new/gpt-62-astra-sol",
+          "publisher": "OpenAI",
+          "publishedAt": "2026-11-17",
+          "type": "primary",
+          "authenticityReason": "Official publisher announcement explicitly dated on the page; vendor claims are not independent testing."
+        }
+      ]
+    },
+    {
+      "id": "mai-code2-2026-11-17",
+      "section": "news",
+      "title": "MAI Code 2 and Flash arrive in Copilot",
+      "summary": "GitHub adds MAI Code 2 for complex agentic coding and MAI Code 2 Flash for lighter everyday tasks. Both appear in supported clients including Copilot CLI; billing is usage-based. Flash includes Free and Student eligibility, while Code 2 starts with paid Copilot plans.",
+      "whyItMatters": "These provide additional candidates for coding evaluations within Copilot. Business and Enterprise model policies govern access; advertised availability does not prove a given organization has enabled them.",
+      "confidence": "high",
+      "confidenceReason": "Official sources establish the dated release and reported behavior; no independent performance test was run.",
+      "historicalContext": "These are Microsoft model additions announced at Ignite, not a rename of GPT or Claude and not an announcement of unrestricted local weights.",
+      "sources": [
+        {
+          "title": "MAI Code 2 and MAI Code 2 Flash in GitHub Copilot",
+          "url": "https://github.blog/changelog/2026-11-17-mai-code-2-and-mai-code-2-flash-in-github-copilot/",
+          "publisher": "GitHub",
+          "publishedAt": "2026-11-17",
+          "type": "primary",
+          "authenticityReason": "Official publisher announcement explicitly dated on the page; vendor claims are not independent testing."
+        }
+      ]
+    },
+    {
+      "id": "copilot-entra-2026-11-17",
+      "section": "news",
+      "title": "Copilot CLI previews Entra sign-in, but not on Linux yet",
+      "summary": "Copilot CLI 1.0.113 or later supports Microsoft Entra authentication in public preview on Windows and macOS. Linked OIDC Enterprise Managed Users require assigned Copilot Business or Enterprise access and CLI policy enablement. A separate eligible Microsoft 365 Copilot route uses Microsoft 365 inference and does not require a GitHub account.",
+      "whyItMatters": "The two entitlement paths have different billing and model policies. Linux support is promised later, so this is not yet a Linux-VPS sign-in solution. Separately, 1.0.113 lets administrators disable built-in Browser Use even in running sessions.",
+      "confidence": "high",
+      "confidenceReason": "Official sources establish the dated release and reported behavior; no independent performance test was run.",
+      "historicalContext": "This is authentication and administration functionality, not automatic entitlement for every Entra tenant or Microsoft 365 account.",
+      "sources": [
+        {
+          "title": "Copilot CLI Entra preview",
+          "url": "https://github.blog/changelog/2026-11-17-github-copilot-cli-adds-microsoft-entra-sign-in-as-a-preview/",
+          "publisher": "GitHub",
+          "publishedAt": "2026-11-17",
+          "type": "primary",
+          "authenticityReason": "Official publisher announcement explicitly dated on the page; vendor claims are not independent testing."
+        },
+        {
+          "title": "github/copilot-cli v1.0.113",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.113",
+          "publisher": "GitHub",
+          "publishedAt": "2026-11-17",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository; GitHub API published_at 2026-11-17T16:35:43Z; draft and prerelease are false. Release-note behavior has not been independently tested."
+        }
+      ]
+    },
+    {
+      "id": "copilot-review-2026-11-17",
+      "section": "news",
+      "title": "Copilot review adds adaptive effort and secret detection previews",
+      "summary": "Adaptive chooses Lite, Balanced or Max within configured limits; Balanced remains the default. Cross-repository context is previewed for public repositories, and secret detection combines deterministic detectors with AI. Copilot review for Azure Repos becomes generally available.",
+      "whyItMatters": "Review depth can respond to risk without exceeding the administrator’s cap. Secret findings still need human investigation; these features do not guarantee a clean repository. Azure Repos support is not GitLab support.",
+      "confidence": "high",
+      "confidenceReason": "Official sources establish the dated release and reported behavior; no independent performance test was run.",
+      "historicalContext": "The announcement mixes public previews with a separate Azure Repos GA release. Do not present every component as generally available.",
+      "sources": [
+        {
+          "title": "Copilot code review updates",
+          "url": "https://github.blog/changelog/2026-11-17-copilot-code-review-adaptive-effort-secret-detection-and-more/",
+          "publisher": "GitHub",
+          "publishedAt": "2026-11-17",
+          "type": "primary",
+          "authenticityReason": "Official publisher announcement explicitly dated on the page; vendor claims are not independent testing."
+        }
+      ]
+    },
+    {
+      "id": "copilot-retirements-2026-11-16",
+      "section": "news",
+      "title": "Added Nov 17: Copilot retires three older model options",
+      "summary": "The November 16 retirement notice covers Claude Opus 4.8, Claude Opus 5 and GPT-5.6 Terra across most Copilot experiences. Exceptions: Opus 4.8 remains for individual annual subscribers, and Opus 5 retains authorized runtime refusal fallback despite leaving the picker.",
+      "whyItMatters": "Check pinned model choices. GitHub suggests Opus 5.5 or GPT-6.1 Sol/GPT-6 Luna, subject to enterprise policy; do not assume a newly launched model is automatically enabled.",
+      "confidence": "high",
+      "confidenceReason": "Official sources establish the dated release and reported behavior; no independent performance test was run.",
+      "historicalContext": "These retirements were announced October 15 and took effect November 16. This issue adds the missed dated notice retrospectively, not as a November 17 retirement.",
+      "sources": [
+        {
+          "title": "Copilot model retirements",
+          "url": "https://github.blog/changelog/2026-11-16-github-copilot-models-deprecated-on-november-16-2026/",
+          "publisher": "GitHub",
+          "publishedAt": "2026-11-16",
+          "type": "primary",
+          "authenticityReason": "Official publisher announcement explicitly dated on the page; vendor claims are not independent testing."
+        }
+      ]
+    },
+    {
+      "id": "claude-code-21326-2026-11-16",
+      "section": "news",
+      "title": "Late Nov 16: Claude Code hardens background sessions and prompts",
+      "summary": "Version 2.1.326 supports Code Mode with agent teams. It fixes unintended acceptance at trust and auto-mode prompts, warns when permission settings cannot be saved, and stops background sessions before model calls if their inherited gateway configuration is lost.",
+      "whyItMatters": "Relevant regression tests include accidental Enter presses, failed settings writes and crash recovery. These are publisher-reported fixes, not proof of universal safety.",
+      "confidence": "high",
+      "confidenceReason": "Official sources establish the dated release and reported behavior; no independent performance test was run.",
+      "historicalContext": "Published at 22:11 UTC after the previous 20:00 cutoff. It is a harness release, not a new Claude model.",
+      "sources": [
+        {
+          "title": "anthropics/claude-code v2.1.326",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.326",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-16",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository; GitHub API published_at 2026-11-16T22:11:05Z; draft and prerelease are false. Release-note behavior has not been independently tested."
+        }
+      ]
+    },
+    {
+      "id": "qwen-code-0280-2026-11-17",
+      "section": "news",
+      "title": "Qwen Code 0.28 unifies loops and adds Qwen4-Max controls",
+      "summary": "Headless sessions, the terminal UI and subagents use the shared agent loop by default. The release adds Qwen4-Max effort, cache TTL and image-detail support, preserves the latest complete operation during compaction, and enables external workspace execution.",
+      "whyItMatters": "More consistent runtime paths may simplify orchestration, but permission boundaries and interruption recovery still require workload-specific tests.",
+      "confidence": "high",
+      "confidenceReason": "Official sources establish the dated release and reported behavior; no independent performance test was run.",
+      "historicalContext": "This follows the November 15 stable 0.27.4 release. The separately numbered 1.0 preview channel should not be confused with this stable release.",
+      "sources": [
+        {
+          "title": "QwenLM/qwen-code v0.28.0",
+          "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.0",
+          "publisher": "Qwen Team",
+          "publishedAt": "2026-11-17",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository; GitHub API published_at 2026-11-17T11:17:50Z; draft and prerelease are false. Release-note behavior has not been independently tested."
+        }
+      ]
+    },
+    {
+      "id": "hermes-0232-2026-11-16",
+      "section": "news",
+      "title": "Late Nov 16: Hermes ships a stable rollup with durable subagents",
+      "summary": "Hermes 0.23.2 lists subagents that survive gateway restarts or crashes and can continue in their own conversations. The publisher defers full curated notes to 0.24.0; immediate fixes include duplicate recovery replies and incomplete reconnect rendering.",
+      "whyItMatters": "Persistence claims are useful for long-running workflows, but validate recovery before depending on it. The installer-based Desktop bundle does not update with this release; the publisher distinguishes that from CLI, Store and container delivery.",
+      "confidence": "high",
+      "confidenceReason": "Official sources establish the dated release and reported behavior; no independent performance test was run.",
+      "historicalContext": "Published 20:59 UTC, after yesterday’s cutoff. A large patch-version rollup does not mean every listed feature was introduced on that date.",
+      "sources": [
+        {
+          "title": "NousResearch/hermes-agent v0.23.2",
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.2",
+          "publisher": "Nous Research",
+          "publishedAt": "2026-11-16",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository; GitHub API published_at 2026-11-16T20:59:18Z; draft and prerelease are false. Release-note behavior has not been independently tested."
+        }
+      ]
+    },
+    {
+      "id": "opencode-1196-2026-11-17",
+      "section": "news",
+      "title": "OpenCode 1 patch offers migration and trims oversized image history",
+      "summary": "OpenCode 1.19.6 offers a user-controlled upgrade to OpenCode 2, preserving sessions, projects and settings; version-1 plugins need updates. Above 25 MiB of image history, older images become placeholders. Oversized-body provider errors trigger compaction and retry.",
+      "whyItMatters": "This recovers requests by removing older image content, not by losslessly compressing it. Re-check whether required visual evidence remains available.",
+      "confidence": "high",
+      "confidenceReason": "Official sources establish the dated release and reported behavior; no independent performance test was run.",
+      "historicalContext": "This is maintenance of the OpenCode 1 line, not a downgrade from the OpenCode 2.3 release covered last week.",
+      "sources": [
+        {
+          "title": "anomalyco/opencode v1.19.6",
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v1.19.6",
+          "publisher": "OpenCode / Anomaly",
+          "publishedAt": "2026-11-17",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository; GitHub API published_at 2026-11-17T07:21:32Z; draft and prerelease are false. Release-note behavior has not been independently tested."
+        }
+      ]
+    },
+    {
+      "id": "qwen4-max-2026-11-16",
+      "section": "news",
+      "title": "Qwen4-Max launches beyond the separate preview",
+      "summary": "QwenCloud lists qwen4-max for multimodal reasoning, coding and agent tasks, with tool calling, structured outputs, explicit caching and reasoning summaries. The specifications list a one-million-token context window and pay-as-you-go access.",
+      "whyItMatters": "A new hosted candidate for long-context agent evaluations. Test compatibility and costs on your workload; this is not evidence of local weight availability or benchmark superiority.",
+      "confidence": "high",
+      "confidenceReason": "Official publisher sources support the announcement. Capabilities have not been independently tested for this newsletter.",
+      "historicalContext": "The November 11 qwen4-max-preview was a distinct Token Plan preview. Today’s dated entry uses qwen4-max; do not count the preview and launch as two unrelated model families.",
+      "sources": [
+        {
+          "title": "QwenCloud model releases",
+          "url": "https://docs.qwencloud.com/changelog/models",
+          "publisher": "Alibaba / QwenCloud",
+          "publishedAt": "2026-11-16",
+          "type": "primary",
+          "authenticityReason": "Official provider changelog explicitly dates qwen4-max November 16 and the separate preview November 11; release dates are not search crawl dates."
+        },
+        {
+          "title": "Qwen4-Max specifications",
+          "url": "https://docs.qwencloud.com/developer-guides/getting-started/latest-model",
+          "publisher": "Alibaba / QwenCloud",
+          "publishedAt": "2026-11-16",
+          "type": "primary",
+          "authenticityReason": "Official provider documentation checked November 16; this is the observation date for the rolling specifications page, not a separately stated publication timestamp."
+        }
+      ]
+    },
+    {
+      "id": "openai-csam-2026-11-16",
+      "section": "news",
+      "title": "OpenAI adds a specialized image-safety classifier",
+      "summary": "Approved organizations can use omni-moderation-csam-latest through the moderation API without charge. It supplies distinct signals for possible child sexual abuse material and possible AI-generated CSAM to prioritize human review.",
+      "whyItMatters": "Relevant to eligible trust-and-safety teams, not a coding-model upgrade. A classifier signal is not a definitive judgment and does not replace review.",
+      "confidence": "high",
+      "confidenceReason": "Official publisher sources support the announcement. Capabilities have not been independently tested for this newsletter.",
+      "historicalContext": "This is a specialized moderation release, separate from OpenAI’s general-purpose GPT and coding models.",
+      "sources": [
+        {
+          "title": "OpenAI API changelog: CSAM classifier",
+          "url": "https://developers.openai.com/api/docs/changelog",
+          "publisher": "OpenAI",
+          "publishedAt": "2026-11-16",
+          "type": "primary",
+          "authenticityReason": "Official API changelog explicitly dated November 16, 2026. It establishes announced availability, not independent classifier accuracy."
+        }
+      ]
+    },
+    {
+      "id": "codex-alpha-2026-11-16",
+      "section": "news",
+      "title": "Nov 16 snapshot: Codex 0.171 alpha, not stable",
+      "summary": "At the November 16 cutoff, the official repository had published 0.171.0-alpha.9 with no documented feature set in its brief note. The observed stable baseline was 0.169.0 from November 13.",
+      "whyItMatters": "Do not treat an alpha artifact as a stable rollout or infer new model support from the version number. Existing stable users need not switch solely because an alpha exists.",
+      "confidence": "high",
+      "confidenceReason": "Official publisher sources support the announcement. Capabilities have not been independently tested for this newsletter.",
+      "historicalContext": "The prior weekly edition covered 0.169.0. Today’s alpha is new evidence of release activity, not a verified new stable feature.",
+      "sources": [
+        {
+          "title": "Codex 0.171.0-alpha.9",
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.9",
+          "publisher": "OpenAI",
+          "publishedAt": "2026-11-16",
+          "type": "primary",
+          "authenticityReason": "Official openai/codex release page labels this a prerelease and displays November 16 at 19:13 UTC. This does not establish stable availability."
+        },
+        {
+          "title": "Codex 0.169.0",
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0",
+          "publisher": "OpenAI",
+          "publishedAt": "2026-11-13",
+          "type": "primary",
+          "authenticityReason": "Official stable release; GitHub API checked November 16, draft and prerelease false."
+        }
+      ]
+    },
+    {
+      "id": "multi-harness-controls-2026-11-16",
+      "section": "predictions",
+      "title": "Resolved Nov 17 · two-harness controls forecast: met",
+      "summary": "We expect at least two of Codex, Claude Code, Copilot CLI and OpenCode to publish stable releases that add or fix permission, background-task or session-control behavior during the next calendar week.",
+      "whyItMatters": "Cross-publisher progress would be stronger evidence of an operational-controls trend than another isolated patch.",
+      "confidence": "medium",
+      "confidenceReason": "Recent releases support the direction, but the count and timing are editorial forecasts, not publisher commitments or calculated probabilities. Resolution: stable Claude Code 2.1.326 (November 16) fixes permission and background-session behavior; stable Copilot CLI 1.0.113 (November 17) adds administrator control of Browser Use during running sessions. These two distinct publishers satisfy the original criterion.",
+      "historicalContext": "The November 9 and November 10 follow-up forecasts each required only one release and were met. This prospectively raises the threshold to two distinct harnesses and excludes the current week.",
+      "sources": [
+        {
+          "title": "Copilot CLI v1.0.109 release",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.109",
+          "publisher": "GitHub",
+          "publishedAt": "2026-11-10",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository; GitHub API published_at is 2026-11-10T17:02:15Z, with draft and prerelease both false. Release notes are publisher claims, not independent testing."
+        },
+        {
+          "title": "OpenCode v2.2.7 release",
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.7",
+          "publisher": "OpenCode",
+          "publishedAt": "2026-11-10",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository; GitHub API published_at is 2026-11-10T10:37:15Z, with draft and prerelease both false. Release notes are publisher claims, not independent testing."
+        },
+        {
+          "title": "Claude Code v2.1.321 release",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-09",
+          "type": "primary",
+          "authenticityReason": "Official repository release dated November 9, 19:22 UTC; marked latest rather than prerelease. Fixes are publisher-reported, not independently audited."
+        },
+        {
+          "title": "anthropics/claude-code v2.1.326",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.326",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-16",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository; GitHub API published_at 2026-11-16T22:11:05Z; draft and prerelease are false. Release-note behavior has not been independently tested."
+        },
+        {
+          "title": "github/copilot-cli v1.0.113",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.113",
+          "publisher": "GitHub",
+          "publishedAt": "2026-11-17",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository; GitHub API published_at 2026-11-17T16:35:43Z; draft and prerelease are false. Release-note behavior has not been independently tested."
+        }
+      ],
+      "horizon": "November 16–22, 2026 (UTC)",
+      "resolutionCriteria": "Pass if official stable releases from at least two distinct named harnesses have published_at dates from November 16 through November 22 and explicitly document a permission, background-task or session-control addition or fix. Count each harness once. Prereleases, documentation-only changes and model support alone do not count. Otherwise fail at 23:59 UTC November 22.",
+      "counterarguments": "Recent patches may reduce immediate demand, releases may cluster before the window, or work may stay in prerelease."
+    },
+    {
+      "id": "mythos-access-outlook-2026-11-22",
+      "section": "predictions",
+      "title": "Carry-over forecast · By November 22: direct Mythos 5.2 access stays verification-gated",
+      "summary": "We expect direct general-purpose Mythos 5.2 access still to require organizational verification at the end of next week.",
+      "whyItMatters": "Teams should not plan around unrestricted direct access becoming available on ordinary paid accounts.",
+      "confidence": "medium",
+      "confidenceReason": "This is a forecast of policy continuity, not an announced future restriction.",
+      "historicalContext": "The launch separates broad Fable access from direct Mythos access. Task-specific Claude Security access is outside this forecast.",
+      "sources": [
+        {
+          "title": "Claude Fable 5.2 and Mythos 5.2",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-09",
+          "type": "primary",
+          "authenticityReason": "Directly retrieved official announcement dated November 9, rechecked November 10. Capability claims are vendor-reported."
+        }
+      ],
+      "horizon": "Resolution at 23:59 UTC November 22, 2026; next calendar week is November 16–22.",
+      "resolutionCriteria": "Pass if Anthropic’s current official access documentation at the deadline still requires organizational verification for direct general-purpose Mythos 5.2 access. Fail if any ordinary paid subscriber or API customer can obtain that direct access without verification. Claude Security access does not count. Mark unresolved, not passed, if official evidence is unavailable or contradictory.",
+      "counterarguments": "Anthropic could relax eligibility or offer a new direct-access route before the deadline."
+    },
+    {
+      "id": "controls-forecast-2026-11-23",
+      "section": "predictions",
+      "title": "November 23–29: another stable operational-controls release",
+      "summary": "We expect at least one of Codex, Claude Code, Copilot CLI or OpenCode to publish a stable permission, background-task or session-control addition or fix.",
+      "whyItMatters": "This tests whether the recent operational-controls trend persists beyond the current reporting week.",
+      "confidence": "medium",
+      "confidenceReason": "Editorial inference from recent releases, not a publisher commitment or numeric probability.",
+      "historicalContext": "Recent stable releases addressed trust, credits and background sessions. This is a new forecast, not a restatement of the still-pending November 16–22 two-publisher forecast.",
+      "sources": [
+        {
+          "title": "Added Nov 14 · Copilot CLI 1.0.112 tightens credit limits and untrusted-text rendering",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.112",
+          "publisher": "GitHub",
+          "publishedAt": "2026-11-13",
+          "type": "primary",
+          "authenticityReason": "Official publisher repository. GitHub release API published_at is 2026-11-13T23:59:41Z; draft and prerelease are false. Original release timestamp, not search crawl time."
+        }
+      ],
+      "horizon": "November 23–29, 2026 (UTC)",
+      "resolutionCriteria": "Pass if an official stable release from any named harness has a published_at date November 23–29 and explicitly adds or fixes permission, background-task or session-control behavior. Exclude prereleases, documentation-only updates and model support alone. Otherwise fail at 23:59 UTC November 29.",
+      "counterarguments": "Holiday timing, stabilization or unrelated priorities could interrupt this pattern."
+    },
+    {
+      "id": "codex-stable-forecast-2026-11-29",
+      "section": "predictions",
+      "title": "By November 29: Codex ships a stable version newer than 0.169.0",
+      "summary": "We expect a stable Codex release newer than 0.169.0 by the end of next week.",
+      "whyItMatters": "This tests whether current prerelease activity converts to a stable release; it makes no claim about which features will ship.",
+      "confidence": "medium",
+      "confidenceReason": "Editorial forecast based on an active alpha series; no release date has been promised.",
+      "historicalContext": "The November 16 alpha series is observable, but publishers can skip version numbers or delay promotion.",
+      "sources": [
+        {
+          "title": "Codex 0.171.0-alpha.9",
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.9",
+          "publisher": "OpenAI",
+          "publishedAt": "2026-11-16",
+          "type": "primary",
+          "authenticityReason": "Official openai/codex release page labels this a prerelease and displays November 16 at 19:13 UTC. This does not establish stable availability."
+        }
+      ],
+      "horizon": "Deadline 23:59 UTC November 29, 2026; next calendar week is November 23–29.",
+      "resolutionCriteria": "Pass if the official openai/codex repository lists a non-draft, non-prerelease release with a semantic version greater than 0.169.0 published after November 16 at 20:00 UTC and by November 29 at 23:59 UTC. Otherwise fail. A release before November 23 may satisfy this explicit by-deadline prediction.",
+      "counterarguments": "The alpha series may remain unstable or a stable rollout may be deferred."
+    }
+  ],
+  "charts": [
+    {
+      "id": "nov16-release-timeline",
+      "type": "timeline",
+      "title": "This week: model launches, previews and stable harness updates",
+      "description": "Selected official announcements with original release dates. This is not an exhaustive census or a capability ranking.",
+      "points": [
+        {
+          "label": "Qwen4-Max launches beyond the separate preview",
+          "date": "2026-11-16",
+          "sourceUrl": "https://docs.qwencloud.com/changelog/models",
+          "storyId": "qwen4-max-2026-11-16"
+        },
+        {
+          "label": "OpenAI adds a specialized image-safety classifier",
+          "date": "2026-11-16",
+          "sourceUrl": "https://developers.openai.com/api/docs/changelog",
+          "storyId": "openai-csam-2026-11-16"
+        },
+        {
+          "label": "Codex 0.171 remains in prerelease",
+          "date": "2026-11-16",
+          "sourceUrl": "https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.9",
+          "storyId": "codex-alpha-2026-11-16"
+        },
+        {
+          "label": "Added Nov 17: Copilot retires three older model options",
+          "date": "2026-11-16",
+          "sourceUrl": "https://github.blog/changelog/2026-11-16-github-copilot-models-deprecated-on-november-16-2026/",
+          "storyId": "copilot-retirements-2026-11-16"
+        },
+        {
+          "label": "Late Nov 16: Claude Code hardens background sessions and prompts",
+          "date": "2026-11-16",
+          "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.326",
+          "storyId": "claude-code-21326-2026-11-16"
+        },
+        {
+          "label": "Late Nov 16: Hermes ships a stable rollup with durable subagents",
+          "date": "2026-11-16",
+          "sourceUrl": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.2",
+          "storyId": "hermes-0232-2026-11-16"
+        },
+        {
+          "label": "GPT-6.2 Astra and Sol launch with lower Astra API rates",
+          "date": "2026-11-17",
+          "sourceUrl": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+          "storyId": "gpt62-2026-11-17"
+        },
+        {
+          "label": "MAI Code 2 and Flash arrive in Copilot",
+          "date": "2026-11-17",
+          "sourceUrl": "https://github.blog/changelog/2026-11-17-mai-code-2-and-mai-code-2-flash-in-github-copilot/",
+          "storyId": "mai-code2-2026-11-17"
+        },
+        {
+          "label": "Copilot CLI previews Entra sign-in, but not on Linux yet",
+          "date": "2026-11-17",
+          "sourceUrl": "https://github.blog/changelog/2026-11-17-github-copilot-cli-adds-microsoft-entra-sign-in-as-a-preview/",
+          "storyId": "copilot-entra-2026-11-17"
+        },
+        {
+          "label": "Copilot review adds adaptive effort and secret detection previews",
+          "date": "2026-11-17",
+          "sourceUrl": "https://github.blog/changelog/2026-11-17-copilot-code-review-adaptive-effort-secret-detection-and-more/",
+          "storyId": "copilot-review-2026-11-17"
+        },
+        {
+          "label": "Qwen Code 0.28 unifies loops and adds Qwen4-Max controls",
+          "date": "2026-11-17",
+          "sourceUrl": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.0",
+          "storyId": "qwen-code-0280-2026-11-17"
+        },
+        {
+          "label": "OpenCode 1 patch offers migration and trims oversized image history",
+          "date": "2026-11-17",
+          "sourceUrl": "https://github.com/anomalyco/opencode/releases/tag/v1.19.6",
+          "storyId": "opencode-1196-2026-11-17"
+        }
+      ]
+    },
+    {
+      "id": "gpt62-standard-prices",
+      "type": "bar",
+      "title": "GPT-6.2: standard API token rates",
+      "description": "USD per million tokens, as stated in OpenAI’s November 17 launch announcement.",
+      "selectionCriteria": "Same service tier for both newly released models; input, cached input and output are separate billable categories.",
+      "unit": "USD per million tokens",
+      "domain": [
+        0,
+        40
+      ],
+      "sourceTitle": "Introducing GPT-6.2 Astra and Sol",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+      "publisher": "OpenAI",
+      "publishedAt": "2026-11-17",
+      "storyId": "gpt62-2026-11-17",
+      "points": [
+        {
+          "label": "Astra input",
+          "value": 8
+        },
+        {
+          "label": "Astra cached input",
+          "value": 0.4
+        },
+        {
+          "label": "Astra output",
+          "value": 40
+        },
+        {
+          "label": "Sol input",
+          "value": 2
+        },
+        {
+          "label": "Sol cached input",
+          "value": 0.1
+        },
+        {
+          "label": "Sol output",
+          "value": 10
+        }
+      ],
+      "caveat": "Standard API rates only, not Ultrafast prices or subscription usage limits. Actual task cost depends on token use, caching and tools; lower list prices do not guarantee a proportional workload saving."
+    },
+    {
+      "id": "qwen4-output-limits",
+      "type": "bar",
+      "title": "Qwen4-Max: documented token ceilings",
+      "description": "Provider specifications checked November 16. These are distinct output budgets, not benchmark scores.",
+      "selectionCriteria": "Compare the documented non-thinking output limit with the combined thinking-plus-final-answer limit for the same model.",
+      "unit": "tokens",
+      "domain": [
+        0,
+        262144
+      ],
+      "sourceTitle": "Qwen4-Max specifications",
+      "sourceUrl": "https://docs.qwencloud.com/developer-guides/getting-started/latest-model",
+      "publisher": "Alibaba / QwenCloud",
+      "publishedAt": "2026-11-16",
+      "storyId": "qwen4-max-2026-11-16",
+      "points": [
+        {
+          "label": "Non-thinking output",
+          "value": 131072
+        },
+        {
+          "label": "Thinking + final answer",
+          "value": 262144
+        }
+      ],
+      "caveat": "The larger budget includes reasoning tokens, so it is not a promise of twice as much visible output. Context, input budgets and API settings also constrain requests. Rolling documentation observation date, not independent performance measurement."
+    }
+  ]
+}
