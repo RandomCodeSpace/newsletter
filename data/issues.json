@@ -1,6 +1,10 @@
 {
   "issues": [
     {
+      "label": "2026-11-16 – 2026-11-22 (through Nov 18)",
+      "path": "./data/archive/2026-11-16-through-2026-11-18.json"
+    },
+    {
       "label": "2026-11-16 – 2026-11-22 (through Nov 17)",
       "path": "./data/archive/2026-11-16-through-2026-11-17.json"
     },

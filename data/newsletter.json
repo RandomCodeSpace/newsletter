@@ -1,14 +1,74 @@
 {
   "title": "The AI Ledger",
-  "issue": "Week of November 16–22, 2026 · through November 18",
+  "issue": "Week of November 16–22, 2026 · through November 19",
   "publishedAt": "2026-11-16",
-  "updatedAt": "2026-11-18T20:00:00Z",
+  "updatedAt": "2026-11-19T20:00:00Z",
   "issueStart": "2026-11-16",
   "issueEnd": "2026-11-22",
   "forecastStart": "2026-11-23",
   "forecastEnd": "2026-11-29",
-  "introduction": "Reviewed through November 18 at 20:00 UTC. Stable Codex and Claude Code updates focus on permissions, recovery and avoiding destructive side effects. Yesterday’s complete snapshot is preserved unchanged. The Codex stable-version forecast is now met by the late-November-17 0.169.1 release; remaining forecast criteria are unchanged. Earlier model announcements keep their original dates. No fresh timing rumor met the evidence threshold. Confidence labels are qualitative, not probabilities.",
+  "introduction": "Reviewed through November 19 at 20:00 UTC. Claude Code adds fail-closed hook and resume controls. This review also adds November 18 announcements for Gemini 4 Neon in Copilot and team plugin defaults, retaining their original dates. Yesterday’s complete snapshot is preserved unchanged. Existing forecast outcomes and future resolution criteria remain unchanged. No fresh timing rumor met the evidence threshold. Confidence labels are qualitative, not probabilities.",
   "items": [
+    {
+      "id": "claude-code-21328-2026-11-19",
+      "section": "news",
+      "title": "Claude Code 2.1.328 adds fail-closed hooks and resume controls",
+      "summary": "MCP-tool hooks can block an action when their call fails. Hosts can disable resuming deferred tool calls. Fixes address lost cloud-session summaries, saved-task corruption and read-only subagents being offered write tools.",
+      "whyItMatters": "Regression-test hook failures, resume and scheduled-task persistence. Auto mode also expands to Opus 4.6 and Sonnet 4.6 on supported cloud providers; review permission defaults before adopting.",
+      "historicalContext": "Published November 19 at 01:14 UTC. This is a stable harness release, not a model launch. The operational-controls forecast concerns November 23–29, so this release cannot resolve it.",
+      "confidence": "high",
+      "confidenceReason": "Official dated publisher documentation supports availability and release-note claims; no independent performance or behavior tests were run.",
+      "sources": [
+        {
+          "title": "Claude Code 2.1.328 adds fail-closed hooks and resume controls",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.328",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-19",
+          "type": "primary",
+          "authenticityReason": "Official publisher release page, checked November 19. Reported behavior is not independently verified."
+        }
+      ]
+    },
+    {
+      "id": "gemini4-neon-copilot-2026-11-18",
+      "section": "news",
+      "title": "Added Nov 19: Gemini 4 Neon rolls out in Copilot",
+      "summary": "GitHub announced general availability for Copilot Pro+, Max, Business and Enterprise, including CLI and coding agent. Rollout is gradual; organization model policies still govern access. Billing uses provider list pricing under usage-based billing.",
+      "whyItMatters": "A candidate for a controlled cost-and-quality comparison. GitHub relays Google’s claims of near-Carbon quality at lower cost per task; those are vendor claims, not independent results or guaranteed savings.",
+      "historicalContext": "Announcement dated November 18, added in this review without redating the launch. No unsupported benchmark numbers or token prices are added to the charts.",
+      "confidence": "high",
+      "confidenceReason": "Official dated publisher documentation supports availability and release-note claims; no independent performance or behavior tests were run.",
+      "sources": [
+        {
+          "title": "Added Nov 19: Gemini 4 Neon rolls out in Copilot",
+          "url": "https://github.blog/changelog/2026-11-18-gemini-4-neon-in-github-copilot/",
+          "publisher": "GitHub",
+          "publishedAt": "2026-11-18",
+          "type": "primary",
+          "authenticityReason": "Official publisher release page, checked November 19. Reported behavior is not independently verified."
+        }
+      ]
+    },
+    {
+      "id": "copilot-team-plugins-2026-11-18",
+      "section": "news",
+      "title": "Added Nov 19: Copilot team plugin defaults reach general availability",
+      "summary": "Business and Enterprise team maintainers or organization owners can enable approved plugins by default for direct team members in VS Code, Copilot app and CLI. Child teams do not inherit these defaults.",
+      "whyItMatters": "Reduces repeated setup, but is not a policy bypass. Enterprise and organization restrictions win; members may disable a team plugin only where policy permits.",
+      "historicalContext": "Announcement dated November 18. Team defaults are distinct from mandatory organization policy and do not grant plugins new permission by themselves.",
+      "confidence": "high",
+      "confidenceReason": "Official dated publisher documentation supports availability and release-note claims; no independent performance or behavior tests were run.",
+      "sources": [
+        {
+          "title": "Added Nov 19: Copilot team plugin defaults reach general availability",
+          "url": "https://github.blog/changelog/2026-11-18-customize-github-copilot-for-your-team/",
+          "publisher": "GitHub",
+          "publishedAt": "2026-11-18",
+          "type": "primary",
+          "authenticityReason": "Official publisher release page, checked November 19. Reported behavior is not independently verified."
+        }
+      ]
+    },
     {
       "id": "codex-01700-2026-11-18",
       "section": "news",
@@ -552,6 +612,24 @@
           "date": "2026-11-18",
           "sourceUrl": "https://github.com/openai/codex/releases/tag/rust-v0.170.0",
           "storyId": "codex-01700-2026-11-18"
+        },
+        {
+          "label": "Added Nov 19: Gemini 4 Neon rolls out in Copilot",
+          "date": "2026-11-18",
+          "sourceUrl": "https://github.blog/changelog/2026-11-18-gemini-4-neon-in-github-copilot/",
+          "storyId": "gemini4-neon-copilot-2026-11-18"
+        },
+        {
+          "label": "Added Nov 19: Copilot team plugin defaults reach general availability",
+          "date": "2026-11-18",
+          "sourceUrl": "https://github.blog/changelog/2026-11-18-customize-github-copilot-for-your-team/",
+          "storyId": "copilot-team-plugins-2026-11-18"
+        },
+        {
+          "label": "Claude Code 2.1.328 adds fail-closed hooks and resume controls",
+          "date": "2026-11-19",
+          "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.328",
+          "storyId": "claude-code-21328-2026-11-19"
         }
       ]
     },
