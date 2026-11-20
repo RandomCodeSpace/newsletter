@@ -1,14 +1,74 @@
 {
   "title": "The AI Ledger",
-  "issue": "Week of November 16–22, 2026 · through November 19",
+  "issue": "Week of November 16–22, 2026 · through November 20",
   "publishedAt": "2026-11-16",
-  "updatedAt": "2026-11-19T20:00:00Z",
+  "updatedAt": "2026-11-20T20:00:00Z",
   "issueStart": "2026-11-16",
   "issueEnd": "2026-11-22",
   "forecastStart": "2026-11-23",
   "forecastEnd": "2026-11-29",
-  "introduction": "Reviewed through November 19 at 20:00 UTC. Claude Code adds fail-closed hook and resume controls. This review also adds November 18 announcements for Gemini 4 Neon in Copilot and team plugin defaults, retaining their original dates. Yesterday’s complete snapshot is preserved unchanged. Existing forecast outcomes and future resolution criteria remain unchanged. No fresh timing rumor met the evidence threshold. Confidence labels are qualitative, not probabilities.",
+  "introduction": "Reviewed through November 20 at 20:00 UTC. Stable Codex adds remote execution and a richer terminal workspace; Hermes ships cache and context-management changes. OpenAI’s previously announced usage-policy update takes effect today. Yesterday’s full snapshot is preserved unchanged. Original announcement dates, forecast outcomes and future resolution criteria are retained. No fresh timing rumor met the evidence threshold. Confidence labels are qualitative, not probabilities.",
   "items": [
+    {
+      "id": "codex-01710-2026-11-20",
+      "section": "news",
+      "title": "Codex 0.171.0 brings remote exec and the workspace TUI",
+      "summary": "The stable release adds GPT-6.2 Sol and Astra to the catalog, with Sol as default. It enables workspace previews and subagent transcripts, adds codex exec --remote for an existing app server, and exposes /rc and /remote controls.",
+      "whyItMatters": "Useful for remote orchestration. Notes also report preserved permission profiles after directory changes and thread-specific drafts after switching sessions. Test these paths before relying on them; remote execution does not itself prove disconnect survival.",
+      "historicalContext": "Published November 20 at 00:44 UTC. This supersedes the earlier 0.171 prerelease snapshot, not the already-resolved version forecast. The November 23–29 forecast window has not started.",
+      "confidence": "high",
+      "confidenceReason": "Official publisher documentation supports these statements; release behavior has not been independently tested.",
+      "sources": [
+        {
+          "title": "Codex 0.171.0 brings remote exec and the workspace TUI",
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.171.0",
+          "publisher": "OpenAI",
+          "publishedAt": "2026-11-20",
+          "type": "primary",
+          "authenticityReason": "Official publisher page checked November 20; dates and release status are identified explicitly."
+        }
+      ]
+    },
+    {
+      "id": "hermes-0233-2026-11-20",
+      "section": "news",
+      "title": "Hermes 0.23.3 ships cache lifecycle and tool-result archiving",
+      "summary": "The stable rollup reports cache lifecycle handling, archival of tool results removed during compaction, default proactive tool-result pruning, and GPT-6.2 support through OpenRouter and Nous Portal. Detailed curated notes are deferred to 0.24.0.",
+      "whyItMatters": "Archiving dropped results is relevant to long-session auditability, but does not establish lossless context or reliable retrieval. Verify archive access and pruning behavior on representative logs before switching a production workflow.",
+      "historicalContext": "GitHub publication is November 20 at 00:34 UTC; the release body labels it November 19. CLI, Store and Docker delivery differ: the separately bundled .exe/.dmg desktop release is explicitly unchanged.",
+      "confidence": "high",
+      "confidenceReason": "Official publisher documentation supports these statements; release behavior has not been independently tested.",
+      "sources": [
+        {
+          "title": "Hermes 0.23.3 ships cache lifecycle and tool-result archiving",
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.3",
+          "publisher": "Nous Research",
+          "publishedAt": "2026-11-20",
+          "type": "primary",
+          "authenticityReason": "Official publisher page checked November 20; dates and release status are identified explicitly."
+        }
+      ]
+    },
+    {
+      "id": "openai-policy-effective-2026-11-20",
+      "section": "news",
+      "title": "OpenAI usage-policy changes take effect today",
+      "summary": "The revised policy requires prior review for services that give third parties direct model access, while excluding applications merely integrating models into their features. It clarifies restrictions on supplying training material or signals for substitute models.",
+      "whyItMatters": "Review intermediary and training-data workflows against the actual policy and your agreement. Research, software development, evaluation and benchmarking remain permitted within its boundaries; express contractual permissions still matter.",
+      "historicalContext": "This is the November 20 effective-date milestone for changes listed in the October 21 changelog, not a newly announced model, price or subscription limit.",
+      "confidence": "high",
+      "confidenceReason": "Official publisher documentation supports these statements; release behavior has not been independently tested.",
+      "sources": [
+        {
+          "title": "OpenAI usage-policy changes take effect today",
+          "url": "https://openai.com/policies/usage-policies/",
+          "publisher": "OpenAI",
+          "publishedAt": "2026-10-21",
+          "type": "primary",
+          "authenticityReason": "Official publisher page checked November 20; dates and release status are identified explicitly."
+        }
+      ]
+    },
     {
       "id": "claude-code-21328-2026-11-19",
       "section": "news",
@@ -630,6 +690,18 @@
           "date": "2026-11-19",
           "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.328",
           "storyId": "claude-code-21328-2026-11-19"
+        },
+        {
+          "label": "Codex 0.171.0 brings remote exec and the workspace TUI",
+          "date": "2026-11-20",
+          "sourceUrl": "https://github.com/openai/codex/releases/tag/rust-v0.171.0",
+          "storyId": "codex-01710-2026-11-20"
+        },
+        {
+          "label": "Hermes 0.23.3 ships cache lifecycle and tool-result archiving",
+          "date": "2026-11-20",
+          "sourceUrl": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.3",
+          "storyId": "hermes-0233-2026-11-20"
         }
       ]
     },
