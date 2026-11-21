@@ -1,14 +1,90 @@
 {
   "title": "The AI Ledger",
-  "issue": "Week of November 16–22, 2026 · through November 20",
+  "issue": "Week of November 16–22, 2026 · through November 21",
   "publishedAt": "2026-11-16",
-  "updatedAt": "2026-11-20T20:00:00Z",
+  "updatedAt": "2026-11-21T20:00:00Z",
   "issueStart": "2026-11-16",
   "issueEnd": "2026-11-22",
   "forecastStart": "2026-11-23",
   "forecastEnd": "2026-11-29",
-  "introduction": "Reviewed through November 20 at 20:00 UTC. Stable Codex adds remote execution and a richer terminal workspace; Hermes ships cache and context-management changes. OpenAI’s previously announced usage-policy update takes effect today. Yesterday’s full snapshot is preserved unchanged. Original announcement dates, forecast outcomes and future resolution criteria are retained. No fresh timing rumor met the evidence threshold. Confidence labels are qualitative, not probabilities.",
+  "introduction": "Reviewed through November 21 at 20:00 UTC. Inkling 2 Mini brings open multimodal weights to capable local hardware. Catch-up coverage adds late November 19 Claude Code controls and November 18 OpenCode caching fixes on their original dates. The November 20 snapshot is preserved unchanged. Existing forecasts retain their windows and criteria. No fresh rumor met the evidence threshold. Confidence labels are qualitative, not probabilities.",
   "items": [
+    {
+      "id": "inkling2-mini-2026-11-20",
+      "section": "news",
+      "title": "Inkling 2 Mini ships open weights for local inference",
+      "summary": "Thinking Machines released Apache-2.0 weights for a model that accepts text and images and generates text. The model card gives 26.4B total and 3.4B active parameters, or 5.4B effective active per token when repeated layer passes count.",
+      "whyItMatters": "The native checkpoint weighs about 20 GB, not the total runtime memory. The lab lists Apple silicon with at least 32 GB and DGX Spark as supported hardware, and recommends at least 32 GB VRAM for other GPU setups. Treat the model’s 1M-token maximum as a capability ceiling, not a guarantee on minimum hardware.",
+      "historicalContext": "Released November 20 and added in the November 21 review. Ollama’s library confirms a local package; its headline active count uses the repeated computation figure, not a different model.",
+      "confidence": "high",
+      "confidenceReason": "Official model documentation or dated release notes support the claims; behavior and performance were not independently tested.",
+      "sources": [
+        {
+          "title": "Inkling 2 Mini model card",
+          "url": "https://thinkingmachines.ai/model-card/inkling-2-mini/",
+          "publisher": "Thinking Machines Lab",
+          "publishedAt": "2026-11-20",
+          "type": "primary",
+          "authenticityReason": "The developer’s dated card defines parameter accounting and supported hardware."
+        },
+        {
+          "title": "Inkling 2 Mini weights and license",
+          "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
+          "publisher": "Thinking Machines Lab",
+          "publishedAt": "2026-11-20",
+          "type": "primary",
+          "authenticityReason": "Developer-maintained weights listing specifies the license."
+        }
+      ]
+    },
+    {
+      "id": "claude-code-21329-2026-11-19",
+      "section": "news",
+      "title": "Late Nov 19: Claude Code surfaces hook provenance and session tasks",
+      "summary": "Version 2.1.329 identifies the source of folder hooks in its trust dialog and warns noninteractive hosts when managed hooks fail to load. The tasks view now includes scheduled work, loop wakeups, goals and forks.",
+      "whyItMatters": "Makes it easier to inspect what is running and why a trusted setup differs from expectations. The release also fixes a settings-reset failure when the configuration is temporarily unreadable; preserve backups before testing upgrades.",
+      "historicalContext": "Published November 19 at 22:14 UTC, after that day’s cutoff. This is a harness release, not a new Claude model.",
+      "confidence": "high",
+      "confidenceReason": "Official model documentation or dated release notes support the claims; behavior and performance were not independently tested.",
+      "sources": [
+        {
+          "title": "Claude Code v2.1.329",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.329",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-19",
+          "type": "primary",
+          "authenticityReason": "Publisher’s immutable GitHub release records the time and changes."
+        }
+      ]
+    },
+    {
+      "id": "opencode-232-2026-11-18",
+      "section": "news",
+      "title": "Added Nov 21: OpenCode fixes GPT-6.2 prompt caching",
+      "summary": "OpenCode 2.3.2 changes how it sends the system prompt on Responses routes to improve reuse across steps. The preceding 2.3.1 introduced GPT-6.2 for ChatGPT sign-ins, background compaction and continued execution of shell commands after their foreground timeout.",
+      "whyItMatters": "Inspect cached and uncached usage per step on your own provider route. OpenCode’s example is a maintainer measurement, not a cost guarantee. A foreground timeout no longer guarantees the underlying command stopped.",
+      "historicalContext": "Both versions were published November 18; added here without redating them. This is scoped to OpenCode’s behavior and does not imply a pricing change or a provider-wide fix.",
+      "confidence": "high",
+      "confidenceReason": "Official model documentation or dated release notes support the claims; behavior and performance were not independently tested.",
+      "sources": [
+        {
+          "title": "OpenCode v2.3.2",
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v2.3.2",
+          "publisher": "OpenCode",
+          "publishedAt": "2026-11-18",
+          "type": "primary",
+          "authenticityReason": "Official immutable release describes the caching change and its example."
+        },
+        {
+          "title": "OpenCode v2.3.1",
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v2.3.1",
+          "publisher": "OpenCode",
+          "publishedAt": "2026-11-18",
+          "type": "primary",
+          "authenticityReason": "Official immutable release documents the preceding harness changes."
+        }
+      ]
+    },
     {
       "id": "codex-01710-2026-11-20",
       "section": "news",
@@ -686,10 +762,22 @@
           "storyId": "copilot-team-plugins-2026-11-18"
         },
         {
+          "label": "Added Nov 21: OpenCode fixes GPT-6.2 prompt caching",
+          "date": "2026-11-18",
+          "sourceUrl": "https://github.com/anomalyco/opencode/releases/tag/v2.3.2",
+          "storyId": "opencode-232-2026-11-18"
+        },
+        {
           "label": "Claude Code 2.1.328 adds fail-closed hooks and resume controls",
           "date": "2026-11-19",
           "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.328",
           "storyId": "claude-code-21328-2026-11-19"
+        },
+        {
+          "label": "Late Nov 19: Claude Code surfaces hook provenance and session tasks",
+          "date": "2026-11-19",
+          "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.329",
+          "storyId": "claude-code-21329-2026-11-19"
         },
         {
           "label": "Codex 0.171.0 brings remote exec and the workspace TUI",
@@ -702,6 +790,12 @@
           "date": "2026-11-20",
           "sourceUrl": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.3",
           "storyId": "hermes-0233-2026-11-20"
+        },
+        {
+          "label": "Inkling 2 Mini ships open weights for local inference",
+          "date": "2026-11-20",
+          "sourceUrl": "https://thinkingmachines.ai/model-card/inkling-2-mini/",
+          "storyId": "inkling2-mini-2026-11-20"
         }
       ]
     },
