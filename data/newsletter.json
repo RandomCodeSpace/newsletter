@@ -1,14 +1,82 @@
 {
   "title": "The AI Ledger",
-  "issue": "Week of November 16–22, 2026 · through November 21",
+  "issue": "Week of November 16–22, 2026 · through November 22",
   "publishedAt": "2026-11-16",
-  "updatedAt": "2026-11-21T20:00:00Z",
+  "updatedAt": "2026-11-22T20:00:00Z",
   "issueStart": "2026-11-16",
   "issueEnd": "2026-11-22",
   "forecastStart": "2026-11-23",
   "forecastEnd": "2026-11-29",
-  "introduction": "Reviewed through November 21 at 20:00 UTC. Inkling 2 Mini brings open multimodal weights to capable local hardware. Catch-up coverage adds late November 19 Claude Code controls and November 18 OpenCode caching fixes on their original dates. The November 20 snapshot is preserved unchanged. Existing forecasts retain their windows and criteria. No fresh rumor met the evidence threshold. Confidence labels are qualitative, not probabilities.",
+  "introduction": "Reviewed through November 22 at 20:00 UTC. This update adds Claude Code enterprise and session changes, a Qwen-derived open-weight model, and a research note on perplexity. Late additions keep their original release dates. The November 21 snapshot is preserved unchanged. The Mythos access forecast is not resolved ahead of its 23:59 UTC deadline; the next-week controls forecast keeps its original criteria. No fresh rumor met the evidence threshold.",
   "items": [
+    {
+      "id": "claude-code-21330-2026-11-20",
+      "section": "news",
+      "title": "Added Nov 22: Claude Code 2.1.330 improves enterprise sign-in and session recovery",
+      "summary": "The release adds sign-in for organizations managed in Anthropic’s Enterprise Admin Console; Claude Code applies organization settings and uses its provider or gateway. It also lets self-hosted runners start work in a repository subdirectory.",
+      "whyItMatters": "Regression-test long-session compaction and resume, concurrent settings saves, and worktree ownership. Anthropic reports fixes for freezes after compaction, invalid timestamps on resume, and worktree deletion while another session is using it.",
+      "historicalContext": "GitHub published this version November 20 at 22:32 UTC. This is a harness update, not a Claude model launch. A GitHub release does not establish that every updater channel has promoted the version.",
+      "confidence": "high",
+      "confidenceReason": "Primary publisher documentation supports the described release or proposal. Reported results have not been independently reproduced here.",
+      "sources": [
+        {
+          "title": "Claude Code v2.1.330",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-20",
+          "type": "primary",
+          "authenticityReason": "The publisher’s immutable GitHub release records the publication time and describes the changes."
+        }
+      ]
+    },
+    {
+      "id": "daisyrose27b-2026-11-18",
+      "section": "news",
+      "title": "Added Nov 22: RadixArk publishes DaisyRose-27B weights",
+      "summary": "RadixArk used reinforcement learning to adapt Qwen3.8-27B for long-horizon agent tasks. Its model card lists Apache-2.0 weights in BF16, FP8 and NVFP4, retaining the base tokenizer, image input and 256K context.",
+      "whyItMatters": "On Terminal-Bench 4.1, RadixArk reports 12.0% pass@1 versus 5.6% for the base model. That is a publisher-reported comparison, not an independent result or a guarantee for a different harness.",
+      "historicalContext": "The publisher’s announcement is dated November 18. A later inference-provider listing does not make this a new November 22 model launch.",
+      "confidence": "high",
+      "confidenceReason": "Primary publisher documentation supports the described release or proposal. Reported results have not been independently reproduced here.",
+      "sources": [
+        {
+          "title": "DaisyRose-27B announcement",
+          "url": "https://huggingface.co/blog/RadixArk/daisyrose-27b-pushing-the-frontier-of-post-trainin",
+          "publisher": "RadixArk",
+          "publishedAt": "2026-11-18",
+          "type": "primary",
+          "authenticityReason": "Dated announcement authored by the model developer; the benchmark comparison is vendor-reported."
+        },
+        {
+          "title": "DaisyRose-27B model card",
+          "url": "https://huggingface.co/RadixArk/DaisyRose-27B",
+          "publisher": "RadixArk",
+          "publishedAt": "2026-11-18",
+          "type": "primary",
+          "authenticityReason": "The developer’s weights repository documents the architecture, formats and license; date follows the release announcement."
+        }
+      ]
+    },
+    {
+      "id": "openai-perplexity-research-2026-11-22",
+      "section": "news",
+      "title": "Research note: OpenAI proposes shared perplexity tracking",
+      "summary": "OpenAI published historical measurements of next-token prediction on its held-out internal codebase and proposed exploring a shared cross-lab measure for pretraining progress and safety milestones.",
+      "whyItMatters": "Treat it as a research proposal, not a coding-agent leaderboard. The article discusses dataset choice and the fact that improvements from reasoning after pretraining are not captured by this metric.",
+      "historicalContext": "Published November 22. It does not announce a new model, availability, pricing, or an adopted industry standard.",
+      "confidence": "high",
+      "confidenceReason": "Primary publisher documentation supports the described release or proposal. Reported results have not been independently reproduced here.",
+      "sources": [
+        {
+          "title": "Perplexity and Intelligence",
+          "url": "https://openai.com/index/perplexity-and-intelligence/",
+          "publisher": "OpenAI",
+          "publishedAt": "2026-11-22",
+          "type": "primary",
+          "authenticityReason": "Dated first-party research post reports its own measurements and states the proposal and limitations."
+        }
+      ]
+    },
     {
       "id": "inkling2-mini-2026-11-20",
       "section": "news",
@@ -768,6 +836,12 @@
           "storyId": "opencode-232-2026-11-18"
         },
         {
+          "label": "Added Nov 22: RadixArk publishes DaisyRose-27B weights",
+          "date": "2026-11-18",
+          "sourceUrl": "https://huggingface.co/blog/RadixArk/daisyrose-27b-pushing-the-frontier-of-post-trainin",
+          "storyId": "daisyrose27b-2026-11-18"
+        },
+        {
           "label": "Claude Code 2.1.328 adds fail-closed hooks and resume controls",
           "date": "2026-11-19",
           "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.328",
@@ -796,6 +870,12 @@
           "date": "2026-11-20",
           "sourceUrl": "https://thinkingmachines.ai/model-card/inkling-2-mini/",
           "storyId": "inkling2-mini-2026-11-20"
+        },
+        {
+          "label": "Added Nov 22: Claude Code 2.1.330 improves enterprise sign-in and session recovery",
+          "date": "2026-11-20",
+          "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
+          "storyId": "claude-code-21330-2026-11-20"
         }
       ]
     },
