@@ -1,14 +1,122 @@
 {
   "title": "The AI Ledger",
-  "issue": "Week of November 23–29, 2026 · through November 23",
+  "issue": "Week of November 23–29, 2026 · through November 24",
   "publishedAt": "2026-11-23",
-  "updatedAt": "2026-11-23T20:00:00Z",
+  "updatedAt": "2026-11-24T20:00:00Z",
   "issueStart": "2026-11-23",
   "issueEnd": "2026-11-29",
   "forecastStart": "2026-11-30",
   "forecastEnd": "2026-12-06",
-  "introduction": "Reviewed through November 23 at 20:00 UTC. GPT-6.2 reaches Chat as a separate rollout, OpenCode adds unattended jobs, and Anthropic and GitHub change enterprise operating details. The November 16–22 edition is archived unchanged. OpenCode already met the previous operational-controls forecast, and verified access still gates direct Mythos 5.2. No fresh timing rumor met the evidence threshold.",
+  "introduction": "Reviewed through November 24 at 20:00 UTC. Stable Codex and Copilot CLI releases change resume behavior, sandbox controls and editor interactions. Claude Ship and Strands updates retain their November 23 announcement dates. OpenAI adds specialized Responses API configurations and refreshes a separate moving chat alias. The November 23 snapshot is preserved unchanged. The next-week forecast keeps its original criteria. No fresh timing rumor met the evidence threshold.",
   "items": [
+    {
+      "id": "codex-01720-2026-11-24",
+      "section": "news",
+      "title": "Codex 0.172.0 restores sandbox context on exec resume",
+      "summary": "The stable version restores the saved sandbox permissions, working directory and workspace roots on noninteractive resume unless explicitly overridden. The terminal UI can follow thread links; optional stdio MCP servers with cached tool lists start on first use.",
+      "whyItMatters": "Check that reopened jobs retain their intended access boundary. Codex also adds an approval-reviewer setting for individual connected-app tools; test policy behavior before relying on it.",
+      "historicalContext": "The publisher posted stable 0.172.0 on November 24 at 00:03 UTC. These are CLI changes, not a model or subscription-limit update.",
+      "confidence": "high",
+      "confidenceReason": "Confirmed in the publisher’s release documentation; behavior and performance have not been independently tested here.",
+      "sources": [
+        {
+          "title": "Codex rust-v0.172.0",
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.172.0",
+          "publisher": "OpenAI",
+          "publishedAt": "2026-11-24",
+          "type": "primary",
+          "authenticityReason": "The publisher’s stable GitHub release lists these new features and behavior changes."
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-10115-2026-11-24",
+      "section": "news",
+      "title": "Copilot CLI 1.0.115 adds ACP forms and sandbox fixes",
+      "summary": "Supporting ACP editors can show structured clarification forms. Release notes include changes to Windows and macOS sandbox settings and a fix for sandboxed Git add and commit with many linked worktrees.",
+      "whyItMatters": "Useful for editor integrations and agents sharing a repository through worktrees. Validate the target OS and client; ACP form support is conditional, and the CLI release alone does not establish SDK compatibility.",
+      "historicalContext": "Published November 24 at 13:03 UTC. This CLI changelog is distinct from yesterday’s cloud sandbox billing milestone.",
+      "confidence": "high",
+      "confidenceReason": "Confirmed in the publisher’s release documentation; behavior and performance have not been independently tested here.",
+      "sources": [
+        {
+          "title": "Copilot CLI v1.0.115",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.115",
+          "publisher": "GitHub",
+          "publishedAt": "2026-11-24",
+          "type": "primary",
+          "authenticityReason": "The official GitHub release gives the CLI publication date and lists platform and integration changes."
+        }
+      ]
+    },
+    {
+      "id": "claude-ship-beta-2026-11-23",
+      "section": "news",
+      "title": "Added Nov 24: Claude Ship brings PR stewardship and approvals to beta",
+      "summary": "Anthropic released Claude Ship for Team and Enterprise plans with GitHub repositories. It pairs the existing generally available Code Review with PR Steward and Claude Approvals, both in beta.",
+      "whyItMatters": "PR fixes and approval decisions are separate jobs. Review the repository approval policy and branch-protection interactions before enabling repository-wide automation; do not infer GitLab support.",
+      "historicalContext": "The announcement is dated November 23, added in this review without redating. This is a code-delivery workflow, not a Claude model launch.",
+      "confidence": "high",
+      "confidenceReason": "Confirmed in the publisher’s release documentation; behavior and performance have not been independently tested here.",
+      "sources": [
+        {
+          "title": "Introducing Claude Ship",
+          "url": "https://claude.com/resources/articles/introducing-claude-ship",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-23",
+          "type": "primary",
+          "authenticityReason": "Official announcement identifies the components, eligibility and GitHub scope."
+        }
+      ]
+    },
+    {
+      "id": "strands-decider2-box-2026-11-23",
+      "section": "news",
+      "title": "Added Nov 24: Strands ships Decider v2 weights and expands Box CLI support",
+      "summary": "Strands published five Apache-2.0 Gemma 4-based decision models, from E2B to 31B. Its separate Box update adds native support for Claude Code, Codex, and Kiro CLI.",
+      "whyItMatters": "Consider Decider for bounded option selection, not as a general coding-agent replacement. Calibrate fallback thresholds on your own task distribution. For Box, independently check what the sandbox permits rather than treating integration support as a security guarantee.",
+      "historicalContext": "Both first-party announcements were dated November 23. Box is a sandbox integration, not a requirement to use Decider v2.",
+      "confidence": "high",
+      "confidenceReason": "Confirmed in the publisher’s release documentation; behavior and performance have not been independently tested here.",
+      "sources": [
+        {
+          "title": "Introducing Strands Decider v2",
+          "url": "https://strandsagents.com/blog/introducing-strands-decider-v2/",
+          "publisher": "Strands Agents",
+          "publishedAt": "2026-11-23",
+          "type": "primary",
+          "authenticityReason": "First-party project announcement documents model family, license, weights and vendor-reported evaluations."
+        },
+        {
+          "title": "Strands Box CLI support",
+          "url": "https://strandsagents.com/blog/strands-box-cli/",
+          "publisher": "Strands Agents",
+          "publishedAt": "2026-11-23",
+          "type": "primary",
+          "authenticityReason": "Separate first-party announcement documents supported CLI integrations."
+        }
+      ]
+    },
+    {
+      "id": "openai-responses-healthcare-2026-11-24",
+      "section": "news",
+      "title": "OpenAI adds Healthcare configurations to the Responses API",
+      "summary": "OpenAI released Healthcare configurations for GPT-6.2 Astra, GPT-6.2 Sol, GPT-6 Astra and GPT-6.1 Sol. The configurations pair the models with a harness tailored to clinical questions; when web search is used, it draws from a dedicated medical-source index.",
+      "whyItMatters": "This describes developer API behavior, not clinical validation, a substitute for licensed oversight, or a ChatGPT/Codex feature change.",
+      "historicalContext": "A separate November 24 changelog entry refreshed the moving chat-latest API snapshot. It is not a fixed model ID or a new base-model launch.",
+      "confidence": "high",
+      "confidenceReason": "Confirmed in the publisher’s release documentation; behavior and performance have not been independently tested here.",
+      "sources": [
+        {
+          "title": "OpenAI API changelog, November 24",
+          "url": "https://developers.openai.com/api/docs/changelog.md",
+          "publisher": "OpenAI",
+          "publishedAt": "2026-11-24",
+          "type": "primary",
+          "authenticityReason": "First-party API release notes identify both the Responses API configurations and the chat-latest snapshot refresh as distinct changes."
+        }
+      ]
+    },
     {
       "id": "gpt62-sol-chat-2026-11-23",
       "section": "news",
@@ -213,6 +321,36 @@
           "date": "2026-11-23",
           "sourceUrl": "https://github.blog/changelog/2026-10-28-work-from-anywhere-with-a-new-connected-copilot-cloud-experience/",
           "storyId": "copilot-cloud-billing-2026-11-23"
+        },
+        {
+          "label": "Added Nov 24: Claude Ship brings PR stewardship and approvals to beta",
+          "date": "2026-11-23",
+          "sourceUrl": "https://claude.com/resources/articles/introducing-claude-ship",
+          "storyId": "claude-ship-beta-2026-11-23"
+        },
+        {
+          "label": "Added Nov 24: Strands ships Decider v2 weights and expands Box CLI support",
+          "date": "2026-11-23",
+          "sourceUrl": "https://strandsagents.com/blog/introducing-strands-decider-v2/",
+          "storyId": "strands-decider2-box-2026-11-23"
+        },
+        {
+          "label": "Codex 0.172.0 restores sandbox context on exec resume",
+          "date": "2026-11-24",
+          "sourceUrl": "https://github.com/openai/codex/releases/tag/rust-v0.172.0",
+          "storyId": "codex-01720-2026-11-24"
+        },
+        {
+          "label": "Copilot CLI 1.0.115 adds ACP forms and sandbox fixes",
+          "date": "2026-11-24",
+          "sourceUrl": "https://github.com/github/copilot-cli/releases/tag/v1.0.115",
+          "storyId": "copilot-cli-10115-2026-11-24"
+        },
+        {
+          "label": "OpenAI adds Healthcare configurations to the Responses API",
+          "date": "2026-11-24",
+          "sourceUrl": "https://developers.openai.com/api/docs/changelog.md",
+          "storyId": "openai-responses-healthcare-2026-11-24"
         }
       ]
     },
