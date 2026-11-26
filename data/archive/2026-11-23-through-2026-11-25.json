@@ -1,0 +1,458 @@
+{
+  "title": "The AI Ledger",
+  "issue": "Week of November 23–29, 2026 · through November 25",
+  "publishedAt": "2026-11-23",
+  "updatedAt": "2026-11-25T20:00:00Z",
+  "issueStart": "2026-11-23",
+  "issueEnd": "2026-11-29",
+  "forecastStart": "2026-11-30",
+  "forecastEnd": "2026-12-06",
+  "introduction": "Reviewed through November 25 at 20:00 UTC. Claude Code adds MCP-provided skills and a shell-command hook; Cognition introduces SWE-2.1 for coding. GitHub’s Fusion documentation now lists a December 31 discount cutoff. Earlier items retain their original dates, and the November 24 snapshot is preserved unchanged. The next-week forecast keeps its original criteria. No fresh timing rumor met the evidence threshold.",
+  "items": [
+    {
+      "id": "claude-code-21332-2026-11-25",
+      "section": "news",
+      "title": "Claude Code 2.1.332 adds MCP-provided skills in beta",
+      "summary": "Skills served by MCP servers now appear in the slash menu under a server-qualified name. A new PreSkillShellCommand hook can reject inline shell commands when a skill or command loads. The release also improves recovery when an SSE MCP stream disconnects.",
+      "whyItMatters": "Treat remote skill content as part of the trust boundary. Validate existing local policies against the new hook and check the runtime version across machines; older versions surface a startup dialog if the new hook is present.",
+      "historicalContext": "Published November 25 at 01:32 UTC. This is a Claude Code release, not a universal MCP protocol rollout. MCP-provided skills specifically are beta.",
+      "confidence": "high",
+      "confidenceReason": "First-party documentation supports the reported update; independent behavior and workload costs were not tested.",
+      "sources": [
+        {
+          "title": "Claude Code v2.1.332",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-25",
+          "type": "primary",
+          "authenticityReason": "The publisher’s GitHub release records the date, beta status and hook behavior."
+        }
+      ]
+    },
+    {
+      "id": "cognition-swe21-2026-11-24",
+      "section": "news",
+      "title": "Added Nov 25: Cognition releases SWE-2.1 for coding workloads",
+      "summary": "Cognition introduced SWE-2.1, a Kimi K3-based follow-up to SWE-2, and reports improved results on FrontierCode 2.0 and Terminal-Bench 4.1. The model is listed for Devin Desktop, Cloud, and CLI.",
+      "whyItMatters": "Treat the scores as publisher-reported. Cognition’s comparisons combine results from different harnesses, so evaluate the model and harness together on your own coding tasks.",
+      "historicalContext": "The announcement is dated November 24; added here without redating it. This entry concerns the standard software-engineering model.",
+      "confidence": "high",
+      "confidenceReason": "First-party documentation supports the reported update; independent behavior and workload costs were not tested.",
+      "sources": [
+        {
+          "title": "Introducing SWE-2.1",
+          "url": "https://cognition.com/blog/swe-2-1",
+          "publisher": "Cognition",
+          "publishedAt": "2026-11-24",
+          "type": "primary",
+          "authenticityReason": "Publisher announcement lists availability, coding benchmark results and comparison methodology."
+        }
+      ]
+    },
+    {
+      "id": "copilot-fusion-billing-docs-2026-11-25",
+      "section": "news",
+      "title": "Billing watch: GitHub now lists the Fusion discount through Dec 31",
+      "summary": "GitHub’s Fusion documentation says users on paid Copilot plans receive a 30% discount on model costs when using Fusion through December 31, 2026. The models used are billed at their applicable rates before the discount.",
+      "whyItMatters": "Do not assume the older November 30 cutoff or apply this discount to non-Fusion model selection. For longer-running workloads, review actual usage and recheck the published terms before January.",
+      "historicalContext": "The date is a documentation check, not the publication date of a new model or the exact day the terms changed. Copilot cloud sandbox compute is a separate cost.",
+      "confidence": "high",
+      "confidenceReason": "First-party documentation supports the reported update; independent behavior and workload costs were not tested.",
+      "sources": [
+        {
+          "title": "About GitHub Copilot Fusion",
+          "url": "https://docs.github.com/en/copilot/concepts/models/copilot-fusion",
+          "publisher": "GitHub",
+          "publishedAt": "2026-11-25",
+          "type": "primary",
+          "authenticityReason": "Living first-party documentation verified November 25; no discrete publication timestamp for this specific edit was established."
+        }
+      ]
+    },
+    {
+      "id": "codex-01720-2026-11-24",
+      "section": "news",
+      "title": "Codex 0.172.0 restores sandbox context on exec resume",
+      "summary": "The stable version restores the saved sandbox permissions, working directory and workspace roots on noninteractive resume unless explicitly overridden. The terminal UI can follow thread links; optional stdio MCP servers with cached tool lists start on first use.",
+      "whyItMatters": "Check that reopened jobs retain their intended access boundary. Codex also adds an approval-reviewer setting for individual connected-app tools; test policy behavior before relying on it.",
+      "historicalContext": "The publisher posted stable 0.172.0 on November 24 at 00:03 UTC. These are CLI changes, not a model or subscription-limit update.",
+      "confidence": "high",
+      "confidenceReason": "Confirmed in the publisher’s release documentation; behavior and performance have not been independently tested here.",
+      "sources": [
+        {
+          "title": "Codex rust-v0.172.0",
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.172.0",
+          "publisher": "OpenAI",
+          "publishedAt": "2026-11-24",
+          "type": "primary",
+          "authenticityReason": "The publisher’s stable GitHub release lists these new features and behavior changes."
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-10115-2026-11-24",
+      "section": "news",
+      "title": "Copilot CLI 1.0.115 adds ACP forms and sandbox fixes",
+      "summary": "Supporting ACP editors can show structured clarification forms. Release notes include changes to Windows and macOS sandbox settings and a fix for sandboxed Git add and commit with many linked worktrees.",
+      "whyItMatters": "Useful for editor integrations and agents sharing a repository through worktrees. Validate the target OS and client; ACP form support is conditional, and the CLI release alone does not establish SDK compatibility.",
+      "historicalContext": "Published November 24 at 13:03 UTC. This CLI changelog is distinct from yesterday’s cloud sandbox billing milestone.",
+      "confidence": "high",
+      "confidenceReason": "Confirmed in the publisher’s release documentation; behavior and performance have not been independently tested here.",
+      "sources": [
+        {
+          "title": "Copilot CLI v1.0.115",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.115",
+          "publisher": "GitHub",
+          "publishedAt": "2026-11-24",
+          "type": "primary",
+          "authenticityReason": "The official GitHub release gives the CLI publication date and lists platform and integration changes."
+        }
+      ]
+    },
+    {
+      "id": "claude-ship-beta-2026-11-23",
+      "section": "news",
+      "title": "Added Nov 24: Claude Ship brings PR stewardship and approvals to beta",
+      "summary": "Anthropic released Claude Ship for Team and Enterprise plans with GitHub repositories. It pairs the existing generally available Code Review with PR Steward and Claude Approvals, both in beta.",
+      "whyItMatters": "PR fixes and approval decisions are separate jobs. Review the repository approval policy and branch-protection interactions before enabling repository-wide automation; do not infer GitLab support.",
+      "historicalContext": "The announcement is dated November 23, added in this review without redating. This is a code-delivery workflow, not a Claude model launch.",
+      "confidence": "high",
+      "confidenceReason": "Confirmed in the publisher’s release documentation; behavior and performance have not been independently tested here.",
+      "sources": [
+        {
+          "title": "Introducing Claude Ship",
+          "url": "https://claude.com/resources/articles/introducing-claude-ship",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-23",
+          "type": "primary",
+          "authenticityReason": "Official announcement identifies the components, eligibility and GitHub scope."
+        }
+      ]
+    },
+    {
+      "id": "strands-decider2-box-2026-11-23",
+      "section": "news",
+      "title": "Added Nov 24: Strands ships Decider v2 weights and expands Box CLI support",
+      "summary": "Strands published five Apache-2.0 Gemma 4-based decision models, from E2B to 31B. Its separate Box update adds native support for Claude Code, Codex, and Kiro CLI.",
+      "whyItMatters": "Consider Decider for bounded option selection, not as a general coding-agent replacement. Calibrate fallback thresholds on your own task distribution. For Box, independently check what the sandbox permits rather than treating integration support as a security guarantee.",
+      "historicalContext": "Both first-party announcements were dated November 23. Box is a sandbox integration, not a requirement to use Decider v2.",
+      "confidence": "high",
+      "confidenceReason": "Confirmed in the publisher’s release documentation; behavior and performance have not been independently tested here.",
+      "sources": [
+        {
+          "title": "Introducing Strands Decider v2",
+          "url": "https://strandsagents.com/blog/introducing-strands-decider-v2/",
+          "publisher": "Strands Agents",
+          "publishedAt": "2026-11-23",
+          "type": "primary",
+          "authenticityReason": "First-party project announcement documents model family, license, weights and vendor-reported evaluations."
+        },
+        {
+          "title": "Strands Box CLI support",
+          "url": "https://strandsagents.com/blog/strands-box-cli/",
+          "publisher": "Strands Agents",
+          "publishedAt": "2026-11-23",
+          "type": "primary",
+          "authenticityReason": "Separate first-party announcement documents supported CLI integrations."
+        }
+      ]
+    },
+    {
+      "id": "openai-responses-healthcare-2026-11-24",
+      "section": "news",
+      "title": "OpenAI adds Healthcare configurations to the Responses API",
+      "summary": "OpenAI released Healthcare configurations for GPT-6.2 Astra, GPT-6.2 Sol, GPT-6 Astra and GPT-6.1 Sol. The configurations pair the models with a harness tailored to clinical questions; when web search is used, it draws from a dedicated medical-source index.",
+      "whyItMatters": "This describes developer API behavior, not clinical validation, a substitute for licensed oversight, or a ChatGPT/Codex feature change.",
+      "historicalContext": "A separate November 24 changelog entry refreshed the moving chat-latest API snapshot. It is not a fixed model ID or a new base-model launch.",
+      "confidence": "high",
+      "confidenceReason": "Confirmed in the publisher’s release documentation; behavior and performance have not been independently tested here.",
+      "sources": [
+        {
+          "title": "OpenAI API changelog, November 24",
+          "url": "https://developers.openai.com/api/docs/changelog.md",
+          "publisher": "OpenAI",
+          "publishedAt": "2026-11-24",
+          "type": "primary",
+          "authenticityReason": "First-party API release notes identify both the Responses API configurations and the chat-latest snapshot refresh as distinct changes."
+        }
+      ]
+    },
+    {
+      "id": "gpt62-sol-chat-2026-11-23",
+      "section": "news",
+      "title": "GPT-6.2 Sol variant starts rolling out in ChatGPT Chat",
+      "summary": "OpenAI began a global rollout of a conversation-tuned GPT-6.2 Sol variant in the Chat tab for Plus, Pro, Business, and Enterprise. Enterprise access depends on admin settings.",
+      "whyItMatters": "OpenAI reports improvements on images and complex instructions in its Chat-tab evaluations. Those are publisher results, not independent coding benchmarks.",
+      "historicalContext": "This is distinct from the November 17 GPT-6.2 launch. The November 23 Chat-tab release does not change Work or Codex models, or announce API pricing or subscription-limit changes.",
+      "confidence": "high",
+      "confidenceReason": "Confirmed in first-party documentation; performance and behavior claims were not independently reproduced.",
+      "sources": [
+        {
+          "title": "ChatGPT release notes: GPT-6.2 in Chat",
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "publisher": "OpenAI",
+          "publishedAt": "2026-11-23",
+          "type": "primary",
+          "authenticityReason": "Dated product release notes state the scope, eligibility, model variant, and internal comparison results."
+        },
+        {
+          "title": "GPT-6.2 in ChatGPT system card",
+          "url": "https://deploymentsafety.openai.com/gpt-6-2-chatgpt",
+          "publisher": "OpenAI",
+          "publishedAt": "2026-11-23",
+          "type": "primary",
+          "authenticityReason": "Dated first-party system card describes the deployment and its evaluations."
+        }
+      ]
+    },
+    {
+      "id": "opencode-240-2026-11-23",
+      "section": "news",
+      "title": "OpenCode 2.4.0 adds scheduled and event-triggered automations",
+      "summary": "The stable release supports one-off and recurring automations, cron schedules, and events from connected MCP servers. The automation manager exposes the resulting jobs, and the configuration can disable the feature.",
+      "whyItMatters": "Audit what is allowed to run unattended. The release notes say a fixed shell action asks for approval at creation and logs the exit code and output for each run; do not assume it asks for fresh approval at every run.",
+      "historicalContext": "This is a harness release, not a model launch. Its explicit background-task controls meet last edition’s November 23–29 forecast on November 23.",
+      "confidence": "high",
+      "confidenceReason": "Confirmed in first-party documentation; performance and behavior claims were not independently reproduced.",
+      "sources": [
+        {
+          "title": "OpenCode v2.4.0",
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v2.4.0",
+          "publisher": "OpenCode",
+          "publishedAt": "2026-11-23",
+          "type": "primary",
+          "authenticityReason": "The immutable publisher release was posted November 23 at 09:22 UTC and lists automation controls."
+        }
+      ]
+    },
+    {
+      "id": "claude-efs-beta-2026-11-23",
+      "section": "news",
+      "title": "Anthropic starts Enterprise Frontier Safeguards beta",
+      "summary": "The beta is available for eligible organizations on Claude Platform, Claude Platform on AWS, and Claude Models on Google Cloud when Anthropic-managed. Anthropic says it does not retain prompts or responses under EFS; encrypted safety copies go to a bucket in the customer’s cloud account.",
+      "whyItMatters": "Zero data retention by Anthropic does not mean no copies exist. Workspaces using Anthropic-managed storage do not qualify as EFS. Verify eligibility and storage configuration before depending on it.",
+      "historicalContext": "The November 23 platform update concerns safeguards for existing models, not a new model or general Mythos access.",
+      "confidence": "high",
+      "confidenceReason": "Confirmed in first-party documentation; performance and behavior claims were not independently reproduced.",
+      "sources": [
+        {
+          "title": "Claude Platform release notes, November 23",
+          "url": "https://platform.claude.com/docs/en/release-notes/overview",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-23",
+          "type": "primary",
+          "authenticityReason": "Dated publisher platform changelog distinguishes product launch, beta status, provider boundaries, and retirement timing."
+        }
+      ]
+    },
+    {
+      "id": "opus45-deprecation-2026-11-23",
+      "section": "news",
+      "title": "Claude Opus 4.5 is deprecated, not yet retired",
+      "summary": "Anthropic deprecated the dated Claude Opus 4.5 model ID and its alias. The Claude API retirement is scheduled for January 22, 2027; Anthropic recommends Claude Opus 5.5.",
+      "whyItMatters": "Inventory hard-coded model IDs and test the replacement before the cutoff. Check the schedule for the provider you actually use rather than assuming the Claude API date applies everywhere.",
+      "historicalContext": "This is the November 23 deprecation announcement, not same-day API removal.",
+      "confidence": "high",
+      "confidenceReason": "Confirmed in first-party documentation; performance and behavior claims were not independently reproduced.",
+      "sources": [
+        {
+          "title": "Claude Platform release notes, November 23",
+          "url": "https://platform.claude.com/docs/en/release-notes/overview",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-23",
+          "type": "primary",
+          "authenticityReason": "Dated publisher platform changelog distinguishes product launch, beta status, provider boundaries, and retirement timing."
+        },
+        {
+          "title": "Claude model deprecations",
+          "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-23",
+          "type": "primary",
+          "authenticityReason": "Official model lifecycle table states deprecation and retirement dates."
+        }
+      ]
+    },
+    {
+      "id": "copilot-cloud-billing-2026-11-23",
+      "section": "news",
+      "title": "Copilot cloud sandbox billing begins",
+      "summary": "GitHub says billing for its managed Copilot cloud sandboxes begins November 23. Included cloud sandbox usage draws from compute entitlement shared with eligible GitHub Actions usage.",
+      "whyItMatters": "Check shared compute consumption and budgets if you rely on cloud sessions. This is sandbox compute, not a new local CLI charge or an announced change to AI Credits.",
+      "historicalContext": "This is the billing milestone in GitHub’s October 28 launch post, updated November 19, not a new general-availability announcement.",
+      "confidence": "high",
+      "confidenceReason": "Confirmed in first-party documentation; performance and behavior claims were not independently reproduced.",
+      "sources": [
+        {
+          "title": "Copilot cloud experience and shared entitlement",
+          "url": "https://github.blog/changelog/2026-10-28-work-from-anywhere-with-a-new-connected-copilot-cloud-experience/",
+          "publisher": "GitHub",
+          "publishedAt": "2026-10-28",
+          "type": "primary",
+          "authenticityReason": "First-party changelog gives the November 23 effective date and describes its shared entitlement."
+        }
+      ]
+    },
+    {
+      "id": "mythos-access-outlook-result-2026-11-23",
+      "section": "news",
+      "title": "Forecast result: Direct Mythos 5.2 access still requires verification",
+      "summary": "Anthropic’s current documentation still marks direct general-purpose Mythos 5.2 access as verification required. No official change to that rule was identified for the November 22 forecast cutoff.",
+      "whyItMatters": "The result does not count Claude Security, which the original forecast explicitly excluded. EFS adds a storage and monitoring option for eligible organizations; it is not unrestricted access.",
+      "historicalContext": "The prior edition set November 22, 23:59 UTC as the deadline. Its criterion is met based on the published access rules checked after the deadline.",
+      "confidence": "high",
+      "confidenceReason": "Confirmed in first-party documentation; performance and behavior claims were not independently reproduced.",
+      "sources": [
+        {
+          "title": "Claude Mythos 5.2 platform overview",
+          "url": "https://platform.claude.com/docs/en/models/mythos-5-2/overview",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-09",
+          "type": "primary",
+          "authenticityReason": "The official model page dates the model to November 9; checked November 23, it still says verification is required."
+        },
+        {
+          "title": "Claude Fable 5.2 and Claude Mythos 5.2",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-11-09",
+          "type": "primary",
+          "authenticityReason": "The original dated launch explains verification and separate Claude Security access."
+        }
+      ]
+    },
+    {
+      "id": "harness-automation-controls-2026-11-30",
+      "section": "predictions",
+      "title": "November 30–December 6: stable unattended-task control",
+      "summary": "We expect at least one of Codex, Claude Code, Copilot CLI, or OpenCode to add or fix a user-visible control for unattended work.",
+      "whyItMatters": "Scheduling is becoming useful only if developers can audit, pause, or stop jobs that run without them.",
+      "confidence": "low",
+      "confidenceReason": "Editorial extrapolation from OpenCode’s automation release and recent harness controls, not a publisher commitment or numeric probability.",
+      "historicalContext": "OpenCode 2.4.0 provides a November 23 baseline and does not count toward this later forecast.",
+      "sources": [
+        {
+          "title": "OpenCode v2.4.0",
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v2.4.0",
+          "publisher": "OpenCode",
+          "publishedAt": "2026-11-23",
+          "type": "primary",
+          "authenticityReason": "The immutable publisher release was posted November 23 at 09:22 UTC and lists automation controls."
+        }
+      ],
+      "horizon": "November 30–December 6, 2026 (UTC)",
+      "resolutionCriteria": "Pass if official stable release notes for a named harness, published during the window, explicitly add or fix approval, disablement, cancellation, or per-run audit history for scheduled, event-triggered, or background jobs. Generic permissions, prereleases, documentation-only and model-only updates do not count. Otherwise fail at 23:59 UTC on December 6.",
+      "counterarguments": "Maintainers may prioritize reliability or model support; automation changes may ship only as prereleases or outside the window."
+    }
+  ],
+  "charts": [
+    {
+      "id": "nov23-release-timeline",
+      "type": "timeline",
+      "title": "This week: model and harness rollouts",
+      "description": "Selected verified release and effective dates. These points are not a capability ranking.",
+      "points": [
+        {
+          "label": "GPT-6.2 Sol variant starts rolling out in ChatGPT Chat",
+          "date": "2026-11-23",
+          "sourceUrl": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "storyId": "gpt62-sol-chat-2026-11-23"
+        },
+        {
+          "label": "OpenCode 2.4.0 adds scheduled and event-triggered automations",
+          "date": "2026-11-23",
+          "sourceUrl": "https://github.com/anomalyco/opencode/releases/tag/v2.4.0",
+          "storyId": "opencode-240-2026-11-23"
+        },
+        {
+          "label": "Anthropic starts Enterprise Frontier Safeguards beta",
+          "date": "2026-11-23",
+          "sourceUrl": "https://platform.claude.com/docs/en/release-notes/overview",
+          "storyId": "claude-efs-beta-2026-11-23"
+        },
+        {
+          "label": "Claude Opus 4.5 is deprecated, not yet retired",
+          "date": "2026-11-23",
+          "sourceUrl": "https://platform.claude.com/docs/en/release-notes/overview",
+          "storyId": "opus45-deprecation-2026-11-23"
+        },
+        {
+          "label": "Copilot cloud sandbox billing begins",
+          "date": "2026-11-23",
+          "sourceUrl": "https://github.blog/changelog/2026-10-28-work-from-anywhere-with-a-new-connected-copilot-cloud-experience/",
+          "storyId": "copilot-cloud-billing-2026-11-23"
+        },
+        {
+          "label": "Added Nov 24: Claude Ship brings PR stewardship and approvals to beta",
+          "date": "2026-11-23",
+          "sourceUrl": "https://claude.com/resources/articles/introducing-claude-ship",
+          "storyId": "claude-ship-beta-2026-11-23"
+        },
+        {
+          "label": "Added Nov 24: Strands ships Decider v2 weights and expands Box CLI support",
+          "date": "2026-11-23",
+          "sourceUrl": "https://strandsagents.com/blog/introducing-strands-decider-v2/",
+          "storyId": "strands-decider2-box-2026-11-23"
+        },
+        {
+          "label": "Codex 0.172.0 restores sandbox context on exec resume",
+          "date": "2026-11-24",
+          "sourceUrl": "https://github.com/openai/codex/releases/tag/rust-v0.172.0",
+          "storyId": "codex-01720-2026-11-24"
+        },
+        {
+          "label": "Copilot CLI 1.0.115 adds ACP forms and sandbox fixes",
+          "date": "2026-11-24",
+          "sourceUrl": "https://github.com/github/copilot-cli/releases/tag/v1.0.115",
+          "storyId": "copilot-cli-10115-2026-11-24"
+        },
+        {
+          "label": "OpenAI adds Healthcare configurations to the Responses API",
+          "date": "2026-11-24",
+          "sourceUrl": "https://developers.openai.com/api/docs/changelog.md",
+          "storyId": "openai-responses-healthcare-2026-11-24"
+        },
+        {
+          "label": "Added Nov 25: Cognition releases SWE-2.1 for coding workloads",
+          "date": "2026-11-24",
+          "sourceUrl": "https://cognition.com/blog/swe-2-1",
+          "storyId": "cognition-swe21-2026-11-24"
+        },
+        {
+          "label": "Claude Code 2.1.332 adds MCP-provided skills in beta",
+          "date": "2026-11-25",
+          "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
+          "storyId": "claude-code-21332-2026-11-25"
+        }
+      ]
+    },
+    {
+      "id": "gpt62-chat-image-understanding",
+      "type": "bar",
+      "title": "Chat tab image understanding: OpenAI’s test",
+      "description": "Percent correct on the image-understanding test reported in the November 23 release notes.",
+      "selectionCriteria": "The two Chat-tab models compared on this one published metric.",
+      "unit": "%",
+      "domain": [
+        0,
+        100
+      ],
+      "sourceTitle": "ChatGPT release notes: GPT-6.2 in Chat",
+      "sourceUrl": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "publisher": "OpenAI",
+      "publishedAt": "2026-11-23",
+      "storyId": "gpt62-sol-chat-2026-11-23",
+      "points": [
+        {
+          "label": "GPT-6",
+          "value": 47.4
+        },
+        {
+          "label": "GPT-6.2",
+          "value": 71.7
+        }
+      ],
+      "caveat": "Vendor-reported Chat-tab evaluation, not an independent comparison or a coding-workload result."
+    }
+  ]
+}
