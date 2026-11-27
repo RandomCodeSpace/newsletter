@@ -1,14 +1,74 @@
 {
   "title": "The AI Ledger",
-  "issue": "Week of November 23–29, 2026 · through November 26",
+  "issue": "Week of November 23–29, 2026 · through November 27",
   "publishedAt": "2026-11-23",
-  "updatedAt": "2026-11-26T20:00:00Z",
+  "updatedAt": "2026-11-27T20:00:00Z",
   "issueStart": "2026-11-23",
   "issueEnd": "2026-11-29",
   "forecastStart": "2026-11-30",
   "forecastEnd": "2026-12-06",
-  "introduction": "Reviewed through November 26 at 20:00 UTC. Codex corrected its GPT-6.2 usage accounting, OpenCode changed what happens after a scheduled run fails, and Copilot CLI improved MCP startup. The November 25 snapshot is preserved unchanged. Next-week forecasts cover unattended-task controls and MCP readiness. No fresh rumor met the evidence threshold.",
+  "introduction": "Reviewed through November 27 at 20:00 UTC. Copilot CLI now errors on unavailable pinned providers, GitHub announced a December code-review payer change, and VS Code previews keeping active agent hosts awake. The November 26 snapshot is preserved unchanged. Next-week forecasts retain their original criteria. No fresh rumor met the evidence threshold.",
   "items": [
+    {
+      "id": "copilot-cli-10117-2026-11-27",
+      "section": "news",
+      "title": "Copilot CLI 1.0.117 makes provider pins fail explicitly",
+      "summary": "The stable CLI shows an error rather than switching providers when a repository pins a model to an unavailable provider. It also supports configured custom certificate authorities for sandboxed commands behind TLS-intercepting proxies.",
+      "whyItMatters": "A provider pin now fails where operators can see it. Recheck sandboxed Git workflows too: the release restores commits, branch creation and stashing in writable linked worktrees while keeping existing repository settings files read-only on macOS and Linux.",
+      "historicalContext": "Published November 27 at 13:04 UTC. This updates the CLI, not Copilot model pricing or SDK compatibility.",
+      "confidence": "high",
+      "confidenceReason": "Confirmed in first-party release notes or changelog; behavior and individual billing were not independently tested.",
+      "sources": [
+        {
+          "title": "Copilot CLI v1.0.117",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.117",
+          "publisher": "GitHub",
+          "publishedAt": "2026-11-27",
+          "type": "primary",
+          "authenticityReason": "Official tagged stable CLI release specifies the behavior and date."
+        }
+      ]
+    },
+    {
+      "id": "copilot-review-billing-default-2026-11-25",
+      "section": "news",
+      "title": "Added Nov 27: GitHub plans an organization billing default for Copilot reviews",
+      "summary": "Starting December 30, eligible Business and Enterprise organizations with no saved choice will have licensed members’ code reviews billed to the repository-owning organization. Accounts without paid AI Credits usage enabled, with a billing lock, or without a billable customer will be set to Member instead.",
+      "whyItMatters": "Administrators can select Member before the change to preserve member-entitlement billing. Review budget exposure where the organization will pay.",
+      "historicalContext": "Announced November 25; the stated effective date is December 30, not today. This is a default payer change for code review, not a Fusion price change or a change to CLI usage.",
+      "confidence": "high",
+      "confidenceReason": "Confirmed in first-party release notes or changelog; behavior and individual billing were not independently tested.",
+      "sources": [
+        {
+          "title": "Copilot code review billing will default to the organization",
+          "url": "https://github.blog/changelog/2026-11-25-copilot-code-review-billing-will-default-to-the-organization/",
+          "publisher": "GitHub",
+          "publishedAt": "2026-11-25",
+          "type": "primary",
+          "authenticityReason": "Dated first-party changelog specifies rollout timing, scope and exceptions."
+        }
+      ]
+    },
+    {
+      "id": "vscode-1148-agent-host-2026-11-25",
+      "section": "news",
+      "title": "Added Nov 27: VS Code 1.148 previews keeping active agent hosts awake",
+      "summary": "On supported Agent Hosts, active turns can prevent idle sleep, including after an editor window closes. The default is to hold off idle sleep when plugged in; the setting can also apply on battery or be disabled.",
+      "whyItMatters": "Useful for active work interrupted by idle sleep. It does not establish that jobs survive reboot, forced sleep, or Host termination. Check host support before relying on it.",
+      "historicalContext": "The stable editor update was released November 25; this capability is a preview for Agent Host, not a guarantee from the old Local harness or a change to Copilot CLI.",
+      "confidence": "high",
+      "confidenceReason": "Confirmed in first-party release notes or changelog; behavior and individual billing were not independently tested.",
+      "sources": [
+        {
+          "title": "Visual Studio Code 1.148",
+          "url": "https://code.visualstudio.com/updates/v1_148",
+          "publisher": "Microsoft",
+          "publishedAt": "2026-11-25",
+          "type": "primary",
+          "authenticityReason": "Official stable editor release notes give the date, supported host scope, and feature preview status."
+        }
+      ]
+    },
     {
       "id": "codex-usage-correction-2026-11-26",
       "section": "news",
@@ -514,6 +574,18 @@
           "storyId": "copilot-cli-10116-2026-11-25"
         },
         {
+          "label": "Added Nov 27: GitHub plans an organization billing default for Copilot reviews",
+          "date": "2026-11-25",
+          "sourceUrl": "https://github.blog/changelog/2026-11-25-copilot-code-review-billing-will-default-to-the-organization/",
+          "storyId": "copilot-review-billing-default-2026-11-25"
+        },
+        {
+          "label": "Added Nov 27: VS Code 1.148 previews keeping active agent hosts awake",
+          "date": "2026-11-25",
+          "sourceUrl": "https://code.visualstudio.com/updates/v1_148",
+          "storyId": "vscode-1148-agent-host-2026-11-25"
+        },
+        {
           "label": "Codex corrects discounted usage for GPT-6.2 Astra and Sol",
           "date": "2026-11-26",
           "sourceUrl": "https://www.businessinsider.com/openai-token-billing-cost-discount-mistake-sol-astra-2026-11",
@@ -524,6 +596,12 @@
           "date": "2026-11-26",
           "sourceUrl": "https://github.com/anomalyco/opencode/releases/tag/v2.4.2",
           "storyId": "opencode-242-2026-11-26"
+        },
+        {
+          "label": "Copilot CLI 1.0.117 makes provider pins fail explicitly",
+          "date": "2026-11-27",
+          "sourceUrl": "https://github.com/github/copilot-cli/releases/tag/v1.0.117",
+          "storyId": "copilot-cli-10117-2026-11-27"
         }
       ]
     },
